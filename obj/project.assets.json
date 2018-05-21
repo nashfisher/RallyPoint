@@ -12827,11 +12827,25 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
       "projectUniqueName": "/Users/Cole/Documents/CsharpProj/RallyPoint/Rallypoint.csproj",
       "projectName": "Rallypoint",
       "projectPath": "/Users/Cole/Documents/CsharpProj/RallyPoint/Rallypoint.csproj",
       "packagesPath": "/Users/Cole/.nuget/packages/",
       "outputPath": "/Users/Cole/Documents/CsharpProj/RallyPoint/obj/",
+<<<<<<< HEAD
+=======
+=======
+      "projectUniqueName": "/Users/tomgarcia/Desktop/CodingDojo/C#project/RallyPoint/Rallypoint.csproj",
+      "projectName": "Rallypoint",
+      "projectPath": "/Users/tomgarcia/Desktop/CodingDojo/C#project/RallyPoint/Rallypoint.csproj",
+      "packagesPath": "/Users/tomgarcia/.nuget/packages/",
+      "outputPath": "/Users/tomgarcia/Desktop/CodingDojo/C#project/RallyPoint/obj/",
+>>>>>>> 2fd29c6f9d0466cafeb9b9776e6abe7e62f84ac8
+>>>>>>> master
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

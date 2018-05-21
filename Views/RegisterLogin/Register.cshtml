@@ -1,53 +1,45 @@
 ﻿@{
     ViewData["Title"] = "Register";
 }
-@model Rallypoint.Models.User
+@model Rallypoint.Models.RegisterViewModel
 
-<div class="container">
-    <!-- <form action="process-register" method="POST">
-        <h4>Register</h4>
-        <div class="uk-margin">
-            <input class="uk-input" type="text" name="first_name" placeholder="First Name">
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input" type="text" name="last_name" placeholder="Last Name">
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input" type="email" name="email" placeholder="Email Address">
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input" type="password" name="password" placeholder="Password">
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input" type="password" name="password_confirm" placeholder="Confirm Password">
-        </div>
-        <div class="uk-margin">
-            <button class="uk-button uk-button-default">Submit</button>
-        </div>
-    </form> -->
-    <h4>Create an account</h4>
-    <form asp-controller="Users" asp-action="ProcessRegister" method="POST">
-        <div class="uk-margin">
-            <input class="uk-input" asp-for="First_Name" placeholder="First Name" />
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input" asp-for="Last_Name" placeholder="Last Name" />
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input" type="email" asp-for="Email" placeholder="Email" />
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input" type="password" asp-for="Password" placeholder="Password" />
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input" type="password" name="Password_Confirm" placeholder="Confirm Password" />
-        </div>
-        <div class="uk-margin">
-            <button class="uk-button uk-button-default">Register</button>
-        </div>
-    </form>
-    <a class="uk-link-blue" href="/login">Login with existing account</a>
+<div class="wrapper">
+    <div class="entrance">
+        <form asp-controller="RegisterLogin" asp-action="Register" method="POST" class="entrance">
+            <legend class="uk-legend">Create an account</legend>
 
-    <div asp-validation-summary="All" style="color: red;"></div>
-    <div><p style="color: red;">@TempData["error"]</p></div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="first_name" placeholder="First Name">
+                <div class="error-message"><span asp-validation-for="first_name"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="last_name" placeholder="Last Name">
+                <div class="error-message"><span asp-validation-for="last_name"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="username" placeholder="Username">
+                <div class="error-message"><span asp-validation-for="username"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="email" type="email" placeholder="Email">
+                <div class="error-message"><span asp-validation-for="email"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="password" type="password" placeholder="Password">
+                <div class="error-message"><span asp-validation-for="password"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="password_confirmation" type="password" placeholder="Confirm Password">
+                <div class="error-message"><span asp-validation-for="password_confirmation"></span></div>
+            </div>
+            <div class="uk-margin">
+                <button class="uk-button uk-button-primary">Register</button>
+            </div>
+        </form>
+        <div class="error-message">
+            <p>@TempData["error"]</p>
+        </div>
+    <hr />
+    <p>Already a user? <a href="existing-user">Login with existing account.</a></p>
+    </div>
 </div>

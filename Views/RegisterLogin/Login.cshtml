@@ -2,20 +2,27 @@
     ViewData["Title"] = "Login";
 }
 
-<div class="container">
-    <h4>Login</h4>
-    <form action="process-login" method="POST">
-        <div class="uk-margin">
-            <input class="uk-input" type="email" name="email" placeholder="Email" />
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input" type="password" name="password" placeholder="Password" />
-        </div>
-        <div class="uk-margin">
-            <button class="uk-button uk-button-default">Login</button>
-        </div>
-    </form>
-    <p>If you forgot your email or password, you'll have to <a class="uk-link-blue" href="/">register again</a>.</p>
+<div class="wrapper">
+    <div class="entrance">
+        <form action="login" method="POST">
+            <legend class="uk-legend">Login</legend>
 
-    <div><p style="color: red;">@TempData["error"]</p></div>
+            <div class="uk-margin">
+                <input class="uk-input" type="text" name="identity" placeholder="Username or Email">
+                <div class="error-message"></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" type="password" name="password" placeholder="password">
+                <div class="error-message"></div>
+            </div>
+            <div class="uk-margin">
+                <button class="uk-button uk-button-primary">Submit</button>
+            </div>
+            <div class="error-message">
+            <p>@TempData["error"]</p>
+            </div>
+        </form>
+    <hr />
+    <p>Forgot login info? For now, you'll have to <a href="/">create a new account.</a></p>
+    </div>
 </div>
