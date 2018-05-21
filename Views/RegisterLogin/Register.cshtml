@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+@model Rallypoint.Models.User
+
+<div class="container">
+    <!-- <form action="process-register" method="POST">
+        <h4>Register</h4>
+        <div class="uk-margin">
+            <input class="uk-input" type="text" name="first_name" placeholder="First Name">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="text" name="last_name" placeholder="Last Name">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="email" name="email" placeholder="Email Address">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="password" name="password" placeholder="Password">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="password" name="password_confirm" placeholder="Confirm Password">
+        </div>
+        <div class="uk-margin">
+            <button class="uk-button uk-button-default">Submit</button>
+        </div>
+    </form> -->
+    <h4>Create an account</h4>
+    <form asp-controller="Users" asp-action="ProcessRegister" method="POST">
+        <div class="uk-margin">
+            <input class="uk-input" asp-for="First_Name" placeholder="First Name" />
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" asp-for="Last_Name" placeholder="Last Name" />
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="email" asp-for="Email" placeholder="Email" />
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="password" asp-for="Password" placeholder="Password" />
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" type="password" name="Password_Confirm" placeholder="Confirm Password" />
+        </div>
+        <div class="uk-margin">
+            <button class="uk-button uk-button-default">Register</button>
+        </div>
+    </form>
+    <a class="uk-link-blue" href="/login">Login with existing account</a>
+
+    <div asp-validation-summary="All" style="color: red;"></div>
+    <div><p style="color: red;">@TempData["error"]</p></div>
+</div>

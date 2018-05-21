@@ -1,5 +1,9 @@
 {
   "version": 1,
+<<<<<<< HEAD
   "dgSpecHash": "5Nw7nItdwVqEiHY89/R2A2s35GYsGr3mDH+O811B9HZ00+9fv0uIDTYXCAeWuKbVuY1pn6DHUIvXhMim/F2QfQ==",
+=======
+  "dgSpecHash": "GDTMhNuOOBZiQoxk4O29syesUo1+ZtqQ5/Ug/IFCKcXutrTP/nPoQSPG2F7XpI+fZtKr+D5BOqCd+yArse65BA==",
+>>>>>>> nash_branch
   "success": true
 }
