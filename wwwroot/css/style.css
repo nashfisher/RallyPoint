@@ -1,0 +1,74 @@
+body {
+    padding-bottom: 20px;
+}
+
+.desktop-hidden {
+    display: none;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background:  linear-gradient(to top, #1359b9, #2e35c4, #1359b9) !important;
+    -webkit-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
+    box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    width: 100%;
+}
+
+.wrapper{
+    margin: auto;
+    width: 75vw;
+    height: 80vh;
+    overflow: scroll;
+    padding: 20px;
+}
+
+.entrance {
+    width: 25vw;
+    margin: auto;
+}
+
+.messageinput {
+    width: 75vw;
+    height: 15vh;
+}
+
+.error-message { 
+    height: 8px;
+    color: red;
+    font-size: 12px;
+}
+
+nav img {
+    height: 50px;
+}
+nav a {
+    color: rgb(238, 238, 238) !important;
+}
+
+ul {
+    list-style: none;
+}
+
+ol, ul {
+    padding-left: 0px !important;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    
+    .container {
+        margin: auto;
+        width: 75vw;
+        overflow: scroll;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+}
+
