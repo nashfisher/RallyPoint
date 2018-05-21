@@ -4716,11 +4716,7 @@
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-7TS9rH/O/WFOb47rINjHkHXmMtuzGzjPYW12daZ6EuL0ryUPm6o095IhVmjLNPmPtyScNfD/Q7z+T46uDbOwjA==",
-=======
-      "sha512": "sha512-xWuwjNP79XFJ/QkHcAik9Ni8bRNnZAlnr1N3RqnT5OuDxXRajJA1IoEjuqyAGcpg6QPMuAaWBpLGDxo149A1Uw==",
->>>>>>> Tombranch
       "path": "microsoft.codeanalysis.analyzers/1.1.0",
       "hashPath": "microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512"
     },
@@ -5189,11 +5185,7 @@
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-Z0XZ5lvRWtdMpMMV/jJs8rvPD/R2g7G1SFm8SQSvpE4S88zP9pV7FkEEtTghOJV9+sDKYdvTxxE38MtkUtjVeg==",
-=======
-      "sha512": "sha512-ivDZkjIsrj7kz5t4yg0tN7fmGPb36u0AK9hOAKKfuzJfIt1ey3kAMX2IOLNjS8jUVNuwPfoDuVhyS1Lp+hYIsQ==",
->>>>>>> Tombranch
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
@@ -5221,11 +5213,7 @@
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-0bDrUOHh+AcZAGhPPE9dxbz+A1BKD8FxGmATxn4/qU49+Xhvd+GhK//delyCpqjcZmeSJLIbIsoUtZtqgcQNlQ==",
-=======
-      "sha512": "sha512-rY/YcF8Ra0YhxU1ejAZsucAaEF8D43mWttkKpy4+0kYGGhFZoTK2RuYaEUODJZu+i7XAsVwMJaTO2Kx0xF6VOA==",
->>>>>>> Tombranch
       "path": "microsoft.win32.primitives/4.3.0",
       "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
     },
@@ -5281,44 +5269,28 @@
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-KhCMqdgv1Xniyz02GuOjZUryq0k26P+XSrk0zdWMX74vc9cSj9JKD/qrcwm8XsuL5ALI+Opc08d86oIaKkd2bA==",
-=======
-      "sha512": "sha512-525LUL7O9c14O8Yqf0+gq99A3hbN38v8LeKGH3iXzDX7u9CwaFh+nTD80hMOCyBI3vhGRBS/STx1I0GYJVjwqw==",
->>>>>>> Tombranch
       "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-gnUbceszPNFqQ9Ropg9ysqxWZgqcyMm4QPxRpMJAy6gwcrS0nyiItYcMiu5tnv87z8QkonChYD4edcbvFOfY5A==",
-=======
-      "sha512": "sha512-kUnp1pCkvTKyfF2GUjphmOikxwpHDWaYiYgAq4coHBp8y7kZOusnzvshFwimKF2q71kUJyzkR/Jw0ML64YN5sA==",
->>>>>>> Tombranch
       "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-jbxa0dbzkUGBUJVX7RaIXPJAAZXEU5ApSNm0p3sWADqE40w/PKpm1Ygjq+//Pq6lJdpcYQ2WYEIIPfFDqLmXvw==",
-=======
-      "sha512": "sha512-jdIlOerYMgSZsZa5xmVLLzJPn9q2R8zq1beoQjjOFsHkC33I7C8nuHZMYt+nEXUwFM+I2pz33C+6LH+Sc4lilA==",
->>>>>>> Tombranch
       "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-K5oVy7VTreXoERK3OBWWWoA6QIsV6S8MOlrOeUbz6MPTnnr8G7Ozls2ENBGm8U/Kh85kRLSJ+WaOhmDRkIgh8g==",
-=======
-      "sha512": "sha512-4EMjgjouPuXzHlWWGnV/fLd2+vONcQplOX4RoQW6LPoVz3i2/b6caHYsQDxyL0HmLlk5QHVz1hjmRHKcuD8P8w==",
->>>>>>> Tombranch
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
@@ -5332,143 +5304,91 @@
     "runtime.native.System.IO.Compression/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-A/2ft1IDplfRdbP7BXbYzq4SSJqw6/4KFLLY1Plz92mFgzD8A8Q4PNHwxh0xIhQ/xqBW95qaZWBc4hOffuOVCQ==",
-=======
-      "sha512": "sha512-YqsrUvkTLv64AeSGAi2J32XVsqRhm1DOpI7LReEX9ZMf2tkLAGYtKE5RFzJTpX4MtD4w2vRgVrwE5OeGfTdtUg==",
->>>>>>> Tombranch
       "path": "runtime.native.system.io.compression/4.3.0",
       "hashPath": "runtime.native.system.io.compression.4.3.0.nupkg.sha512"
     },
     "runtime.native.System.Net.Http/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-RMz96Y+jgi7n0dYbfCtQ6tcQ/8KnHKqHzQFNSxiVbJUwCimZStPcyXuq+KoexY6STGo75JzFEvYuhcYPDep8IQ==",
-=======
-      "sha512": "sha512-pnllHQCogb6egjXIy+JSTHrNW1Vsy7E7VGzkPAgWXnfeCs1uxdECwXVXFEW461Unauhdj7AX5SxH92vkUnNarg==",
->>>>>>> Tombranch
       "path": "runtime.native.system.net.http/4.3.0",
       "hashPath": "runtime.native.system.net.http.4.3.0.nupkg.sha512"
     },
     "runtime.native.System.Net.Security/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-6pIKFXCiwX3UOuh3BptP9XO52XcZ9O+RvJIsLwNpbamVDz/uj/YGZVL/rMP3tyVSZQCz03Q+F68j2nFxOf/0Lw==",
-=======
-      "sha512": "sha512-5IW93YdF0C0vzDj5WdI13EA8kynIAqL/RktBuKjpzC6IdHxrELAhyIjRQDvVXrtVyYx5hA9ovs1mYD5sX5cIIg==",
->>>>>>> Tombranch
       "path": "runtime.native.system.net.security/4.3.0",
       "hashPath": "runtime.native.system.net.security.4.3.0.nupkg.sha512"
     },
     "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-g46XR7IBD9+WglCSdMNVzNu3WwvgKUV2U0H7iqcjpLu6IQ3Kn3SBQf+Kwkx62KPf7O7s/6yvFBaw4I2sQF7uSw==",
-=======
-      "sha512": "sha512-VXgtl1B4rujXjPQ7wEL51/1GOdVWumwnvDCT7O3W838QLK1EdYxv2g7h8AcksCXmK1CIPc8K6yzsYVi7rtqbWw==",
->>>>>>> Tombranch
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
     },
     "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-jmaqxPR9mBgeqL84zeQ5THi4oKZzMoeCz59w2c5tfdIODJK5J08ccUccKDyDYDbrop26PfXKgsEoawfxq6y4Xg==",
-=======
-      "sha512": "sha512-tw7M2qzZTginW8/yJWn9NVjPKjQqqWKMBpFYXdEJEfpTNEFrHPG1zgIsiJA50J7qmowXX98TNKPiN77WXzYpbA==",
->>>>>>> Tombranch
       "path": "runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-HczCK2KHn8OowB8MAG66I9GWQqU1w1RNNxB1g+xnWedSMIhPuoM/gVrtOVLvpGbxN9ACiS4dJDTwpRL/nl+HVg==",
-=======
-      "sha512": "sha512-vQb5GYLcmwE07b0cMFOd3TEOZsfkfWvd+6lavP9Lj9k7vTIm84ZKaF+SluRoPaQqvwaEhcPO1bBSuIZaVAa9gA==",
->>>>>>> Tombranch
       "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-qCRhoChQUnU1BN3pfEXgPwKwcTYbrdPybkCn38aw8QVKY6nw76q7QXKV3Ew5WBfgG4uUQuRGkPf5pDCr8DyLJw==",
-=======
-      "sha512": "sha512-LelaQHbPYWNBmz+OFuWvT5AJV3lUgsxILXZXouzdpxzcutOuFAqwCTBh8C/8Niye9NnfJUC1TF+Aw7nEAJhr+Q==",
->>>>>>> Tombranch
       "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-a+KiOLr/VEUE/pv7WY9qmHECRT94xNR3s74oe7n/GT5fxPRk33oKIrhjirob/y0m0i4/VoUERCKAum7/QyGzRw==",
-=======
-      "sha512": "sha512-OOqaYKlWVQi2g8SvRlckv/Lq9KWSl4jl97R+BitEC/+c7SiKmoZPNboC5aTv85lk9mmjpzYoElK79YJoECNYvA==",
->>>>>>> Tombranch
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-B/Cthb2VNN66VZ/KnGRybO+lkXQdbaB+aqmzT9mwaLjVY8Ld6fnmEZADALimM2dMCR2egbQQp9xLufvC1r7hSA==",
-=======
-      "sha512": "sha512-Vahr3zSJSm2mVbPGyM2InYI2+cA4v+3JZobO0Ugpx/fkpari7yZKKrwwaL28zUD28lQvEFq7+2g+cQjv/6TpRA==",
->>>>>>> Tombranch
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-+zCy0Z6+RQ/mBoauzf9yE/uhfEPh+aGLa3/WiOUThJMVirAjia2h3N9FrufD/ugTrvvVBJBgKhxtExgfA2QJnw==",
-=======
-      "sha512": "sha512-WE6/Mp+fqHv7lSClgIugL/bDhWLfFq93qsWuFpJoABgeF5r8Ei9QDckdgfyfXOyv/c/edwRArFqs3Bn3dDBuPQ==",
->>>>>>> Tombranch
       "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-n3TQwl8c3sMaOHvWtjW+ZlqHHfZnYF0QeKHZ2vX9HTVP9EGP2Z4MsGiuSxO+SxiOK3LkR/3R1om4TyzPS9YDwg==",
-=======
-      "sha512": "sha512-l3A56onahFhFh/bDsWtgCsyHRj1z2qvrF/ubdczPA9HC2zTPEKMFatJB9LQf8pyxUXS29cCwly/YHbYKVaR2Pw==",
->>>>>>> Tombranch
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-SMzYZ5CDGIY2pHWctAUQvcNXWhWBDmTO2W37lqwmmlSlb5VBlIflrkSbfh6+wSRrFS9UyjD6HmCZvr3OM1A9OQ==",
-=======
-      "sha512": "sha512-gpy3ZMZcJIuSFyNZBWY2wHc2lIxkq6cVfPJuDW7e0KTBkVzx6IJaDc01jWy9Vm1UKrEsclkT3BkcB2e0cA6yAQ==",
->>>>>>> Tombranch
       "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-Pskqz7bgGs5uA0ISZF2ogULNvpL+uR1Y1mVhgjqHwTonH65yNaPEcssvkeSOcic1DHJAcZNBH8l2q1Zy0naF+Q==",
-=======
-      "sha512": "sha512-UaBxn0ifQ6yyll6TDChPggKZLw7+7cQYI9X7hBRTP8AL+BZLQTmieV0WZ3WUId4pHSPud9/PCHtCQuaa/wtycA==",
->>>>>>> Tombranch
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
@@ -5545,11 +5465,7 @@
     "System.AppContext/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-IjhP2pSAzgtBa8D80xPbCrEp96Vww1doTdLBNRe8LYZtadRAQS2XkXqGoKriliDhau+XKF9KbIjSg9MRxNUCNg==",
-=======
-      "sha512": "sha512-WsTbc4CR5FaynDVT9PfJvefd/O6Avw3uN7UlprQMZPEYKpStGDBhAbo02Ut8JjGYu3jYMLqq+4dCxFPBG64fyQ==",
->>>>>>> Tombranch
       "path": "system.appcontext/4.3.0",
       "hashPath": "system.appcontext.4.3.0.nupkg.sha512"
     },
@@ -5563,22 +5479,14 @@
     "System.Collections/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-tyBaAxmWeWfYdesCxDRPtyFP5pa4p7a3B8b7TXRwFVyktgxLfybHAVr2ZptjHZiem40nGNbgiVfAvMMy3rnCeQ==",
-=======
-      "sha512": "sha512-Gw6qscT+h/dFgdDYOSWpebKuyuODRLffCRDKh/uVtUuRldBQYIYIe26UsK+ZK9EsUGlcRA/6KVHChm4d6SPuGw==",
->>>>>>> Tombranch
       "path": "system.collections/4.3.0",
       "hashPath": "system.collections.4.3.0.nupkg.sha512"
     },
     "System.Collections.Concurrent/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-sazAVye03FVZSljaOmnmDpBTdka/xNnPfkz5vGDpeO1hsj0Y8M4OPWpXLVWSVf63+eY9IVHUDLvuBBULJgFskA==",
-=======
-      "sha512": "sha512-VJZ0Vzg3tb5eZ8kvYWFrw8EbeHL5tmafNZHMdDhnjBnlVAYE+lPRO3AY1tqZxXts8nGe2saJvwd5yNepB9S3qQ==",
->>>>>>> Tombranch
       "path": "system.collections.concurrent/4.3.0",
       "hashPath": "system.collections.concurrent.4.3.0.nupkg.sha512"
     },
@@ -5592,33 +5500,21 @@
     "System.Collections.NonGeneric/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-GsLzb4TiMHJxV7ENTRFpa7UioUtyDIdgGwEsAYFGV6gBV0pvEP/xI0ArKyL1GTawDAJW6smpAtFP/InjxFdPkw==",
-=======
-      "sha512": "sha512-6VLqCKG6PJbs/c+AmniaWYshxIaiHfuxQ4mHxvxeuFAFUX5u47oUfNnFuvd4tuubFP/EJqkrKL6OrNqBoVdj2g==",
->>>>>>> Tombranch
       "path": "system.collections.nongeneric/4.3.0",
       "hashPath": "system.collections.nongeneric.4.3.0.nupkg.sha512"
     },
     "System.Collections.Specialized/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-PjpJ9fjsoso+qcX28iiGWT+GSAkjPSCCic9+pKM5DZgpiuLu8TZOkKgbuvEpRl7pFfRJ4R7lnEXMHksp2kxnLw==",
-=======
-      "sha512": "sha512-IUslm4LcSriZXXmcEuduz+u7EKLrcGQAvqDfEm9c0YX9LRPTWLLV0RjVc/GOcGGFkZaDzkOi/C7UBO1zVa9l6A==",
->>>>>>> Tombranch
       "path": "system.collections.specialized/4.3.0",
       "hashPath": "system.collections.specialized.4.3.0.nupkg.sha512"
     },
     "System.ComponentModel/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-fAqCS8UdX7JY2ZDAlqFdsaFMRJV3bXQBBNqiKpOQEiHcusg9lGxHHSXt4ukXBYO2tXfY3zUsuSkuCNX5awmjEg==",
-=======
-      "sha512": "sha512-AWKmTknB2j8fDqJy9stxnFslfscP5BlujEPruvpq+UIOumOujJxSpl2WZJxLsxxPLY0yZGrDw+CuCXvvY9jGXg==",
->>>>>>> Tombranch
       "path": "system.componentmodel/4.3.0",
       "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
     },
@@ -5632,33 +5528,21 @@
     "System.ComponentModel.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-vqoMrEl949AgzVtkzJpYkhqbc0gTUutJkTQO4tCtNGJ7NDlfZXTpwnAxFE8C895VifIfmvzWsaCtn42iO86DPQ==",
-=======
-      "sha512": "sha512-5YIB9GF2JWZlGb4DfPhRNuuLzAFyCd7yPkqcNfa+KYJk+3b4FvAo6MHe74ct5ei5crDKiwGiI1eIFuehcprVnQ==",
->>>>>>> Tombranch
       "path": "system.componentmodel.primitives/4.3.0",
       "hashPath": "system.componentmodel.primitives.4.3.0.nupkg.sha512"
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-xm+2qn+bqD/VIImTAQ4l3pP9mcjey+9qjB4pp5vjC7SfUankNiyEhLTB5jrvXVCNkdjKecT9xinqKFckUHpA0A==",
-=======
-      "sha512": "sha512-ZRG6S7DP9GZC7+AF8TwLoEJGf8U9V/+oorqKjD46ssMhVURRRXPQiBrbWtz5AtslcmejYtT5Onbtle2SiWdjKA==",
->>>>>>> Tombranch
       "path": "system.componentmodel.typeconverter/4.3.0",
       "hashPath": "system.componentmodel.typeconverter.4.3.0.nupkg.sha512"
     },
     "System.Console/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-4J4T/cphPrz04i84g5/A6obeE8FQsdPYt2Na0golSWGPaYTb0RXiUzuvbhP1Br0nTe0eaLNiqO04C3fpSX6CIg==",
-=======
-      "sha512": "sha512-bpj6LBiWBMWbnsW9ctougokNzOMs9twzYiMMa88Fy+y7W/txcDg9lBhQuM4+6UBUVfqD7YjQjd2jB+hGdfrsJw==",
->>>>>>> Tombranch
       "path": "system.console/4.3.0",
       "hashPath": "system.console.4.3.0.nupkg.sha512"
     },
@@ -5686,11 +5570,7 @@
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-ZYhTTUMN4kuGAAGNC8kcpSlBLhpeQanGhQCzbSRynJcTZS3sGW04RbMMNPQOTvR3OrYrnM94EdH+6V+xK9P6vA==",
-=======
-      "sha512": "sha512-5om43I8E9uJ2PiTPmW5UJQjoyEHMO0utvHUrjA9zlOkB2ZCGqAvbIDR18tjBds0QPsRk8q1NbVev3DNwJytWvw==",
->>>>>>> Tombranch
       "path": "system.diagnostics.debug/4.3.0",
       "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
     },
@@ -5725,66 +5605,42 @@
     "System.Diagnostics.Tools/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-3zcYSM9DMtRK/axVj5b32x9pmEIPMxQarCVyaTW3oi+VpoULCFSXVGJYLSfzzwFvYEJz/WrEhMh8lKzu5oCifQ==",
-=======
-      "sha512": "sha512-vSMoOLFIZdhnEwVeaLgbFKhJsnpJ9ulvyN6zCF9X7GFnNew1/WD6GCvLmXVSkP1P9/JB+4wqHVaAXQ1iZllXqA==",
->>>>>>> Tombranch
       "path": "system.diagnostics.tools/4.3.0",
       "hashPath": "system.diagnostics.tools.4.3.0.nupkg.sha512"
     },
     "System.Diagnostics.Tracing/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-nSZjsJqOcOCzOmRIQq0+8388K7xnpq3BrbtIJ8NNWRVeFzP41Ww13zgVi7ZYK3yrGTx0zI7wdqkiBt4ejBpA5g==",
-=======
-      "sha512": "sha512-Shyag891meRyvImo+CVSYI8SdMCPkIM/HenIBt0Yka0XrG9nCmtClDa+5g3Y/hPs6gWiUkGqhUeRQd7b2NJ/Mw==",
->>>>>>> Tombranch
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
     },
     "System.Dynamic.Runtime/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-i30yDtzQdwd/vhgX/NalxldDbEubn4UG9D7INVs+vSx40MP2q1V9U3QxVUUsQ24zSjjFYEOi28KVK3CEJ0Lkew==",
-=======
-      "sha512": "sha512-xQ1d+oPYhY1bdPOI9xW/OFt1UQljWx68or98fSHQVMJRKQYS5pUq/ftELqNIE/V3t1KixZmUHEjjjiULk62Q8A==",
->>>>>>> Tombranch
       "path": "system.dynamic.runtime/4.3.0",
       "hashPath": "system.dynamic.runtime.4.3.0.nupkg.sha512"
     },
     "System.Globalization/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-2BQOANhzFeHpt3dUGElFvgafOUmp4Td0/q+CfztEjj96eN+225Ye8ZIkVd7iYciNQQfth93G1MEDHuRkYzm4Yg==",
-=======
-      "sha512": "sha512-AumL28ygZWKpJ3sEgFbFBFGbJKRqk1POMRjOCuxVXMC6wRhQ3/aFCYFsjPEyGQyCjt5gZZec/k75H4WMGPl/GA==",
->>>>>>> Tombranch
       "path": "system.globalization/4.3.0",
       "hashPath": "system.globalization.4.3.0.nupkg.sha512"
     },
     "System.Globalization.Calendars/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-EBqyJn+zHGlv1vtkxuY4nrR4Y+1kTWO7uQBIRvi0+U1qM25lE/QMynobCRaS65B5Ad04WmhR7cvpbFV8oZiYWg==",
-=======
-      "sha512": "sha512-hJDvcFPFG7GQEQnLzdkkQ1aW6fS8uvD7f8uZ4/0aCNd7cXaDHdkZ3wz63FUQ7p3vLT1ee33nzR1DL5w5vw/A0w==",
->>>>>>> Tombranch
       "path": "system.globalization.calendars/4.3.0",
       "hashPath": "system.globalization.calendars.4.3.0.nupkg.sha512"
     },
     "System.Globalization.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-hnDdiLLmvuyQfcAoafhWTrotGvE4aRu2h6wtXWtCaXJnUZEDr8w/KLqCLPAKwc9GbLuEy9dFqI5klqFs0sQIVA==",
-=======
-      "sha512": "sha512-UQE+5aB9qmYDfeVYagIDVhPf6HfDQprrtLOaX8z/rf8G/KE1fiBovRXMgkG1vo4mOdldpxlA3cmZtwosfrs7mQ==",
->>>>>>> Tombranch
       "path": "system.globalization.extensions/4.3.0",
       "hashPath": "system.globalization.extensions.4.3.0.nupkg.sha512"
     },
@@ -5805,66 +5661,42 @@
     "System.IO/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-wXNBxV2qlCck3ybl4ni916TafGBvT+k2doI1LHz7J2fpAFAzz+2vU7eJ1eD3n970N2w5kFRnm9O7CFcqmqrjPQ==",
-=======
-      "sha512": "sha512-VjuBr61uPoTF4VWDeDC0yfZL1yocRcXICMNPqTJVgORpCnQSF/tGZ6pleaEYGVhoZ/EsyP6bhBwS7gotRPJhdQ==",
->>>>>>> Tombranch
       "path": "system.io/4.3.0",
       "hashPath": "system.io.4.3.0.nupkg.sha512"
     },
     "System.IO.Compression/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-WCtHxHrJpJvcVGZ6pWBYG0I8m0FyWKLY3HTu6vbrvHGT/lHCQcaoBn4D9oSCIZblmvSSsOwMkVk9m9FSPcmTfA==",
-=======
-      "sha512": "sha512-kObdjwJuIA6pEJk1KCvpa0mliPDh0TNHUQhGGQAv5hQpfdrabsZ30CfP/BVFnt7jUPIRecs2u84HFJvY0rfFvg==",
->>>>>>> Tombranch
       "path": "system.io.compression/4.3.0",
       "hashPath": "system.io.compression.4.3.0.nupkg.sha512"
     },
     "System.IO.FileSystem/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-amB4Ua3CCMZN7f9gzMrHzjzbIEiAFBgw6Euh0v+M1nSbI/OuGxzAd6cw9NdSZwVhXhmcxi/pvd52mm/CC9EFJg==",
-=======
-      "sha512": "sha512-TFTB/CoL3PHHqMRBh7YsKcANsBrOGZoM/ZDmX8Uq+srhwB0R684sD0IgNSfBRadX7zJoNjteZOizYpmyBakwOg==",
->>>>>>> Tombranch
       "path": "system.io.filesystem/4.3.0",
       "hashPath": "system.io.filesystem.4.3.0.nupkg.sha512"
     },
     "System.IO.FileSystem.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-GgoOUu7E4M8uALa2Pk7ievXGyj7s0+9LLU85+de3vJ1+Cd593RN4EtAiWmoPulaC9ep0Zj2VXH+DUOyLCmXlLA==",
-=======
-      "sha512": "sha512-yeVBK02tezV6RnwKXTzGrX4ssAfnHkLss6+C6bk6ycNjLiDpkHmIsQYHPI4t2x94Y8SpVy6gfimXN4mjjATW3Q==",
->>>>>>> Tombranch
       "path": "system.io.filesystem.primitives/4.3.0",
       "hashPath": "system.io.filesystem.primitives.4.3.0.nupkg.sha512"
     },
     "System.Linq/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-brtjvrR0vAnVoke4a4UyElqwZSiSUbww7rAvfTVGXyDDqVmzTMVeG34fKsQjR0WtIpy3eWzkKUsXECNAhWF1xg==",
-=======
-      "sha512": "sha512-keWqSZjKFMm95i1ZIeXF6EQkdeHVBSsRup54K+jqo98TGh7+dnYJBfuzEZHH8mODYMUTUyf+NENElUw3zRI7rA==",
->>>>>>> Tombranch
       "path": "system.linq/4.3.0",
       "hashPath": "system.linq.4.3.0.nupkg.sha512"
     },
     "System.Linq.Expressions/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-KTnLiLpmm+Heghr/urAEiIY5HUjzTkmzLuc29TqkDEX1k2C+A62+5ebY0rtNVB4+YWzXIUbI9o02b84ab6W3HQ==",
-=======
-      "sha512": "sha512-g6ppTvgurQnpS+GlKo/YIYAd8yTiScWuDRXIvKu8ill29hHr7yvHmZ+aei8lJyPhOcI406mJvMmQhEWDUD7Y6A==",
->>>>>>> Tombranch
       "path": "system.linq.expressions/4.3.0",
       "hashPath": "system.linq.expressions.4.3.0.nupkg.sha512"
     },
@@ -5878,33 +5710,21 @@
     "System.Net.Http/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-F6QBS/f5uNABD/HUn083hXwHiyDwmKzmgoldGqLoEPeMe+kx2IoPLbnCcAnMYxPdrqlomGzKwNqGIrySxRDIVg==",
-=======
-      "sha512": "sha512-o8cYb/AXaKxYLqf/CXNiH1VG5+MQWI319B7QuAvR/RL2iRGy+QPQw17vhzqMKmBjaeMWwfKduLV4JjgL3qXuBg==",
->>>>>>> Tombranch
       "path": "system.net.http/4.3.0",
       "hashPath": "system.net.http.4.3.0.nupkg.sha512"
     },
     "System.Net.NameResolution/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-G+zR66LeFhMCEy6OGa3VrzDR7THL0FsYLBAJz3NCQoJza/P5kKb413kMyw9jtqTrLHvwz9ozPgfabPXBv3hgTQ==",
-=======
-      "sha512": "sha512-oQBFmFTQmr0K1jzupyk1NU5fnSo1d2NZ588BjGsChf+lH5sJBg/gsp+PgqWayIPk7wKoZmxXa/NSYlwySMoGEQ==",
->>>>>>> Tombranch
       "path": "system.net.nameresolution/4.3.0",
       "hashPath": "system.net.nameresolution.4.3.0.nupkg.sha512"
     },
     "System.Net.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-tGWw7CN5tnBf2AjXreJXpILHPGNMhUyA8X9cuJw9EtoFOPD9NeJiJR/YShdwXCzS3CksWPUK4lMDrJLrjh8GvA==",
-=======
-      "sha512": "sha512-5MA2fwfxpsPJ+7XM+MekS0QNC3naY9PbN5QF6m0k+NIpkj7PHC01LhB7YbMQ0iwDM5GXh4Wi/Pv9lRaOaEE6EA==",
->>>>>>> Tombranch
       "path": "system.net.primitives/4.3.0",
       "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
     },
@@ -5918,11 +5738,7 @@
     "System.Net.Sockets/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-IJy3UYY6gM1P7CwsTfYkbNmVuJD178peiI3ctjlrEv2uLJy8/d8tcKsxg4SsfLfbmVrT3s/p9j5tdwIdfcB1cA==",
-=======
-      "sha512": "sha512-7H7mmdb7XXz+Ver/N2JedpM1Xcv6pz2Za1pVTeso4GaN6N2OzHXhDjWZCep7NQD74iR/eXaPCfe+mq1pbUyz5Q==",
->>>>>>> Tombranch
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
     },
@@ -5936,11 +5752,7 @@
     "System.ObjectModel/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-Vebp7rwPjykMaJmOxRvoef0Wi0vgFZU5BR+XZhpRmi/imCdxCPu35ljxLZdxVPNYYXf32chZ8Iaqfz/IUZjvvQ==",
-=======
-      "sha512": "sha512-v6b93gWFcMAbVAwx/WFGvEQDCnqFFpCOucUy11Eu26bTay7jXrkzfOT2CqxdyLcoEvMUDsSfOOdjA5a1pAMOGw==",
->>>>>>> Tombranch
       "path": "system.objectmodel/4.3.0",
       "hashPath": "system.objectmodel.4.3.0.nupkg.sha512"
     },
@@ -5954,55 +5766,35 @@
     "System.Reflection/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-BUTEruSkDaIa2y3Q72IwczPC61e21UJv94KGLomNvoinIJ0z0ClP38SQZEDqkxll52WLg5qye8yzJevux/hgFg==",
-=======
-      "sha512": "sha512-gqKJmjGATDXrbQMrmilHiVFQ8sDDStyhvcMF7a7LfZkms25PktS9inu+TKI/Jmv7vJgX3C898PJ5YZwiZy8Ujw==",
->>>>>>> Tombranch
       "path": "system.reflection/4.3.0",
       "hashPath": "system.reflection.4.3.0.nupkg.sha512"
     },
     "System.Reflection.Emit/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-ueK1pwb67RF9m0zv2SOtqRmXmR/IgMl+PsUn8S94yxNDVUR9O9PNxQ8d215CrqCxXr9i9kLy/LGIuHxnPmJDnA==",
-=======
-      "sha512": "sha512-paA37q2qu4v0jVBreK7zOu8H2gOzMxv5UgQgLlRpBTg5Ma7ZQFWBUTJKv2sjyJjXqYtSXBY4N3Wf0b019t5cMg==",
->>>>>>> Tombranch
       "path": "system.reflection.emit/4.3.0",
       "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-CBAx9gDpNiWqjHaYsCx4UGo1zwQ614xlUL0PJnHK3nc3DGfVppJB20+lWNR6XaOgPTWEnAMMyvnsd0ybWs4N0A==",
-=======
-      "sha512": "sha512-KimpmfAotCEd4UAuGUgnivIkdFUyGZqF8eFiAsAnal0edQ5ica8WsjBYBHhKOJMoKssExJYAMtpu5lOWg50dQA==",
->>>>>>> Tombranch
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
     },
     "System.Reflection.Emit.Lightweight/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-x7ZVqqUSsibd9QsAAlxhfmaa/kmPnsB/x05A7CccEMnDRUrxzgvGxVycGLYDuFnCQ++X9ZhVIi2fyjsdQ0NagA==",
-=======
-      "sha512": "sha512-6Up7yaxLjCN3D0J6/GsolRcpalviGpMn6LZYgwys6LIzbjJFS54EVHfRJdSAf2F3j+FRwtpdwKRIPX+2Es3B2A==",
->>>>>>> Tombranch
       "path": "system.reflection.emit.lightweight/4.3.0",
       "hashPath": "system.reflection.emit.lightweight.4.3.0.nupkg.sha512"
     },
     "System.Reflection.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-y2MeeJTeyh2sT7H3hZ95W2pbQXriSen8tpRhrETO9UsqmUyOqTUBufOXG3U3mxMBMChGLe7eEiHnJ6geq0y2Bg==",
-=======
-      "sha512": "sha512-4Dm9XaDirzhYkrv+kEsCEyc1B/tgqn4g3Cmby9px5SwOVZWGDlCvBZ7L4VLIH7UHrEWDKBZeVF8vlf8Cr2cklA==",
->>>>>>> Tombranch
       "path": "system.reflection.extensions/4.3.0",
       "hashPath": "system.reflection.extensions.4.3.0.nupkg.sha512"
     },
@@ -6016,11 +5808,7 @@
     "System.Reflection.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-awXBkd3iM6aDJQ3XD/vg3PYqZ6dSIEvH4OxiwB+7tdlmlHfFzjVmO+zeljWeSnWq0pGkIOUNiDxy+Dl/friz1g==",
-=======
-      "sha512": "sha512-KuehQl3EubXvnpLpP56VNfX90nPtnasa4wbYGp+ccZr1kh5PmLbQ49V6SAnIfKhNzBd+oS7ZOxgLiXckqaSplA==",
->>>>>>> Tombranch
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
     },
@@ -6034,22 +5822,14 @@
     "System.Resources.ResourceManager/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-OBi9bXsBx0nhvMxFQCrkymRnc+gJgL87ynQXbsQoaJ+rldflxkb8jRYbNy/cSv2TSNja53VUmoRVUB3oULZOzQ==",
-=======
-      "sha512": "sha512-xU49l2dy2slLzpAmrD74NS++pChr/FWHPv3A9HBy/QWOkp5/kL/OdLnxBw3J+eBL+G/1g+Ov1hQqcSi3BkrQcA==",
->>>>>>> Tombranch
       "path": "system.resources.resourcemanager/4.3.0",
       "hashPath": "system.resources.resourcemanager.4.3.0.nupkg.sha512"
     },
     "System.Runtime/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-m0j+sBAw4OjjOZyYcK7i/OHdNlhFE+jw4pjOZbbFWPI+12M0HwyZCXwsx84Dgl0jnOPXcT4/AwHGJHiPlR7Rpg==",
-=======
-      "sha512": "sha512-AWLN12+1EFRFnHMSy0fbOLBQ0Jb15g55o/7eCBKdVae1fX+FCdKfp/275n3oedLXWprI9Tuuuz8GxijQjB/I6Q==",
->>>>>>> Tombranch
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
@@ -6063,66 +5843,42 @@
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-WSWBAAXF5MArLrzDl0P1sCEDE/9zHC5jZB5U51NNxlMfS2imy/vL51sDj1/W4Ogby1MAOeJXoYoT+G95VQ5eYQ==",
-=======
-      "sha512": "sha512-ugcA8FFxluelZBbHTAAYwzZkFSPkoBUns7iTBvZLw78+YFCdPLc+kHily+sCoEJD0UgMalai+3EhUNVHaBfWnw==",
->>>>>>> Tombranch
       "path": "system.runtime.extensions/4.3.0",
       "hashPath": "system.runtime.extensions.4.3.0.nupkg.sha512"
     },
     "System.Runtime.Handles/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-GRsUp1L/wMxcdqLJOqPLXEn/4NHPH+EE9+40yxq6s0FUQPJjnWMOp/Pb14J4lyWxaO6cb52sSs6P0tAFA+O36w==",
-=======
-      "sha512": "sha512-aKfZyevqREfIWYDffMz5NWNYQ18cfs93EFpcIk6n31B5XwzbGp2i3MN88GZKGKf/OwPNa+U7P2rPPC1dCDrGrg==",
->>>>>>> Tombranch
       "path": "system.runtime.handles/4.3.0",
       "hashPath": "system.runtime.handles.4.3.0.nupkg.sha512"
     },
     "System.Runtime.InteropServices/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-FIt6z4eofqYB/BLHQBjr7MdcrVLUz+HtDgaki724Rp1radEue7fYwugD3LAHGZLAsUH6MLcAkGsvuzS23F1Sxw==",
-=======
-      "sha512": "sha512-qT5UshL0QtN7hWxrsDVTtahgJY6sTBUro9tRcIi7h1yTDLv5X6lVVYdHMS3l/P/O1m6vvjR3VtFiSFH4w/7Iew==",
->>>>>>> Tombranch
       "path": "system.runtime.interopservices/4.3.0",
       "hashPath": "system.runtime.interopservices.4.3.0.nupkg.sha512"
     },
     "System.Runtime.InteropServices.RuntimeInformation/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-2NQDt7HhF2DKU+ZiGIMWkKUKp5A9CenR397m3H9r4M3V+xw3YNGvVJKG2004PdMLuBUeJ2b2W3DRr6MtKz3tkA==",
-=======
-      "sha512": "sha512-DlELYMxBnbdAqcZcVx8fXPn4ZsWSzonE/psLdllSL1GJATE7Ei/xZTXaUw9STrwwK8qDl/XP535eDOf+zRB+0Q==",
->>>>>>> Tombranch
       "path": "system.runtime.interopservices.runtimeinformation/4.3.0",
       "hashPath": "system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512"
     },
     "System.Runtime.Numerics/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-DTp/fBuyMNDUBhow1nokH6Hq62p3aq7LqnXXUfJxsE3xQCG5r/Eh5H0hLTRAYgiePpXaCW9FTciynKLfZfaHyQ==",
-=======
-      "sha512": "sha512-GT/CHn3FSvvBMhuZ2j/kcsOdDaC+E4egZwMpKYe0AyY2BHthlDQqaZDLsciFj4yrSkUXaQlGkKmAmF1al72DOg==",
->>>>>>> Tombranch
       "path": "system.runtime.numerics/4.3.0",
       "hashPath": "system.runtime.numerics.4.3.0.nupkg.sha512"
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-ekyrUi8f2bHQ3qgSQErE4+RBBzOMa4ecW/wqeaPipBvtOtUc/e61NiQMcvctgcwc+ZN8X9p6wAHFxqNnCuVGaw==",
-=======
-      "sha512": "sha512-nFTfX644v3T3xPN8UN2wPoZr42JudhIcOxrYMDfSjrxgFnG45adEFaP15dn3IlcPPeeGPux8kK2IkpiiUGFB6w==",
->>>>>>> Tombranch
       "path": "system.runtime.serialization.formatters/4.3.0",
       "hashPath": "system.runtime.serialization.formatters.4.3.0.nupkg.sha512"
     },
@@ -6136,11 +5892,7 @@
     "System.Runtime.Serialization.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-hZj/LF6ZnhQT0O3kb8AbJhjxLjd+yEmRo32cEMr1PuW8ScGbHi5QpNF+fR/+h2/3BuI8uD+i4XZax5Av7MqHTA==",
-=======
-      "sha512": "sha512-6zwG5x7FCACqMUsUkS+h5RNwoLagcNkXBMlJ9gXSHwPX3LIPG6qArd52+ycsT+7i16Ai0g38/Aclz1kcSsWpSQ==",
->>>>>>> Tombranch
       "path": "system.runtime.serialization.primitives/4.3.0",
       "hashPath": "system.runtime.serialization.primitives.4.3.0.nupkg.sha512"
     },
@@ -6154,88 +5906,56 @@
     "System.Security.Claims/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-agTMCq/bg1FXs1qSoff+4BhDrhFs8a3HtkacvdTVYjTnnzdXyzF7mDu0B2Uy3xKblHT0gf6Ky0WQ/A1ZjzGnQQ==",
-=======
-      "sha512": "sha512-WfZK1cDlj3o9A6QczWKRHFb0w/1jwgaPYNs2o0BsF5zHJaPec0qJzBmAGRkTAY/Tbe+aQ7gtiYNVFl32QeD95A==",
->>>>>>> Tombranch
       "path": "system.security.claims/4.3.0",
       "hashPath": "system.security.claims.4.3.0.nupkg.sha512"
     },
     "System.Security.Cryptography.Algorithms/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-Cm+bUnZT0OoEF8SNlTXC9Fd+7CoYVBjBmebNkJtvazb+eYn/3wimBDTcfINUJZCvm7dytl2PKhOFKkLKDsaD9g==",
-=======
-      "sha512": "sha512-9TaR9anJ9uqr7yityQLFbJebqS8pKtzr50gSY1h9m3y5+LHJlH2JJND28egl77lkV1tR7ljGqASrvQ6cZn7dmw==",
->>>>>>> Tombranch
       "path": "system.security.cryptography.algorithms/4.3.0",
       "hashPath": "system.security.cryptography.algorithms.4.3.0.nupkg.sha512"
     },
     "System.Security.Cryptography.Cng/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-HEMTG4dzA7RIaVH2+QXJi5UFc9jXALqawHVQ7a3i0UBQKGCYvQ/9IGGmgbwnLINGoKPgC6sJOP/PnJOFTe82WQ==",
-=======
-      "sha512": "sha512-VqJ5UevxXpGXWCSyfbPY2zaX+zXijFKUiH+ILkQpuDUxzkc2Hi/Nas6MhQ6GADDbGS2tInforDmbUBdbatyy1g==",
->>>>>>> Tombranch
       "path": "system.security.cryptography.cng/4.3.0",
       "hashPath": "system.security.cryptography.cng.4.3.0.nupkg.sha512"
     },
     "System.Security.Cryptography.Csp/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-FibNwrrMR3mslzTARulPsvv3q8D4bCPazVfWKXfLjUMlt1bfkMSpEFT+/1fwL/USS5POzdmHg4W88gVN4xtsjQ==",
-=======
-      "sha512": "sha512-VkfepVrKdyxrJYTWGv1LpX3S0f4h8MtkwbhlSCHnvGZYf2/f2KsAGl/ntS70NF8zO1HaoctLRK4D4AdzLafVOw==",
->>>>>>> Tombranch
       "path": "system.security.cryptography.csp/4.3.0",
       "hashPath": "system.security.cryptography.csp.4.3.0.nupkg.sha512"
     },
     "System.Security.Cryptography.Encoding/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-6lVDMXGtyiiSGIkawEneJNI+JsCMt669HIy81oE1/E/jsf8yrIkIiSfaoLCUqvLkpfo7IQwmkAiizWHEmmpPjQ==",
-=======
-      "sha512": "sha512-2S9H+yjCJNDXQnbQypXaX3hSJGp14oPLtCBcHWQMX991aw3gk5fe48jH9Y8llaxGqbIrnBMPp847D3cAlu0l1g==",
->>>>>>> Tombranch
       "path": "system.security.cryptography.encoding/4.3.0",
       "hashPath": "system.security.cryptography.encoding.4.3.0.nupkg.sha512"
     },
     "System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-23uHD0CdgcmqbgKZKvyhUZ3CLe+zEeDSAn5rDoEH+q78qbrgjOlMpFq+Q96d99b7jZrjTFBbX82LmW8bHmvaBA==",
-=======
-      "sha512": "sha512-HZ6BVLhqhSLdULvAh11UwNWd/tevs3P49JEm2sdyGTI9OQJSFAvsgPt4vp/i0dvxCP38GVJ3N9FGz8QDgB9iDw==",
->>>>>>> Tombranch
       "path": "system.security.cryptography.openssl/4.3.0",
       "hashPath": "system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
     "System.Security.Cryptography.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-bO+xGv6Y8sDSsW8QlOiionRnsmjLxzfyL6pJm4c4rtBD7v5buv+Ww+EmtBDbf5awQlDmqmUFjpAgORHni8hOjQ==",
-=======
-      "sha512": "sha512-yX/C7SLfE6TEJVHkJ4kTfwyWIRiL6r8zKuPYXfaEJN6Ir2SJZWO6JnPFlV8p8CyIjTrDrhQHXFf+PSPtwmoxGw==",
->>>>>>> Tombranch
       "path": "system.security.cryptography.primitives/4.3.0",
       "hashPath": "system.security.cryptography.primitives.4.3.0.nupkg.sha512"
     },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-1aoE9R13+qH8VGHvCqYSAfqeVfxSH6Lud0lOQEJjXbzE4HGhFyuHAaFTtEbMWNlISTNENaIvmjoZDPuIaxVgSg==",
-=======
-      "sha512": "sha512-j9gqhHJqWi7n3iBiNT9JOPpp/8nA8+3xQoDsbLgMteXahXyZ16EjVR9Uguwfouywl5mwqMQzJYvL1xRgQp1htg==",
->>>>>>> Tombranch
       "path": "system.security.cryptography.x509certificates/4.3.0",
       "hashPath": "system.security.cryptography.x509certificates.4.3.0.nupkg.sha512"
     },
@@ -6249,11 +5969,7 @@
     "System.Security.Principal/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-FHn33wui30CbFruONRj4E2FzZoMFFoDEeCee5MbnaXRUtHCnrAxUXlm4E7rle3257CsDYUHq8y5mIPB8mXbWyg==",
-=======
-      "sha512": "sha512-nPJ0BXAtnqoFeOxL/TUJLyhdFgRz0SF3gRMYXkrw75Scg3CW5Yt6fLVnUjUW1OAp0bCzA+hpayhxr2FkVAYlgA==",
->>>>>>> Tombranch
       "path": "system.security.principal/4.3.0",
       "hashPath": "system.security.principal.4.3.0.nupkg.sha512"
     },
@@ -6274,11 +5990,7 @@
     "System.Text.Encoding/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-FMjvVGFK6C212Lp+S3YAk2LBXMo139+dQUv65Q1zObeSbOFn6BFnUQfUbpjWtr/KsgxXgKVosbVPC+H9m+GN/w==",
-=======
-      "sha512": "sha512-yodZksP8z8DmOQ9qVFMeW2yFEXj9JcQzt5nbZBCNzTvbU9ygezjYnMW6iPxbVoIak7W14/Mu81hnjDLMiiG/eQ==",
->>>>>>> Tombranch
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
     },
@@ -6292,11 +6004,7 @@
     "System.Text.Encoding.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-5mO3cemsw2BFyFEpFsDJzYbroz6RkHJsLYtrn9jHTLbYkJjZrcrjAQTe07m1zbyCiMheHqBKFc7SSGQHqcQUkQ==",
-=======
-      "sha512": "sha512-Wx38zsvVrAajtgE3ZCzuBRoSBNxTU29yCMxxUFXtShmTkJ0xzgAuQX2rmywU0Q/sAXCVB6aYc43cc0yLvDki9Q==",
->>>>>>> Tombranch
       "path": "system.text.encoding.extensions/4.3.0",
       "hashPath": "system.text.encoding.extensions.4.3.0.nupkg.sha512"
     },
@@ -6310,33 +6018,21 @@
     "System.Text.RegularExpressions/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-yM9lRtYmqu4AU/+sWqnhvwFb0WWFOR2HbhT7K30timzBPM1B28pgF+TJJiqm0FcD2ftcfyXduj1Sj8trWIJ7Sg==",
-=======
-      "sha512": "sha512-wG0C/28/7TE5agZw4XOWqVntJNBmggfWWtuLX4hfM8UtAlQeBLi0dXyKSz5RTnspzupgLpy2u4x+FATiv2caDA==",
->>>>>>> Tombranch
       "path": "system.text.regularexpressions/4.3.0",
       "hashPath": "system.text.regularexpressions.4.3.0.nupkg.sha512"
     },
     "System.Threading/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-5m1clpmFFB4b4UdR7IbyhHqXwNyVNyq8XBfEuhHUGdpaMkxrEzgycUXHp63zdSqRpiMDdTxkP1RQQo2o9NmbiQ==",
-=======
-      "sha512": "sha512-egvVUTr4PBwAIsDoA2+jmzpCbIZ5YI30vcfBbJlC6MCFl6OWD338mieVdcXLIMSS00+ii2Fl3Ty3i6l27ddrlg==",
->>>>>>> Tombranch
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
     },
     "System.Threading.Tasks/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-258h3ysDWuTFEzTeMIcSip7JsA+Ku7BZ0gVfkLxGdzRWmPEmu9CcxlROCEmbhjt8hiZWf+KA0xCNhLjE6ge1lQ==",
-=======
-      "sha512": "sha512-AhnkIhukp3DmkLpOpj7ToEexeKOAlF2JktA5Gyyie2yy8J2t61UVh64Iw8z3C0AQt7SvkCZP677XgNVdNm7vbw==",
->>>>>>> Tombranch
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
@@ -6350,44 +6046,28 @@
     "System.Threading.Tasks.Parallel/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-fhu5jkNuz/yIA0I9CcNuEvI5rxgxYpW1qgiMkoEqCkwNG77whufTwGx4nF9jo7S5gTkWAtyUP5IaJ2ggx7R09w==",
-=======
-      "sha512": "sha512-FIXXpe9LEH0MPIU/ye7MHOXP4tu7el1N9Um1IVNHgH+4h8xGAW8zuhToNFa98TzA9crvpOxFfnFUouqwHXl0Ug==",
->>>>>>> Tombranch
       "path": "system.threading.tasks.parallel/4.3.0",
       "hashPath": "system.threading.tasks.parallel.4.3.0.nupkg.sha512"
     },
     "System.Threading.Thread/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-0wfD8cv1j2/ETA9Wn/kwCdkmxAx2PtlaPXErXEX9sacwzitf80vIoWM9sPr3wv2K2ezcQDsVu29PJnT2+UsWeQ==",
-=======
-      "sha512": "sha512-hv4TvC44rq7Lpxt3pLAt3cAg65ObDBmWBS12JRAVz4Yy5j0t77gXIHpiC72QX0+tfPRYTXBwcaVhFNfOxTsgpw==",
->>>>>>> Tombranch
       "path": "system.threading.thread/4.3.0",
       "hashPath": "system.threading.thread.4.3.0.nupkg.sha512"
     },
     "System.Threading.ThreadPool/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-eKJBSqkF7ei/fgD8oasZvZy8NILTFKqfW81tMZkI7P79H7jC5G+OaVDDge/DJ0sHZXPI7qvibNCyWbeSkyoLEg==",
-=======
-      "sha512": "sha512-IthO2s7MfOcjh8JWB9PUIoIH/aPLxpEsk0xrOY0k+D4crSq2vLguAq+NPDvMSPD/XLrwt7OsKSyMFCNyKxQJgQ==",
->>>>>>> Tombranch
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
     },
     "System.Threading.Timer/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-N12/t9bz0dawuOf+MLIp6Dtb0cC9xt3sF4u4Lc3zdzUN5ORKB1MSufutiJAXBtxHhVGpGvpp+rIn5Eggz/RZBw==",
-=======
-      "sha512": "sha512-YJyAdhNJ8ODGKq5a4cIref4qodevfBxKCKsrCXTWKJdszQ1ceMVTrnvl+2KZk30e39wp+kqpduDCquDZwH0xDA==",
->>>>>>> Tombranch
       "path": "system.threading.timer/4.3.0",
       "hashPath": "system.threading.timer.4.3.0.nupkg.sha512"
     },
@@ -6401,33 +6081,21 @@
     "System.Xml.ReaderWriter/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-6wU8U3Sp9KbfInxzCjKIlTEavN/hcw9QgvAKB/Ff6dDfiQl1+1oLhEXIM67rOrds0sM7LIyoaQvqp8QkMaUbPQ==",
-=======
-      "sha512": "sha512-bogJbOxUzB+591BIfQUVfLk/9g2RHzYU/taW32gZTP1r5gX8dOI5TRWhdrFMX2g1yXmIRnQoZGRpOypn21BZYQ==",
->>>>>>> Tombranch
       "path": "system.xml.readerwriter/4.3.0",
       "hashPath": "system.xml.readerwriter.4.3.0.nupkg.sha512"
     },
     "System.Xml.XDocument/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-ro60mFJsFMjHt2aE5yAq3vNs0UyqZt5/X/o6Prbl0AXz2NbOLFTinD2rL/MuS0+N4LoUW5BxdJ6OhsrWVTA3gQ==",
-=======
-      "sha512": "sha512-MkUKieA8nswC8UGUgab6GCHFtUI0C+WLaQQH5fmIdEfGogYEFqaejLsxg/UZe9ZoGitDKIxDv4cwP/PMLh2rbQ==",
->>>>>>> Tombranch
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "System.Xml.XmlDocument/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD
       "sha512": "sha512-EGRzsCK0Lhr9ZQJOXEBcS45z2+8ZSY7GQIlRqht9PUOsbVSAVxKV7gL2aqbwtbthb/j/GUm4v2orYUyV4xJMuw==",
-=======
-      "sha512": "sha512-pgExBluOtqqdJ5u+9ZuIFLFsA8BoZCJ6dvpquqFJmrPzDGQEeGDXXfNsaolKkqTJtQAtOBj5MgI0ZA1dLH+VIg==",
->>>>>>> Tombranch
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
