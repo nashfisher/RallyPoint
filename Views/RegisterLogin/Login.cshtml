@@ -2,7 +2,8 @@
     ViewData["Title"] = "Login";
 }
 
-<div class="container">
+<div class="wrapper">
+    <div class="entrance">
     <h4>Login</h4>
     <form action="process-login" method="POST">
         <div class="uk-margin">
@@ -12,10 +13,11 @@
             <input class="uk-input" type="password" name="password" placeholder="Password" />
         </div>
         <div class="uk-margin">
-            <button class="uk-button uk-button-default">Login</button>
+            <button class="uk-button uk-button-primary">Login</button>
         </div>
     </form>
     <p>If you forgot your email or password, you'll have to <a class="uk-link-blue" href="/">register again</a>.</p>
 
     <div><p style="color: red;">@TempData["error"]</p></div>
+    </div>
 </div>

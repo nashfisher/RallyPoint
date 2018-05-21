@@ -26,6 +26,14 @@ namespace Rallypoint.Controllers
             return View("Register");
         }
 
+        [HttpGet]
+        [Route("existing-user")]
+        public IActionResult ExistingUser() {
+            // ViewBag.log = "login";
+
+            return View("Login");
+        }
+
         // [HttpPost]
         // [Route("process-register")]
         // public IActionResult ProcessRegister(User model, string Password_Confirm) {

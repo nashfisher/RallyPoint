@@ -2,30 +2,60 @@ body {
     padding-bottom: 20px;
 }
 
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background:  linear-gradient(to right top, #0f4e75, #0f64a5, #0071c2, #1359b9, #161d9b) !important;
+    -webkit-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
+    box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
     width: 100%;
 }
 
-.container{
+.wrapper{
     margin: auto;
+    width: 75vw;
+    height: 80vh;
+    overflow: scroll;
+    padding: 20px;
+}
+
+.entrance {
     width: 25vw;
-}
-.uk-navbar-container:not(.uk-navbar-transparent) {
-    background: #3d3d3d !important;
+    margin: auto;
 }
 
-nav a {
-    color: white !important;
+.messageinput {
+    width: 75vw;
+    height: 15vh;
 }
 
-/* .errors {
+.error-message { 
+    height: 8px;
+    color: red;
+    font-size: 12px;
+}
+
+nav img {
     height: 50px;
-} */
+}
+nav a {
+    color: rgb(238, 238, 238) !important;
+}
 
-/* small screen setup */
-@media screen and (max-width: 600px) {
+ul {
+    list-style: none;
+}
+
+ol, ul {
+    padding-left: 0px !important;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
     
     .container {
         margin: auto;
@@ -37,10 +67,4 @@ nav a {
         display: none;
     }
 }
-ul {
-    list-style: none;
-}
 
-ol, ul {
-    padding-left: 0px !important;
-}
