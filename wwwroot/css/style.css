@@ -1,0 +1,46 @@
+body {
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    width: 100%;
+}
+
+.container{
+    margin: auto;
+    width: 25vw;
+}
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: #3d3d3d !important;
+}
+
+nav a {
+    color: white !important;
+}
+
+/* .errors {
+    height: 50px;
+} */
+
+/* small screen setup */
+@media screen and (max-width: 600px) {
+    
+    .container {
+        margin: auto;
+        width: 75vw;
+        overflow: scroll;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+}
+ul {
+    list-style: none;
+}
+
+ol, ul {
+    padding-left: 0px !important;
+}

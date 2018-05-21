@@ -7,12 +7,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/uikit.min.css" />
+    <script src="~/js/uikit.min.js"></script>
+    <script src="~/js/uikit-icons.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="~/css/style.css">
     <script type="text/javascript" src="~/js/main.js"></script>
 </head>
 <body>
     <div class="header">
+        <nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
+
+        <a class="uk-navbar-item uk-logo" href="/">RP</a>
+
+        <ul class="uk-navbar-nav">
+            <li>
+                <a href="/">
+                    <div class="mobile-hidden"><span class="uk-icon uk-margin-small-right" uk-icon="icon: home"></span></div>
+                    Home
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            <li>
+                @{
+                    if (ViewBag.log == "Login")
+                    {
+                        <a href="login">@ViewBag.log</a>
+                    }
+                    else
+                    {
+                        <a><div class="mobile-hidden">@ViewBag.log</div><span class="uk-icon uk-margin-small-left" uk-icon="icon: user"></span></a>
+                    }
+                }
+            </li>
+        </ul>
+    </div>
+    </nav>
 
     </div>
 
