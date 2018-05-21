@@ -4,11 +4,11 @@ using Rallypoint.Models;
 
 namespace Rallypoint.Controllers{
 
-    public class RallypointController:Controller{
+    public class ForumController:Controller{
         [HttpGet]
-        [Route("")]
+        [Route("test")]
         public IActionResult Index(){
-            return View("Index");
+            return View("Index","_ForumLayout");
         }
     }
 }
