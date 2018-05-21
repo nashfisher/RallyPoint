@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+@model Rallypoint.Models.RegisterViewModel
+
+<div class="wrapper">
+    <div class="entrance">
+        <form asp-controller="RegisterLogin" asp-action="Register" method="POST" class="entrance">
+            <legend class="uk-legend">Create an account</legend>
+
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="first_name" placeholder="First Name">
+                <div class="error-message"><span asp-validation-for="first_name"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="last_name" placeholder="Last Name">
+                <div class="error-message"><span asp-validation-for="last_name"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="username" placeholder="Username">
+                <div class="error-message"><span asp-validation-for="username"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="email" type="email" placeholder="Email">
+                <div class="error-message"><span asp-validation-for="email"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="password" type="password" placeholder="Password">
+                <div class="error-message"><span asp-validation-for="password"></span></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" asp-for="password_confirmation" type="password" placeholder="Confirm Password">
+                <div class="error-message"><span asp-validation-for="password_confirmation"></span></div>
+            </div>
+            <div class="uk-margin">
+                <button class="uk-button uk-button-primary">Register</button>
+            </div>
+        </form>
+        <div class="error-message">
+            <p>@TempData["error"]</p>
+        </div>
+    <hr />
+    <p>Already a user? <a href="existing-user">Login with existing account.</a></p>
+    </div>
+</div>

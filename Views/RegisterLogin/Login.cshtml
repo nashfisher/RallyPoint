@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="wrapper">
+    <div class="entrance">
+        <form action="login" method="POST">
+            <legend class="uk-legend">Login</legend>
+
+            <div class="uk-margin">
+                <input class="uk-input" type="text" name="identity" placeholder="Username or Email">
+                <div class="error-message"></div>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" type="password" name="password" placeholder="password">
+                <div class="error-message"></div>
+            </div>
+            <div class="uk-margin">
+                <button class="uk-button uk-button-primary">Submit</button>
+            </div>
+            <div class="error-message">
+            <p>@TempData["error"]</p>
+            </div>
+        </form>
+    <hr />
+    <p>Forgot login info? For now, you'll have to <a href="/">create a new account.</a></p>
+    </div>
+</div>

@@ -1,18 +1,92 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Rallypoint.Models{
-	public class Rallypoint:BaseEntity{
+	public class User: BaseEntity{
+		public string first_name {get; set;}
 
-/*
-	Useful Annotations and Examples:
+		public string last_name {get; set;}
 
-	[Required] - Makes a field required.
-	[RegularExpression(@"[0-9]{0,}\.[0-9]{2}", ErrorMessage = "error Message")] - Put a REGEX string in here.
-	[MinLength(100)] - Field must be at least 100 characters long.
-	[MaxLength(1000)] - Field must be at most 1000 characters long.
-	[Range(5,10)] - Field must be between 5 and 10 characters.
-	[EmailAddress] - Field must contain an @ symbol, followed by a word and a period.
-	[DataType(DataType.Password)] - Ensures that the field conforms to a specific DataType
-*/
+		public string username {get; set;}
+
+		public string email {get; set;}
+
+		public string password {get; set;}
+
+		public int wins {get; set;}
+
+		public int losses {get; set;}
+
+		public List<Post> posts {get; set;}
+
+		public List<Game> gamescreated {get; set;}
+
+		public List<Game> gamesjoined {get; set;}
+
+		public List<Like> likedpost {get; set;}
+
+		public User(){
+			posts =  new List<Post>();
+			gamescreated = new List<Game>();
+			gamesjoined = new List<Game>();
+			likedpost = new List<Like>();
+		}
+
+
+
+
+
+
+
+		
 	}
+	public class Game: BaseEntity{
+
+		public User playertwo {get; set;}
+
+		public int? playertwoId {get; set;}
+
+		public DateTime date {get; set;}
+
+		public int? playeroneScore {get; set;}
+
+		public int? playertwoScore {get; set;}
+
+		public string address {get; set;}
+
+		public User playerone {get; set;}
+		public int? playeroneId {get; set;}
+
+	
+
+
+	}
+	public class Post : BaseEntity{
+		public string post {get; set;}
+
+		public User user {get; set;}
+
+		public int? UserId {get; set;}
+
+		public int? likes {get; set;}
+
+		List<Like> likedpost {get; set;}
+
+		public Post(){
+			likedpost = new List<Like>();
+		}
+
+	}
+
+	public class Like : BaseEntity{
+		public User user {get; set;}
+
+		public int? UserId {get; set;}
+
+		public Post post {get; set;}
+
+		public int? PostId {get; set;}
+	}
+
 }
