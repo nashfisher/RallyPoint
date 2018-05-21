@@ -3,11 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Rallypoint.Models;
 
 namespace Rallypoint.Controllers{
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> nash_branch
     public class RallypointController:Controller{
         
         // [HttpGet]
