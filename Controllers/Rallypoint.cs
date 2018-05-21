@@ -5,11 +5,14 @@ using Rallypoint.Models;
 namespace Rallypoint.Controllers{
 	
     public class RallypointController:Controller{
-        
-        // [HttpGet]
-        // [Route("")]
-        // public IActionResult Index(){
-        //     return View("Index");
-        // }
+        private RallypointContext _context;
+        public RallypointController(RallypointContext context){
+            _context = context;
+        }
+        [HttpGet]
+        [Route("")]
+        public IActionResult Index(){
+            return View("Index");
+        }
     }
 }
