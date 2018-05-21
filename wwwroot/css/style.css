@@ -2,8 +2,12 @@ body {
     padding-bottom: 20px;
 }
 
+.desktop-hidden {
+    display: none;
+}
+
 .uk-navbar-container:not(.uk-navbar-transparent) {
-    background:  linear-gradient(to right top, #0f4e75, #0f64a5, #0071c2, #1359b9, #161d9b) !important;
+    background:  linear-gradient(to top, #1359b9, #2e35c4, #1359b9) !important;
     -webkit-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
     -moz-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
     box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
