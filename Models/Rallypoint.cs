@@ -1,21 +1,92 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Rallypoint.Models{
+	public class User: BaseEntity{
+		public string first_name {get; set;}
 
-	public class Rallypoint:BaseEntity{
+		public string last_name {get; set;}
 
-		public int Id { get; set; }
+		public string username {get; set;}
+
+		public string email {get; set;}
+
+		public string password {get; set;}
+
+		public int wins {get; set;}
+
+		public int losses {get; set;}
+
+		public List<Post> posts {get; set;}
+
+		public List<Game> gamescreated {get; set;}
+
+		public List<Game> gamesjoined {get; set;}
+
+		public List<Like> likedpost {get; set;}
+
+		public User(){
+			posts =  new List<Post>();
+			gamescreated = new List<Game>();
+			gamesjoined = new List<Game>();
+			likedpost = new List<Like>();
+		}
+
+
+
+
+
+
+
+		
+	}
+	public class Game: BaseEntity{
+
+		public User playertwo {get; set;}
+
+		public int? playertwoId {get; set;}
+
+		public DateTime date {get; set;}
+
+		public int? playeroneScore {get; set;}
+
+		public int? playertwoScore {get; set;}
+
+		public string address {get; set;}
+
+		public User playerone {get; set;}
+		public int? playeroneId {get; set;}
+
+	
+
+
+	}
+	public class Post : BaseEntity{
+		public string post {get; set;}
+
+		public User user {get; set;}
+
+		public int? UserId {get; set;}
+
+		public int? likes {get; set;}
+
+		List<Like> likedpost {get; set;}
+
+		public Post(){
+			likedpost = new List<Like>();
+		}
+
 	}
 
-	public class User : BaseEntity
-    {
-        
-        public string first_name { get; set; }
+	public class Like : BaseEntity{
+		public User user {get; set;}
 
-        public string last_name { get; set; }
+		public int? UserId {get; set;}
 
-        public string email { get; set; }
+		public Post post {get; set;}
 
-        public string password { get; set; }
-    }
+		public int? PostId {get; set;}
+	}
+
 }
