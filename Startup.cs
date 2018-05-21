@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Rallypoint.Models;
 
 namespace Rallypoint{
     public class Startup{
@@ -23,6 +25,7 @@ namespace Rallypoint{
         public void ConfigureServices(IServiceCollection services){
             services.AddSession();
             services.AddMvc();
+            services.AddDbContext<RallypointContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory){

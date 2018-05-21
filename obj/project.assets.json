@@ -12827,11 +12827,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tomgarcia/Desktop/CodingDojo/C#/Rallypoint/Rallypoint.csproj",
+      "projectUniqueName": "/Users/tomgarcia/Desktop/CodingDojo/C#project/RallyPoint/Rallypoint.csproj",
       "projectName": "Rallypoint",
-      "projectPath": "/Users/tomgarcia/Desktop/CodingDojo/C#/Rallypoint/Rallypoint.csproj",
+      "projectPath": "/Users/tomgarcia/Desktop/CodingDojo/C#project/RallyPoint/Rallypoint.csproj",
       "packagesPath": "/Users/tomgarcia/.nuget/packages/",
-      "outputPath": "/Users/tomgarcia/Desktop/CodingDojo/C#/Rallypoint/obj/",
+      "outputPath": "/Users/tomgarcia/Desktop/CodingDojo/C#project/RallyPoint/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
