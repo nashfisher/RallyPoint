@@ -18,6 +18,8 @@ namespace Rallypoint.Models{
 
 		public int losses {get; set;}
 
+		public bool admin {get; set;}
+
 		public List<Post> posts {get; set;}
 
 		public List<Game> gamescreated {get; set;}
@@ -31,6 +33,7 @@ namespace Rallypoint.Models{
 			gamescreated = new List<Game>();
 			gamesjoined = new List<Game>();
 			likedpost = new List<Like>();
+			admin = false;
 		}
 
 
@@ -87,6 +90,27 @@ namespace Rallypoint.Models{
 		public Post post {get; set;}
 
 		public int? PostId {get; set;}
+	}
+
+
+	public class Comment : BaseEntity{
+
+		public string comment {get; set;}
+
+		public int? PostId {get; set;}
+
+		public Post post {get; set;}
+
+		public int? UserId {get; set;}
+
+		public User user {get; set;}
+
+		public List<Like> commentlikes {get; set;}
+
+
+		public Comment(){
+			commentlikes = new List<Like>();
+		}
 	}
 
 }
