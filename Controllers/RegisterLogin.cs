@@ -13,7 +13,7 @@ namespace Rallypoint.Controllers
     {
 
         [HttpGet]
-        [Route("")]
+        [Route("register")]
         public IActionResult Register()
         {
             // Setting default nav link to login, should change after login
@@ -27,8 +27,8 @@ namespace Rallypoint.Controllers
         }
 
         [HttpGet]
-        [Route("existing-user")]
-        public IActionResult ExistingUser() {
+        [Route("login")]
+        public IActionResult Login() {
             // ViewBag.log = "login";
 
             return View("Login");

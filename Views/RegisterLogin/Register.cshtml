@@ -5,7 +5,7 @@
 
 <div class="wrapper">
     <div class="entrance">
-        <form asp-controller="RegisterLogin" asp-action="Register" method="POST" class="entrance">
+        <form asp-controller="RegisterLogin" asp-action="register-process" method="POST" class="entrance">
             <legend class="uk-legend">Create an account</legend>
 
             <div class="uk-margin">
@@ -40,6 +40,6 @@
             <p>@TempData["error"]</p>
         </div>
     <hr />
-    <p>Already a user? <a href="existing-user">Login with existing account.</a></p>
+    <p>Already a user? <a href="/login">Login with existing account.</a></p>
     </div>
 </div>

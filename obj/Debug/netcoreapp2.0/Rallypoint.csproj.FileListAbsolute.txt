@@ -40,4 +40,8 @@
 /Users/tomgarcia/Desktop/CodingDojo/C#project/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.dll
 /Users/tomgarcia/Desktop/CodingDojo/C#project/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.pdb
 >>>>>>> Tombranch
+<<<<<<< HEAD
+>>>>>>> master
+=======
+/Users/Nash/Desktop/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.csprojResolveAssemblyReference.cache
 >>>>>>> master
