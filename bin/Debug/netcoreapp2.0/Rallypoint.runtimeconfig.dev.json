@@ -1,15 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "/home/firezdog/.dotnet/store/|arch|/|tfm|",
       "/home/firezdog/.nuget/packages",
       "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-=======
-      "/Users/tomgarcia/.dotnet/store/|arch|/|tfm|",
-      "/Users/tomgarcia/.nuget/packages",
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
->>>>>>> master
     ]
   }
 }
