@@ -27,8 +27,8 @@ namespace Rallypoint.Controllers
         }
 
         [HttpGet]
-        [Route("existing-user")]
-        public IActionResult ExistingUser() {
+        [Route("login")]
+        public IActionResult Login() {
             // ViewBag.log = "login";
 
             return View("Login");

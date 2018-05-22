@@ -10,7 +10,7 @@ namespace Rallypoint.Controllers{
             _context = context;
         }
         [HttpGet]
-        [Route("")]
+        [Route("/")]
         public IActionResult Index(){
             return View("Index");
         }
