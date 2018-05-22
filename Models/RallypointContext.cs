@@ -5,6 +5,8 @@ namespace Rallypoint.Models
     public class RallypointContext : DbContext
     {
 
+
+        
         public  RallypointContext(DbContextOptions<RallypointContext> options) : base(options) { }
 
         public DbSet<User> Users {get; set;}
@@ -14,5 +16,7 @@ namespace Rallypoint.Models
         public DbSet<Post> Posts {get; set;}
 
         public DbSet<Like> Likes {get; set;}
+
+        public DbSet<Comment> Comment {get; set;}
     }
 }
