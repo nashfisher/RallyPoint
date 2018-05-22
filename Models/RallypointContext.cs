@@ -10,6 +10,8 @@ namespace Rallypoint.Models
         public DbSet<Post> Posts {get; set;}
         public DbSet<Like> Likes {get; set;}
 
+        public DbSet<Comment> Comments {get;set;}
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Game>().HasOne(g => g.playerone).WithMany(u => u.gamescreated);

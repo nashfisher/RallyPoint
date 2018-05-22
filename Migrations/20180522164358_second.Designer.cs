@@ -11,9 +11,10 @@ using System;
 namespace Rallypoint.Migrations
 {
     [DbContext(typeof(RallypointContext))]
-    partial class RallypointContextModelSnapshot : ModelSnapshot
+    [Migration("20180522164358_second")]
+    partial class second
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

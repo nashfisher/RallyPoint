@@ -35,13 +35,6 @@ namespace Rallypoint.Models{
 			likedpost = new List<Like>();
 			admin = false;
 		}
-
-
-
-
-
-
-
 		
 	}
 	public class Game: BaseEntity{
