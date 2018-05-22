@@ -3,31 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Rallypoint.Models{
+	
 	public class User: BaseEntity{
 		public string first_name {get; set;}
-
 		public string last_name {get; set;}
-
 		public string username {get; set;}
-
 		public string email {get; set;}
-
 		public string password {get; set;}
-
 		public int wins {get; set;}
-
 		public int losses {get; set;}
-
 		public bool admin {get; set;}
-
 		public List<Post> posts {get; set;}
-
 		public List<Game> gamescreated {get; set;}
-
 		public List<Game> gamesjoined {get; set;}
-
 		public List<Like> likedpost {get; set;}
-
 		public User(){
 			posts =  new List<Post>();
 			gamescreated = new List<Game>();
@@ -35,15 +24,8 @@ namespace Rallypoint.Models{
 			likedpost = new List<Like>();
 			admin = false;
 		}
-
-
-
-
-
-
-
-		
 	}
+
 	public class Game: BaseEntity{
 
 		public int? playertwoId {get; set;}
