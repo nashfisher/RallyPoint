@@ -96,23 +96,15 @@ namespace Rallypoint.Controllers
                     if(0 !=lHasher.VerifyHashedPassword(lUser, lUser.password, user.password))
                 {
                     HttpContext.Session.SetInt32("Id", lUser.Id);
-<<<<<<< HEAD
-                    return RedirectToAction("Index","Rallypoint");
-=======
                     HttpContext.Session.SetString("Username", lUser.username);
                     return RedirectToAction("Index", "Rallypoint");
                 } 
->>>>>>> nash_branch
                 }
                else{
                    if(0 !=Uhasher.VerifyHashedPassword(UUser,UUser.password, user.password)){
                     HttpContext.Session.SetInt32("Id", UUser.Id);
-<<<<<<< HEAD
-                    return RedirectToAction("Index","Rallypoint");
-=======
                     HttpContext.Session.SetString("Username", UUser.username);
                     return RedirectToAction("Index", "Rallypoint");
->>>>>>> nash_branch
 
                     }
                }
@@ -120,10 +112,10 @@ namespace Rallypoint.Controllers
                 ModelState.AddModelError("identity", "Invalid Login Information");
                 return View("Login");
             }
+                return View("Login");
             }
-            return View("Login");
+           
         }
 
        
     }
-}
