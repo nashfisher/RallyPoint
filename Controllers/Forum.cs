@@ -21,6 +21,13 @@ namespace Rallypoint.Controllers{
         [HttpGet]
         [Route("test")]
         public IActionResult Index(){
+
+            if (HttpContext.Session.GetString("Username") == null) {
+                ViewBag.log = "Login";
+            }
+            else {
+                ViewBag.log = HttpContext.Session.GetString("Username");
+            }
             // for testing individual user
             var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == 1);
             var test = _context.Posts;
@@ -32,6 +39,8 @@ namespace Rallypoint.Controllers{
         [Route("test/create")]
         public IActionResult CreatePost()
         {
+            ViewBag.log = HttpContext.Session.GetString("Username");
+
             var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == 1);
             return View();
         }
