@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Rallypoint</title>
+    <title>@ViewData["Title"] Rallypoint Forum</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -18,23 +18,22 @@
 <body>
     <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
-        <div class="uk-navbar-center uk-light">
-            <h2>Rally Point Forum</h2>
+        <div class="uk-navbar-left uk-light">
+            <a class="uk-navbar-item uk-logo" href="/"><img src="~/images/logo-2.png"><h2>Forum</h2></a>
         </div>
         <div class="uk-navbar-right">
 
             <ul class="uk-navbar-nav">
                 <li>
                     <a href="#">Categories</a>
-                    <div class="uk-navbar-dropdown">
+                    <div class="uk-navbar-dropdown uk-dark">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li class="uk-active"><a href="#">Active</a></li>
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Item</a></li>
+                            <li ><a class="CatChoice" href="#">Pro Discussion</a></li>
+                            <li ><a class="CatChoice" href="#">Noob banter</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="uk-active"><a href="#">Home</a></li>
+                <li class="uk-active"><a href="/test">Home</a></li>
             </ul>
         </div>
     </nav>

@@ -21,6 +21,12 @@ namespace Rallypoint.Controllers
 
         [HttpGet]
         [Route("register")]
+        public IActionResult ShowPage(){
+            return View("Register");
+        }
+
+        [HttpPost]
+        [Route("create")]
         public IActionResult Register(RegisterViewModel user)
         {
             User ExistingUser = _context.Users.SingleOrDefault( u => u.email == user.email);
@@ -51,7 +57,7 @@ namespace Rallypoint.Controllers
                 _context.SaveChanges();
                 User ReturnedUser = _context.Users.SingleOrDefault(userID => userID.email == user.email);
                 HttpContext.Session.SetInt32("Id", ReturnedUser.Id);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Rallypoint");
 
             }
 
@@ -77,11 +83,11 @@ namespace Rallypoint.Controllers
                 if(0 !=lHasher.VerifyHashedPassword(lUser, lUser.password, user.password))
                 {
                     HttpContext.Session.SetInt32("Id", lUser.Id);
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index","Rallypoint");
                 }
                 if(0 !=Uhasher.VerifyHashedPassword(UUser,UUser.password, user.password)){
                     HttpContext.Session.SetInt32("Id", UUser.Id);
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index","Rallypoint");
 
                 }
                 ModelState.AddModelError("identity", "Invalid Login Information");

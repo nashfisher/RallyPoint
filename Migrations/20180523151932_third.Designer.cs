@@ -11,9 +11,10 @@ using System;
 namespace Rallypoint.Migrations
 {
     [DbContext(typeof(RallypointContext))]
-    partial class RallypointContextModelSnapshot : ModelSnapshot
+    [Migration("20180523151932_third")]
+    partial class third
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,28 +39,6 @@ namespace Rallypoint.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Comments");
-                });
-
-            modelBuilder.Entity("Rallypoint.Models.ForumPost", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int?>("UserId");
-
-                    b.Property<string>("category");
-
-                    b.Property<string>("forumpost");
-
-                    b.Property<int?>("likes");
-
-                    b.Property<string>("title");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("Rallypoint.Models.Game", b =>
@@ -110,6 +89,28 @@ namespace Rallypoint.Migrations
                     b.ToTable("Likes");
                 });
 
+            modelBuilder.Entity("Rallypoint.Models.Post", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("UserId");
+
+                    b.Property<string>("category");
+
+                    b.Property<int?>("likes");
+
+                    b.Property<string>("post");
+
+                    b.Property<string>("title");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Posts");
+                });
+
             modelBuilder.Entity("Rallypoint.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -138,19 +139,12 @@ namespace Rallypoint.Migrations
 
             modelBuilder.Entity("Rallypoint.Models.Comment", b =>
                 {
-                    b.HasOne("Rallypoint.Models.ForumPost", "post")
+                    b.HasOne("Rallypoint.Models.Post", "post")
                         .WithMany()
                         .HasForeignKey("PostId");
 
                     b.HasOne("Rallypoint.Models.User", "user")
                         .WithMany()
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("Rallypoint.Models.ForumPost", b =>
-                {
-                    b.HasOne("Rallypoint.Models.User", "user")
-                        .WithMany("posts")
                         .HasForeignKey("UserId");
                 });
 
@@ -171,12 +165,19 @@ namespace Rallypoint.Migrations
                         .WithMany("commentlikes")
                         .HasForeignKey("CommentId");
 
-                    b.HasOne("Rallypoint.Models.ForumPost", "post")
+                    b.HasOne("Rallypoint.Models.Post", "post")
                         .WithMany()
                         .HasForeignKey("PostId");
 
                     b.HasOne("Rallypoint.Models.User", "user")
                         .WithMany("likedpost")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Rallypoint.Models.Post", b =>
+                {
+                    b.HasOne("Rallypoint.Models.User", "user")
+                        .WithMany("posts")
                         .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618

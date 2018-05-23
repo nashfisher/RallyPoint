@@ -2,8 +2,12 @@ body {
     padding-bottom: 20px;
 }
 
+.categories {
+    color: black !important;
+}
+
 .uk-section-primary {
-    background: #3d3d3d !important;
+    background: whitesmoke !important;
 }
 
 .desktop-hidden {
@@ -60,6 +64,14 @@ ul {
 
 ol, ul {
     padding-left: 0px !important;
+}
+
+.ForumForm {
+    padding-top: 100px;
+}
+
+.CatChoice {
+    color: black !important;
 }
 
 

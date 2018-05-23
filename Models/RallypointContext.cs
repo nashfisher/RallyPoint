@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 
 namespace Rallypoint.Models
@@ -17,5 +18,6 @@ namespace Rallypoint.Models
             builder.Entity<Game>().HasOne(g => g.playerone).WithMany(u => u.gamescreated);
             builder.Entity<Game>().HasOne(g => g.playertwo).WithMany(u => u.gamesjoined);
         }
+
     }
 }

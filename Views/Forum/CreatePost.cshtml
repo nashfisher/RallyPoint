@@ -1,0 +1,34 @@
+@{
+ Layout = "~/Views/Shared/_ForumLayout.cshtml";
+}
+@model Rallypoint.Models.Post
+
+<form class="ForumForm"asp-action="SavePost" asp-controller="Forum" method="POST">
+    <fieldset class="uk-fieldset">
+
+        <legend class="uk-legend">Create Post</legend>
+
+        <div class="uk-margin">
+            <label asp-for="title">Topic</label>
+            <input class="uk-input" asp-for="title" type="text" placeholder="topic">
+            <span asp-validation-for="title"></span>
+        </div>
+
+        <div class="uk-margin">
+            <select asp-for="category" class="uk-select">
+                <option value="Pro">Pro discussion</option>
+                <option value="Noob">Noob banter</option>
+            </select>
+        </div>
+
+        <div class="uk-margin">
+            <label asp-for="post"></label>
+            <textarea class="uk-textarea" asp-for="post" rows="5" placeholder="post your idea"></textarea>
+            <span asp-validation-for="post"></span>
+        </div>
+
+        <p uk-margin>
+            <button class="uk-button uk-button-primary uk-button-medium">Submit</button>
+        </p>
+    </fieldset>
+</form>

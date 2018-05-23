@@ -8,6 +8,8 @@ namespace Rallypoint.Controllers{
         public RallypointController(RallypointContext context){
             _context = context;
         }
+
+
         [HttpGet]
         [Route("/")]
         public IActionResult Index(){
