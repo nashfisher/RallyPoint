@@ -57,7 +57,7 @@ namespace Rallypoint.Controllers
                 _context.SaveChanges();
                 User ReturnedUser = _context.Users.SingleOrDefault(userID => userID.email == user.email);
                 HttpContext.Session.SetInt32("Id", ReturnedUser.Id);
-                return RedirectToAction("Index", "Rallypoint");
+                return RedirectToAction("Index","Rallypoint");
 
             }
 
@@ -88,21 +88,20 @@ namespace Rallypoint.Controllers
                     if(0 !=lHasher.VerifyHashedPassword(lUser, lUser.password, user.password))
                 {
                     HttpContext.Session.SetInt32("Id", lUser.Id);
-                    return RedirectToAction("Index", "Rallypoint");
-                } 
+                    return RedirectToAction("Index","Rallypoint");
                 }
                else{
                    if(0 !=Uhasher.VerifyHashedPassword(UUser,UUser.password, user.password)){
                     HttpContext.Session.SetInt32("Id", UUser.Id);
-                    return RedirectToAction("Index", "Rallypoint");
+                    return RedirectToAction("Index","Rallypoint");
 
-                }
+                    }
                }
                 
                 ModelState.AddModelError("identity", "Invalid Login Information");
                 return View("Login");
             }
-
+            }
             return View("Login");
         }
 
