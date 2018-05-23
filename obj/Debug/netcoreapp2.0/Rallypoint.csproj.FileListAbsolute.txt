@@ -8,3 +8,13 @@
 /Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfo.cs
 /Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.dll
 /Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.pdb
+/home/firezdog/Documents/CodingDojo/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.deps.json
+/home/firezdog/Documents/CodingDojo/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.runtimeconfig.json
+/home/firezdog/Documents/CodingDojo/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.runtimeconfig.dev.json
+/home/firezdog/Documents/CodingDojo/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.dll
+/home/firezdog/Documents/CodingDojo/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.pdb
+/home/firezdog/Documents/CodingDojo/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.csproj.CoreCompileInputs.cache
+/home/firezdog/Documents/CodingDojo/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfoInputs.cache
+/home/firezdog/Documents/CodingDojo/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfo.cs
+/home/firezdog/Documents/CodingDojo/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.dll
+/home/firezdog/Documents/CodingDojo/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.pdb

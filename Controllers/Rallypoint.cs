@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using Rallypoint.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Rallypoint.Controllers{
     public class RallypointController:Controller{
@@ -84,11 +83,8 @@ namespace Rallypoint.Controllers{
         [HttpGet]
         [Route("games/new")]
         public IActionResult NewGame(){
-            return View();
-
             ViewBag.log = HttpContext.Session.GetString("Username");
-            
-            return View("Index");
+            return View();
         }
 
         [HttpGet]
