@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 
 namespace Rallypoint.Models
@@ -9,6 +10,8 @@ namespace Rallypoint.Models
         public DbSet<Game> Games {get; set;}
         public DbSet<Post> Posts {get; set;}
         public DbSet<Like> Likes {get; set;}
+
+        public DbSet<Comment> Comments {get;set;}
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

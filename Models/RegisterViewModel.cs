@@ -29,4 +29,18 @@ namespace Rallypoint.Models
         [Compare("password", ErrorMessage = "Passwords do not match")]
         public string password_confirmation { get; set; }
     }
+
+    public class LoginViewModel : BaseEntity{
+
+        [Required(ErrorMessage = "Username or email is required")]
+
+        public string identity {get; set;}
+
+       
+        [Required(ErrorMessage = "Password is required")]
+        [MinLength(8)]
+        [DataType(DataType.Password)]
+
+        public string password {get; set;}
+    }
 }

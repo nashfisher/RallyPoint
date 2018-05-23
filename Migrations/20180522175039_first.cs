@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Rallypoint.Migrations
 {
-    public partial class FirstMigration : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -81,17 +81,51 @@ namespace Rallypoint.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    PostId = table.Column<int>(nullable: true),
+                    UserId = table.Column<int>(nullable: true),
+                    comment = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Comments_Posts_PostId",
+                        column: x => x.PostId,
+                        principalTable: "Posts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Comments_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Likes",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CommentId = table.Column<int>(nullable: true),
                     PostId = table.Column<int>(nullable: true),
                     UserId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Likes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Likes_Comments_CommentId",
+                        column: x => x.CommentId,
+                        principalTable: "Comments",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Likes_Posts_PostId",
                         column: x => x.PostId,
@@ -107,6 +141,16 @@ namespace Rallypoint.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Comments_PostId",
+                table: "Comments",
+                column: "PostId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_UserId",
+                table: "Comments",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Games_playeroneId",
                 table: "Games",
                 column: "playeroneId");
@@ -115,6 +159,11 @@ namespace Rallypoint.Migrations
                 name: "IX_Games_playertwoId",
                 table: "Games",
                 column: "playertwoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Likes_CommentId",
+                table: "Likes",
+                column: "CommentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Likes_PostId",
@@ -139,6 +188,9 @@ namespace Rallypoint.Migrations
 
             migrationBuilder.DropTable(
                 name: "Likes");
+
+            migrationBuilder.DropTable(
+                name: "Comments");
 
             migrationBuilder.DropTable(
                 name: "Posts");

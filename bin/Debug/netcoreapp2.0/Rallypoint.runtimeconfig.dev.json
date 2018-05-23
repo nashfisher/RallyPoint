@@ -1,9 +1,14 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/firezdog/.dotnet/store/|arch|/|tfm|",
-      "/home/firezdog/.nuget/packages",
-      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+<<<<<<< HEAD
+      "/Users/Cole/.dotnet/store/|arch|/|tfm|",
+      "/Users/Cole/.nuget/packages",
+=======
+      "/Users/Nash/.dotnet/store/|arch|/|tfm|",
+      "/Users/Nash/.nuget/packages",
+>>>>>>> nash_branch
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
     ]
   }
 }

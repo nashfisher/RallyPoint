@@ -1,12 +1,13 @@
+using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Rallypoint.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Rallypoint.Controllers{
-	
     public class RallypointController:Controller{
         private RallypointContext _context;
         public RallypointController(RallypointContext context){
@@ -84,6 +85,18 @@ namespace Rallypoint.Controllers{
         [Route("games/new")]
         public IActionResult NewGame(){
             return View();
+
+            ViewBag.log = HttpContext.Session.GetString("Username");
+            
+            return View("Index");
+        }
+
+        [HttpGet]
+        [Route("/gameinfo/{gameid}")]
+
+        public IActionResult gameinfo(int gameid){
+            ViewBag.Game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo);
+            return View("gameinfo");
         }
     }
 }

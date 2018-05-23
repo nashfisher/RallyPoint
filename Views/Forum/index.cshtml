@@ -1,0 +1,51 @@
+@{
+ Layout = "~/Views/Shared/_ForumLayout.cshtml";
+}
+
+<div class="uk-section uk-section-primary ">
+    <div class="uk-container">
+
+        <ul class="uk-breadcrumb">
+            <li><a href="">Home</a></li>
+            <li><span></span></li>
+        </ul>
+
+        <div class="uk-panel uk-margin-medium">
+            <a class="uk-button uk-button-default" href="test/create"><h3 class="categories">Create Post</h3></a>
+        </div>
+
+        <div class="uk-panel uk-margin-medium">
+            <h3 class="categories">Top Post </h3>
+        </div>
+
+        <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                    <p>Placeholder recent</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="uk-divider-icon">
+        <div class="uk-panel uk-margin-medium">
+            <h3 class="categories">Recent Posts</h3>
+        </div>
+
+        <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
+            @foreach(var post in @ViewBag.RecentPost)
+            {
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                        <p>@post.title </p>
+                        <p>Created by: @post.user.username </p>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

@@ -1,5 +1,18 @@
 body {
     padding-bottom: 20px;
+    height: 100vh;
+
+    /* Setting the background image */
+    background-image: url("/images/background3.jpg");
+    background-size: 100%;
+}
+
+.categories {
+    color: black !important;
+}
+
+.uk-section-primary {
+    background: whitesmoke !important;
 }
 
 .desktop-hidden {
@@ -8,9 +21,9 @@ body {
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
     background:  linear-gradient(to top, #2e35c4, #1359b9, #2e35c4) !important;
-    -webkit-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
+    /* -webkit-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
     -moz-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
-    box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
+    box-shadow: 0px 11px 14px 6px rgba(153,153,153,1); */
 }
 
 /* Wrapping element */
@@ -21,15 +34,27 @@ body {
 
 .wrapper{
     margin: auto;
-    width: 75vw;
-    height: 80vh;
+    width: 70vw;
+
+    /* Maybe change this */
+    height: 85vh;
     overflow: scroll;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.719);
+    /* background-color: white; */
 }
 
 .entrance {
+    width: 30vw;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.822);
+    border-radius: 3px;
+}
+
+.entranceform {
     width: 25vw;
     margin: auto;
+    padding: 15px;
 }
 
 .messageinput {
@@ -58,6 +83,14 @@ ol, ul {
     padding-left: 0px !important;
 }
 
+.ForumForm {
+    padding-top: 100px;
+}
+
+.CatChoice {
+    color: black !important;
+}
+
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
@@ -73,3 +106,11 @@ ol, ul {
     }
 }
 
+#maps{
+    width: 100px;
+    height: 100px;
+    border-radius: 999px;
+    -moz-border-radius: 999px;
+    -khtml-border-radius: 999px;
+    -webkit-border-radius: 999px;
+}
