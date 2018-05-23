@@ -8,3 +8,4 @@
 /Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfo.cs
 /Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.dll
 /Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.pdb
+/Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.csprojResolveAssemblyReference.cache
