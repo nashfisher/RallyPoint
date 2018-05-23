@@ -57,6 +57,15 @@ body {
     padding: 15px;
 }
 
+.post-title {
+    color: black;
+}
+
+.post-data {
+    color: gray;
+    font-size: 12px;
+}
+
 .messageinput {
     width: 75vw;
     height: 15vh;

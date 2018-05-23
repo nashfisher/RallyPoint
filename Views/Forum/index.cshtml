@@ -35,17 +35,17 @@
             <h3 class="categories">Recent Posts</h3>
         </div>
 
-        <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
+        <!-- <div class="uk-grid-match uk-child-width-expand@m" uk-grid> -->
             @foreach(var post in @ViewBag.RecentPost)
             {
                 <div>
                     <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-                        <p>@post.title </p>
-                        <p>Created by: @post.user.username </p>
+                        <p class="post-title">@post.title </p>
+                        <a href="/profile/{id}"><p class="post-data"><span class="uk-icon uk-margin-small-right" uk-icon="icon: user; ratio: .5"></span>@post.user.username </p></a>
                     </div>
                 </div>
             }
-        </div>
+        <!-- </div> -->
 
     </div>
 </div>
