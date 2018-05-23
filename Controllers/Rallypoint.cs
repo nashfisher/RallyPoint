@@ -1,5 +1,7 @@
+using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Rallypoint.Models;
 
 namespace Rallypoint.Controllers{
@@ -13,6 +15,14 @@ namespace Rallypoint.Controllers{
         [Route("/")]
         public IActionResult Index(){
             return View("Index");
+        }
+
+        [HttpGet]
+        [Route("/gameinfo/{gameid}")]
+
+        public IActionResult gameinfo(int gameid){
+            ViewBag.Game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo);
+            return View("gameinfo");
         }
     }
 }

@@ -73,3 +73,11 @@ ol, ul {
     }
 }
 
+#maps{
+    width: 100px;
+    height: 100px;
+    border-radius: 999px;
+    -moz-border-radius: 999px;
+    -khtml-border-radius: 999px;
+    -webkit-border-radius: 999px;
+}
