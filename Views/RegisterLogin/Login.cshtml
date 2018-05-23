@@ -3,29 +3,29 @@
 }
 @model Rallypoint.Models.LoginViewModel
 
-<div class="wrapper">
+<!-- <div class="wrapper"> -->
     <div class="entrance">
-        <form asp-controller="RegisterLogin" asp-action="Login" method="POST">
+        <form asp-controller="RegisterLogin" asp-action="Login" method="POST" class="entranceform">
             <legend class="uk-legend">Login</legend>
 
             <div class="uk-margin">
-            <span asp-validation-for="identity"></span>
                 <input class="uk-input" type="text" name="identity" placeholder="Username or Email">
-                <div class="error-message"></div>
+                <div class="error-message"><span asp-validation-for="identity"></span></div>
+           
             </div>
             <div class="uk-margin">
-                <span asp-validation-for="password"></span>
-                <input class="uk-input" type="password" name="password" placeholder="password">
-                <div class="error-message"></div>
-            </div>
+                <input class="uk-input" type="password" name="password" placeholder="Password">
+                <div class="error-message"><span asp-validation-for="password"></span></div>
+            </div> 
             <div class="uk-margin">
                 <button class="uk-button uk-button-primary">Submit</button>
             </div>
             <div class="error-message">
             <p>@TempData["error"]</p>
             </div>
+
+            <hr />
+            <p>Forgot login info? For now, you'll have to <a href="/register">create a new account.</a></p>
+            </div>
         </form>
-    <hr />
-    <p>Forgot login info? For now, you'll have to <a href="/register">create a new account.</a></p>
-    </div>
-</div>
+<!-- </div> -->

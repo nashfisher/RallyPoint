@@ -32,17 +32,14 @@ namespace Rallypoint.Models
 
     public class LoginViewModel : BaseEntity{
 
-        [Required]
-        [Display(Name ="Username/Email")]
-
+        [Required(ErrorMessage = "Username or email is required")]
 
         public string identity {get; set;}
 
        
-        [Required]
+        [Required(ErrorMessage = "Password is required")]
         [MinLength(8)]
         [DataType(DataType.Password)]
-        [Display(Name ="Password")]
 
         public string password {get; set;}
     }

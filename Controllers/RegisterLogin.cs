@@ -22,6 +22,9 @@ namespace Rallypoint.Controllers
         [HttpGet]
         [Route("register")]
         public IActionResult ShowPage(){
+
+            ViewBag.log = "Login";
+
             return View("Register");
         }
 
@@ -68,6 +71,11 @@ namespace Rallypoint.Controllers
         [HttpGet]
         [Route("login")]
         public IActionResult Loginpage(){
+
+            HttpContext.Session.Clear();
+
+            ViewBag.log = "Login";
+
             return View("Login");
         }
         [HttpPost]
@@ -88,12 +96,23 @@ namespace Rallypoint.Controllers
                     if(0 !=lHasher.VerifyHashedPassword(lUser, lUser.password, user.password))
                 {
                     HttpContext.Session.SetInt32("Id", lUser.Id);
+<<<<<<< HEAD
                     return RedirectToAction("Index","Rallypoint");
+=======
+                    HttpContext.Session.SetString("Username", lUser.username);
+                    return RedirectToAction("Index", "Rallypoint");
+                } 
+>>>>>>> nash_branch
                 }
                else{
                    if(0 !=Uhasher.VerifyHashedPassword(UUser,UUser.password, user.password)){
                     HttpContext.Session.SetInt32("Id", UUser.Id);
+<<<<<<< HEAD
                     return RedirectToAction("Index","Rallypoint");
+=======
+                    HttpContext.Session.SetString("Username", UUser.username);
+                    return RedirectToAction("Index", "Rallypoint");
+>>>>>>> nash_branch
 
                     }
                }
