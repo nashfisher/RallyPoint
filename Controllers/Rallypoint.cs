@@ -12,6 +12,9 @@ namespace Rallypoint.Controllers{
         [HttpGet]
         [Route("/")]
         public IActionResult Index(){
+
+            ViewBag.log = HttpContext.Session.GetString("Username");
+            
             return View("Index");
         }
     }

@@ -11,7 +11,7 @@ using System;
 namespace Rallypoint.Migrations
 {
     [DbContext(typeof(RallypointContext))]
-    [Migration("20180522164427_first")]
+    [Migration("20180522175039_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

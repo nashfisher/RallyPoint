@@ -3,10 +3,10 @@
 }
 @model Rallypoint.Models.RegisterViewModel
 
-<div class="wrapper">
+<!-- <div class="wrapper"> -->
     <div class="entrance">
-        <form asp-controller="RegisterLogin" asp-action="Register" method="POST" class="entrance">
-            <legend class="uk-legend">Create an account</legend>
+        <form asp-controller="RegisterLogin" asp-action="Register" method="POST" class="entranceform">
+            <legend class="uk-legend" >Create an account</legend>
 
             <div class="uk-margin">
                 <input class="uk-input" asp-for="first_name" placeholder="First Name">
@@ -35,11 +35,11 @@
             <div class="uk-margin">
                 <button class="uk-button uk-button-primary">Register</button>
             </div>
-        </form>
         <div class="error-message">
             <p>@TempData["error"]</p>
         </div>
-    <hr />
-    <p>Already a user? <a href="/login">Login with existing account.</a></p>
+        <hr />
+        <p>Already a user? <a href="/login">Login with existing account.</a></p>
+        </form>
     </div>
-</div>
+<!-- </div> -->
