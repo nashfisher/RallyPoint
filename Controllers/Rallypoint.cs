@@ -13,6 +13,8 @@ namespace Rallypoint.Controllers{
             _context = context;
         }
 
+        
+
 
         public bool LoggedIn() {
             if (HttpContext.Session.GetString("Username") == null) {
@@ -66,6 +68,14 @@ namespace Rallypoint.Controllers{
             return View();
         }
 
+        [HttpGet]
+        [Route("/games/scoreboard")]
+        public IActionResult ScoreBoard(){
+            List<User> users = _context.Users.ToList();
+            ViewBag.Users = users;
+            return View();
+        }
+
         [HttpPost]
         [Route("/games/join")]
         public IActionResult JoinGame(int GameId, bool join){
@@ -99,17 +109,35 @@ namespace Rallypoint.Controllers{
         [Route("/games/new")]
         public IActionResult NewGame(GameViewModel game) {
             //Some logic to get the current user id.
-            int playeroneId = 1;
+            
 
             if (ModelState.IsValid) {
                 Game newGame = new Game(){
-                    playeroneId = playeroneId,
+                    playeroneId = game.playeroneId,
+                    playertwoId = game.playertwoId,
+                    playeroneScore = game.playeroneScore,
+                    playertwoScore = game.playertwoScore,
                     date = (DateTime) game.date,
                     address = game.address
                 };
+                if(newGame.playeroneScore > newGame.playertwoScore)
+                {
+                    User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
+                    User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
+                    winner.wins++;
+                    loser.losses++;
+                }
+                else
+                {
+                    User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
+                    User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
+                    winner.wins++;
+                    loser.losses++;
+                }
+
                 _context.Add(newGame);
                 _context.SaveChanges();
-                return RedirectToAction("GamesIndex");
+                return RedirectToAction("NewGame");
             }
             return View();
         }
@@ -118,6 +146,9 @@ namespace Rallypoint.Controllers{
         [Route("games/new")]
         public IActionResult NewGame(){
             ViewBag.log = HttpContext.Session.GetString("Username");
+            List<User> users = _context.Users.ToList();
+            ViewBag.Users = users;
+
             return View();
         }
 
@@ -125,10 +156,14 @@ namespace Rallypoint.Controllers{
         [Route("/gameinfo/{gameid}")]
         public IActionResult gameinfo(int gameid){
 
+
             // Display username in nav
             ViewBag.log = HttpContext.Session.GetString("Username");
             
-            ViewBag.Game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo);
+
+            List<Game> game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo).ToList();
+            ViewBag.Game = game;
+
             return View("gameinfo");
         }
     }

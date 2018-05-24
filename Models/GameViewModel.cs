@@ -14,7 +14,15 @@ namespace Rallypoint.Models
 {
     public class GameViewModel : BaseEntity
     {
-        [Required,Display(Name="Game Location")]
+        [Required,Display(Name="Player One")]
+        public int playeroneId {get;set;}
+        [Required,Display(Name="Player Two")]
+        public int playertwoId {get;set;}
+        [Required,Display(Name="Player One Score")]
+        public int playeroneScore {get;set;}
+        [Required,Display(Name="Player Two Score")]
+        public int playertwoScore {get;set;}
+        [Required,Display(Name="Location")]
         public string address {get;set;}
         [Later(ErrorMessage="Must be later than today."), Required, Display(Name="Game Date")]
         public DateTime? date {get;set;}

@@ -1,13 +1,3 @@
-/Users/Cole/Documents/CsharpProj/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.deps.json
-/Users/Cole/Documents/CsharpProj/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.runtimeconfig.json
-/Users/Cole/Documents/CsharpProj/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.runtimeconfig.dev.json
-/Users/Cole/Documents/CsharpProj/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.dll
-/Users/Cole/Documents/CsharpProj/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.pdb
-/Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.csproj.CoreCompileInputs.cache
-/Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfoInputs.cache
-/Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfo.cs
-/Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.dll
-/Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.pdb
 /Users/Nash/Desktop/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.deps.json
 /Users/Nash/Desktop/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.runtimeconfig.json
 /Users/Nash/Desktop/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.runtimeconfig.dev.json
