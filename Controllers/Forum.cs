@@ -19,7 +19,7 @@ namespace Rallypoint.Controllers{
         }
 
         [HttpGet]
-        [Route("test")]
+        [Route("forum")]
         public IActionResult Index(){
 
             if (HttpContext.Session.GetString("Username") == null) {
@@ -29,34 +29,56 @@ namespace Rallypoint.Controllers{
                 ViewBag.log = HttpContext.Session.GetString("Username");
             }
             // for testing individual user
+<<<<<<< HEAD
             var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == 1);
+=======
+            int? sessionid = HttpContext.Session.GetInt32("Id");
+            var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == HttpContext.Session.GetInt32("Id"));
+>>>>>>> master
             var test = _context.Posts.Include(p => p.user);
             ViewBag.RecentPost = test;
             return View("Index","_ForumLayout");
         }
 
         [HttpGet]
-        [Route("test/create")]
+        [Route("forum/create")]
         public IActionResult CreatePost()
         {
             ViewBag.log = HttpContext.Session.GetString("Username");
 
-            var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == 1);
+            var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == HttpContext.Session.GetInt32("Id"));
             return View();
         }
 
         [HttpPost]
-        [Route("test/process")]
+        [Route("forum/process")]
         public IActionResult SavePost(Post newpost)
         {
             if(ModelState.IsValid)
             {
-                newpost.UserId = 1;
+                newpost.UserId = HttpContext.Session.GetInt32("Id");
                 _context.Posts.Add(newpost);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View("CreatePost",newpost);
+        }
+
+        [HttpPost]
+        [Route("forum/like/{postId}")]
+        public IActionResult LikePost(int postId)
+        {
+            Like stuff = _context.Likes.SingleOrDefault(j => j.PostId == postId && j.UserId == HttpContext.Session.GetInt32("Id"));
+            if(stuff != null){
+                return Redirect("forum");
+            }
+            Like likedstuff = new Like {
+                PostId = postId,
+                UserId =(int)HttpContext.Session.GetInt32("Id")
+            };
+            _context.Likes.Add(likedstuff);
+            _context.SaveChanges();
+            return RedirectToAction("forum");
         }
     }
 }

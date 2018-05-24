@@ -5,6 +5,7 @@
 
 	<ItemGroup>
 		<Folder Include="wwwroot\" />
+		<PackageReference Include="CodeHollow.FeedReader" Version="1.1.2" />
 		<PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
 		<PackageReference Include="Dapper" Version="1.50.4" />
 		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.1" />

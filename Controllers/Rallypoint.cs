@@ -13,17 +13,49 @@ namespace Rallypoint.Controllers{
             _context = context;
         }
 
+        
+
+
+        public bool LoggedIn() {
+            if (HttpContext.Session.GetString("Username") == null) {
+                
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
 
         [HttpGet]
         [Route("/")]
         public IActionResult Index(){
+
+            ViewBag.splash = "True";
+
+            ViewBag.log = "Login";
+
             return View();
         }
 
         [HttpGet]
         [Route("/games")]
         public IActionResult GamesIndex(){
+<<<<<<< HEAD
             int? userId = HttpContext.Session.GetInt32("Id");
+=======
+
+
+            // Force user to login
+            if (LoggedIn() == false) {
+                
+                return RedirectToAction("Loginpage", "RegisterLogin");
+            }
+
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+
+            int userId = 1;
+>>>>>>> master
             IQueryable<Game> userGames = 
                 _context.Games.Where(g => (g.playeroneId == userId || g.playertwoId == userId));
             IQueryable<Game> availableGames =
@@ -41,10 +73,26 @@ namespace Rallypoint.Controllers{
             return View();
         }
 
+        [HttpGet]
+        [Route("/games/scoreboard")]
+        public IActionResult ScoreBoard(){
+            List<User> users = _context.Users.ToList();
+            ViewBag.Users = users;
+            return View();
+        }
+
         [HttpPost]
         [Route("/games/join")]
         public IActionResult JoinGame(int GameId, bool join){
+<<<<<<< HEAD
             int? userId = HttpContext.Session.GetInt32("Id");
+=======
+
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+
+            int userId = 1;
+>>>>>>> master
             Game toJoin = _context.Games
                 .Where(g => g.Id == GameId).SingleOrDefault();
             toJoin.playertwoId = join ? userId : (int?) null;
@@ -55,6 +103,10 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/delete")]
         public IActionResult DeleteGame(int Id){
+
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+
             Game toDelete = _context.Games
                 .Where(g => g.Id == Id).SingleOrDefault();
             _context.Remove(toDelete);
@@ -65,17 +117,40 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/new")]
         public IActionResult NewGame(GameViewModel game) {
+<<<<<<< HEAD
             int? playeroneId = HttpContext.Session.GetInt32("Id");
+=======
+            //Some logic to get the current user id.
+            
+>>>>>>> master
 
             if (ModelState.IsValid) {
                 Game newGame = new Game(){
-                    playeroneId = playeroneId,
+                    playeroneId = game.playeroneId,
+                    playertwoId = game.playertwoId,
+                    playeroneScore = game.playeroneScore,
+                    playertwoScore = game.playertwoScore,
                     date = (DateTime) game.date,
                     address = game.address
                 };
+                if(newGame.playeroneScore > newGame.playertwoScore)
+                {
+                    User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
+                    User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
+                    winner.wins++;
+                    loser.losses++;
+                }
+                else
+                {
+                    User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
+                    User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
+                    winner.wins++;
+                    loser.losses++;
+                }
+
                 _context.Add(newGame);
                 _context.SaveChanges();
-                return RedirectToAction("GamesIndex");
+                return RedirectToAction("NewGame");
             }
             return View();
         }
@@ -84,14 +159,24 @@ namespace Rallypoint.Controllers{
         [Route("games/new")]
         public IActionResult NewGame(){
             ViewBag.log = HttpContext.Session.GetString("Username");
+            List<User> users = _context.Users.ToList();
+            ViewBag.Users = users;
+
             return View();
         }
 
         [HttpGet]
         [Route("/gameinfo/{gameid}")]
-
         public IActionResult gameinfo(int gameid){
-            ViewBag.Game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo);
+
+
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+            
+
+            List<Game> game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo).ToList();
+            ViewBag.Game = game;
+
             return View("gameinfo");
         }
     }

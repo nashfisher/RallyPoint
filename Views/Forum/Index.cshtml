@@ -2,8 +2,7 @@
  Layout = "~/Views/Shared/_ForumLayout.cshtml";
 }
 
-<div class="uk-section uk-section-primary ">
-    <div class="uk-container">
+<div class="wrapper">
 
         <ul class="uk-breadcrumb">
             <li><a href="">Home</a></li>
@@ -11,7 +10,7 @@
         </ul>
 
         <div class="uk-panel uk-margin-medium">
-            <a class="uk-button uk-button-default" href="test/create"><h3 class="categories">Create Post</h3></a>
+            <a class="uk-button uk-button-default" href="forum/create"><h3 class="categories">Create Post</h3></a>
         </div>
 
         <div class="uk-panel uk-margin-medium">
@@ -39,13 +38,13 @@
             @foreach(var post in @ViewBag.RecentPost)
             {
                 <div>
-                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="postlist">
                         <p class="post-title">@post.title </p>
-                        <a href="/profile/{id}"><p class="post-data"><span class="uk-icon uk-margin-small-right" uk-icon="icon: user; ratio: .5"></span>@post.user.username </p></a>
+                        <a href="/profile"><p class="post-data"><span class="uk-icon uk-margin-small-right" uk-icon="icon: user; ratio: .5"></span>@post.user.username </p></a>
                     </div>
                 </div>
             }
         <!-- </div> -->
 
-    </div>
+
 </div>

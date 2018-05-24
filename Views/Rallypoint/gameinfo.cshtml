@@ -1,7 +1,18 @@
+<div class="wrapper">
 <h1>Game Name</h1>
-<h2>player 1 vs player 2</h2>
-<h3>Address</h3>
+@{
+    @if(@ViewBag.Game[0].playertwo != null)
+    {
+        <h2>@ViewBag.Game[0].playerone.username vs @ViewBag.Game[0].playertwo.username</h2>
+    }
+    else{
+        <h2>@ViewBag.Game[0].playerone.username vs TBD</h2>
+    }
+}
+
+<h3>@ViewBag.Game[0].address</h3>
+<h3>@ViewBag.Game[0].date</h3>
 
 
 <iframe width="600" height="450" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/search?q=2847W38thplchicagoil&key=AIzaSyAekucP4ULjCS-mzW5lXJU-1EON1srynjw" allowfullscreen></iframe>
+src="https://www.google.com/maps/embed/v1/search?q=@ViewBag.Game[0].address&key=AIzaSyAekucP4ULjCS-mzW5lXJU-1EON1srynjw" allowfullscreen></iframe>
