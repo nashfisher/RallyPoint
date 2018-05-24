@@ -14,15 +14,41 @@ namespace Rallypoint.Controllers{
         }
 
 
+        public bool LoggedIn() {
+            if (HttpContext.Session.GetString("Username") == null) {
+                
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
         [HttpGet]
         [Route("/")]
         public IActionResult Index(){
+
+            ViewBag.splash = "True";
+
+            ViewBag.log = "Login";
+
             return View();
         }
 
         [HttpGet]
         [Route("/games")]
         public IActionResult GamesIndex(){
+
+
+            // Force user to login
+            if (LoggedIn() == false) {
+                
+                return RedirectToAction("Loginpage", "RegisterLogin");
+            }
+
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+
             int userId = 1;
             IQueryable<Game> userGames = 
                 _context.Games.Where(g => g.playeroneId == userId);
@@ -43,6 +69,10 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/join")]
         public IActionResult JoinGame(int GameId, bool join){
+
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+
             int userId = 1;
             Game toJoin = _context.Games
                 .Where(g => g.Id == GameId).SingleOrDefault();
@@ -54,6 +84,10 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/delete")]
         public IActionResult DeleteGame(int Id){
+
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+
             Game toDelete = _context.Games
                 .Where(g => g.Id == Id).SingleOrDefault();
             _context.Remove(toDelete);
@@ -89,8 +123,11 @@ namespace Rallypoint.Controllers{
 
         [HttpGet]
         [Route("/gameinfo/{gameid}")]
-
         public IActionResult gameinfo(int gameid){
+
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+            
             ViewBag.Game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo);
             return View("gameinfo");
         }
