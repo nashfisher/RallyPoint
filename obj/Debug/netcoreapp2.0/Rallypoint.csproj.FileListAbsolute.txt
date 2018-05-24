@@ -8,3 +8,14 @@
 /Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfo.cs
 /Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.dll
 /Users/Cole/Documents/CsharpProj/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.pdb
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.deps.json
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.runtimeconfig.json
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.runtimeconfig.dev.json
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.dll
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/bin/Debug/netcoreapp2.0/Rallypoint.pdb
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.csprojResolveAssemblyReference.cache
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.csproj.CoreCompileInputs.cache
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfoInputs.cache
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfo.cs
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.dll
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.pdb
