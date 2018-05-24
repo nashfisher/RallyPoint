@@ -115,25 +115,24 @@ namespace Rallypoint.Controllers{
                 Game newGame = new Game(){
                     playeroneId = game.playeroneId,
                     playertwoId = game.playertwoId,
-                    playeroneScore = game.playeroneScore,
-                    playertwoScore = game.playertwoScore,
+                    
                     date = (DateTime) game.date,
                     address = game.address
                 };
-                if(newGame.playeroneScore > newGame.playertwoScore)
-                {
-                    User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
-                    User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
-                    winner.wins++;
-                    loser.losses++;
-                }
-                else
-                {
-                    User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
-                    User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
-                    winner.wins++;
-                    loser.losses++;
-                }
+                // if(newGame.playeroneScore > newGame.playertwoScore)
+                // {
+                //     User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
+                //     User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
+                //     winner.wins++;
+                //     loser.losses++;
+                // }
+                // else
+                // {
+                //     User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
+                //     User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
+                //     winner.wins++;
+                //     loser.losses++;
+                // }
 
                 _context.Add(newGame);
                 _context.SaveChanges();
@@ -152,6 +151,72 @@ namespace Rallypoint.Controllers{
             return View();
         }
 
+        [HttpPost]
+        [Route("/gameinfo/{gameid}/updatescores")]
+        public IActionResult UpdateScores(UpdateScoresViewModel model, int gameid){
+            int p1subwins = 0;
+            int p2subwins = 0;
+
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+        
+            Game game = _context.Games.Include(up => up.playerone).Include(u =>u.playertwo).SingleOrDefault(g => g.Id == gameid);
+            ViewBag.Game = game;
+            User p1 = game.playerone;
+            User p2 = game.playertwo;
+
+            if (ModelState.IsValid) {
+                game.playeroneroundoneScore = model.playeroneroundoneScore;
+                game.playertworoundoneScore = model.playertworoundoneScore;
+                game.playeroneroundtwoScore = model.playeroneroundtwoScore;
+                game.playertworoundtwoScore = model.playertworoundtwoScore;
+                game.playeroneroundthreeScore = model.playeroneroundthreeScore;
+                game.playertworoundthreeScore = model.playertworoundthreeScore;
+
+            }
+
+            if(game.playeroneroundoneScore > game.playertworoundoneScore)
+            {
+                p1subwins++;
+            }
+            else
+            {
+                p2subwins++;
+            }
+
+            if(game.playeroneroundtwoScore > game.playertworoundtwoScore)
+            {
+                p1subwins++;
+            }
+            else
+            {
+                p2subwins++;
+            }
+
+            if(game.playeroneroundthreeScore > game.playertworoundthreeScore)
+            {
+                p1subwins++;
+            }
+            else
+            {
+                p2subwins++;
+            }
+
+            if(p1subwins == 2)
+            {
+                p1.wins++;
+                p2.losses++;
+            }
+            else
+            {
+                p2.wins++;
+                p1.losses++;
+            }
+
+            _context.SaveChanges();
+            return View("gameinfo");
+        }
+
         [HttpGet]
         [Route("/gameinfo/{gameid}")]
         public IActionResult gameinfo(int gameid){
@@ -161,7 +226,7 @@ namespace Rallypoint.Controllers{
             ViewBag.log = HttpContext.Session.GetString("Username");
             
 
-            List<Game> game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo).ToList();
+            Game game = _context.Games.Include(up => up.playerone).Include(u =>u.playertwo).SingleOrDefault(g => g.Id == gameid);
             ViewBag.Game = game;
 
             return View("gameinfo");
