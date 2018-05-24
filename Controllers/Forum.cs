@@ -31,7 +31,7 @@ namespace Rallypoint.Controllers{
             // for testing individual user
             int? sessionid = HttpContext.Session.GetInt32("Id");
             var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == HttpContext.Session.GetInt32("Id"));
-            var test = _context.Posts;
+            var test = _context.Posts.Include(p => p.user);
             ViewBag.RecentPost = test;
             return View("Index","_ForumLayout");
         }

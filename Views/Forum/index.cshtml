@@ -2,8 +2,7 @@
  Layout = "~/Views/Shared/_ForumLayout.cshtml";
 }
 
-<div class="uk-section uk-section-primary ">
-    <div class="uk-container">
+<div class="wrapper">
 
         <ul class="uk-breadcrumb">
             <li><a href="">Home</a></li>
@@ -41,11 +40,11 @@
                 <div>
                     <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="postlist">
                         <p class="post-title">@post.title </p>
-                        <a href="/profile/{id}"><p class="post-data"><span class="uk-icon uk-margin-small-right" uk-icon="icon: user; ratio: .5"></span>@post.user.username </p></a>
+                        <a href="/profile"><p class="post-data"><span class="uk-icon uk-margin-small-right" uk-icon="icon: user; ratio: .5"></span>@post.user.username </p></a>
                     </div>
                 </div>
             }
         <!-- </div> -->
 
-    </div>
+
 </div>
