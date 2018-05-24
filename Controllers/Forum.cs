@@ -30,7 +30,7 @@ namespace Rallypoint.Controllers{
             }
             // for testing individual user
             var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == 1);
-            var test = _context.Posts;
+            var test = _context.Posts.Include(p => p.user);
             ViewBag.RecentPost = test;
             return View("Index","_ForumLayout");
         }

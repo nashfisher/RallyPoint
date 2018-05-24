@@ -103,17 +103,17 @@ namespace Rallypoint.Controllers
                else{
                    if(0 !=Uhasher.VerifyHashedPassword(UUser,UUser.password, user.password)){
                     HttpContext.Session.SetInt32("Id", UUser.Id);
-                    HttpContext.Session.SetString("Username", UUser.username);
-                    return RedirectToAction("Index", "Rallypoint");
 
+                    HttpContext.Session.SetString("Username", UUser.username);
+                    return RedirectToAction("index", "Forum");
                     }
                }
                 
                 ModelState.AddModelError("identity", "Invalid Login Information");
                 return View("Login");
             }
-                return View("Login");
-            }
-           
+            return View("Login");
         }
-    }
+    }    
+}
+

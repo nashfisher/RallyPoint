@@ -23,9 +23,9 @@ namespace Rallypoint.Controllers{
         [HttpGet]
         [Route("/games")]
         public IActionResult GamesIndex(){
-            int userId = 1;
+            int? userId = HttpContext.Session.GetInt32("Id");
             IQueryable<Game> userGames = 
-                _context.Games.Where(g => g.playeroneId == userId);
+                _context.Games.Where(g => (g.playeroneId == userId || g.playertwoId == userId));
             IQueryable<Game> availableGames =
                 _context.Games.Where(g => (
                     g.playertwoId == null &&
@@ -33,7 +33,8 @@ namespace Rallypoint.Controllers{
             IQueryable<Game> otherGames =
                 _context.Games.Where(g => (
                     g.playeroneId != userId &&
-                    g.playertwoId != null));
+                    g.playertwoId != userId));
+            ViewBag.userId = userId;
             ViewBag.userGames = userGames;
             ViewBag.availableGames = availableGames;
             ViewBag.otherGames = otherGames;
@@ -43,7 +44,7 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/join")]
         public IActionResult JoinGame(int GameId, bool join){
-            int userId = 1;
+            int? userId = HttpContext.Session.GetInt32("Id");
             Game toJoin = _context.Games
                 .Where(g => g.Id == GameId).SingleOrDefault();
             toJoin.playertwoId = join ? userId : (int?) null;
@@ -64,8 +65,7 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/new")]
         public IActionResult NewGame(GameViewModel game) {
-            //Some logic to get the current user id.
-            int playeroneId = 1;
+            int? playeroneId = HttpContext.Session.GetInt32("Id");
 
             if (ModelState.IsValid) {
                 Game newGame = new Game(){
