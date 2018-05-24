@@ -13,6 +13,8 @@ namespace Rallypoint.Controllers{
             _context = context;
         }
 
+        
+
 
         [HttpGet]
         [Route("/")]
