@@ -114,8 +114,6 @@ namespace Rallypoint.Controllers
             }
             return View("Login");
         }
-    }
-
-       
+    }    
 }
 
