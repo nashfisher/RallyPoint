@@ -1,5 +1,14 @@
 <h1>Game Name</h1>
-<h2>@ViewBag.Game[0].playerone.username vs @ViewBag.Game[0].playertwo.username</h2>
+@{
+    @if(@ViewBag.Game[0].playertwo != null)
+    {
+        <h2>@ViewBag.Game[0].playerone.username vs @ViewBag.Game[0].playertwo.username</h2>
+    }
+    else{
+        <h2>@ViewBag.Game[0].playerone.username vs TBD</h2>
+    }
+}
+
 <h3>@ViewBag.Game[0].address</h3>
 <h3>@ViewBag.Game[0].date</h3>
 
