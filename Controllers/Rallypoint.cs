@@ -91,7 +91,8 @@ namespace Rallypoint.Controllers{
         [Route("/gameinfo/{gameid}")]
 
         public IActionResult gameinfo(int gameid){
-            ViewBag.Game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo);
+            List<Game> game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo).ToList();
+            ViewBag.Game = game;
             return View("gameinfo");
         }
     }
