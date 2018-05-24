@@ -1,0 +1,10 @@
+<h1>Scoreboard</h1>
+
+@{
+    foreach(var user in ViewBag.Users)
+    {
+        <p>Username: @user.username</p>
+        <p>Wins: @user.wins</p>
+        <p>Losses: @user.losses</p>
+    }
+}

@@ -5,7 +5,42 @@
 }
 <div class="wrapper">
     <h3>Schedule A Game</h3>
-    <form asp-action="" asp-controller="Rallypoint">
+    <form asp-action="NewGame" asp-controller="Rallypoint">
+        <div class="uk-margin">
+            <label class="uk-form-label" asp-for="playeroneId"></label>
+            <select asp-for="playeroneId">
+            @{
+                foreach(var user in ViewBag.Users)
+                {
+                    <option value="@user.Id">@user.username</option>
+                }
+            }
+            </select>
+            <small><span asp-validation-for="playeroneId"></span></small>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" asp-for="playertwoId"></label>
+            <select asp-for="playertwoId">
+            @{
+                foreach(var user in ViewBag.Users)
+                {
+                    <option value="@user.Id">@user.username</option>
+                }
+            }
+            </select>
+            <small><span asp-validation-for="playertwoId"></span></small>
+        </div>
+        <div class="uk-margin">
+            <label class="uk-form-label" asp-for="playeroneScore"></label>
+            <input class="uk-input" asp-for="playeroneScore"/>
+            <small><span asp-validation-for="playeroneScore"></span></small>
+        </div>
+        <div class="uk-margin">
+            <label class="uk-form-label" asp-for="playertwoScore"></label>
+            <input class="uk-input" asp-for="playertwoScore"/>
+            <small><span asp-validation-for="playertwoScore"></span></small>
+        </div>
         <div class="uk-margin">
             <label class="uk-form-label" asp-for="address"></label>
             <input class="uk-input" asp-for="address"/>
@@ -16,6 +51,8 @@
             <input class="uk-input" asp-for="date"/>
             <small><span asp-validation-for="date"></span></small>
         </div>
+        
+
         <button class="uk-button uk-button-primary">Submit</button>
     </form>
 </div>
