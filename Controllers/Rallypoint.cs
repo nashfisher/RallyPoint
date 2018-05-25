@@ -73,7 +73,7 @@ namespace Rallypoint.Controllers{
         public IActionResult ScoreBoard(){
             List<User> users = _context.Users.ToList();
             ViewBag.Users = users;
-            return View();
+            return View("ScoreBoard");
         }
 
         [HttpPost]
