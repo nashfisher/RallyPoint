@@ -1,9 +1,10 @@
-<div style="text-align: center">
+<div class="wrapper">
+    <div style="text-align: center">
 
     <h1>@ViewBag.User[0].username</h1>
     @{
     @if(@ViewBag.User[0].imagelink == null){
-        <h3>If you want a Profile Picture, please submit an image link! (Any image considered Offensive will be removed and result in a banned account.)</h3>
+        <h4>If you want a Profile Picture, please submit an image link! (Any image considered Offensive will be removed and result in a banned account.)</h4>
     }
     else{
         <img id="profilepic" src="@ViewBag.User[0].imagelink" alt="profile image">
@@ -23,4 +24,5 @@
         <h4 class="stuff"> Games Created: @ViewBag.User[0].gamescreated.Count</h4> 
     </div>
     
+    </div>
 </div>
