@@ -226,7 +226,7 @@ namespace Rallypoint.Controllers{
             ViewBag.log = HttpContext.Session.GetString("Username");
             
 
-            Game game = _context.Games.Include(up => up.playerone).Include(u =>u.playertwo).SingleOrDefault(g => g.Id == gameid);
+            Game game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo).SingleOrDefault();
             ViewBag.Game = game;
 
             return View("gameinfo");

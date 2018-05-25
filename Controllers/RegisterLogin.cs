@@ -60,6 +60,7 @@ namespace Rallypoint.Controllers
                 _context.SaveChanges();
                 User ReturnedUser = _context.Users.SingleOrDefault(userID => userID.email == user.email);
                 HttpContext.Session.SetInt32("Id", ReturnedUser.Id);
+                HttpContext.Session.SetString("Username", ReturnedUser.username);
                 return RedirectToAction("index","Forum");
 
             }

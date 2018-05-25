@@ -28,6 +28,7 @@
                     <option value="@user.Id">@user.username</option>
                 }
             }
+                <option>-Open-</option>
             </select>
             <small><span asp-validation-for="playertwoId"></span></small>
         </div>
@@ -46,4 +47,5 @@
 
         <button class="uk-button uk-button-primary">Submit</button>
     </form>
+    <a href="/games"><button class="uk-primary uk-button-default">Go Back</button></a>
 </div>
