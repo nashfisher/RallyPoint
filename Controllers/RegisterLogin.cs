@@ -61,7 +61,7 @@ namespace Rallypoint.Controllers
                 User ReturnedUser = _context.Users.SingleOrDefault(userID => userID.email == user.email);
                 HttpContext.Session.SetInt32("Id", ReturnedUser.Id);
                 HttpContext.Session.SetString("Username", ReturnedUser.username);
-                return RedirectToAction("index","Forum");
+                return RedirectToAction("GamesIndex","Rallypoint");
 
             }
 
@@ -98,7 +98,7 @@ namespace Rallypoint.Controllers
                 {
                     HttpContext.Session.SetInt32("Id", lUser.Id);
                     HttpContext.Session.SetString("Username", lUser.username);
-                    return RedirectToAction("index", "Forum");
+                    return RedirectToAction("GamesIndex","Rallypoint");
                 } 
                 }
                else{
@@ -106,7 +106,7 @@ namespace Rallypoint.Controllers
                     HttpContext.Session.SetInt32("Id", UUser.Id);
 
                     HttpContext.Session.SetString("Username", UUser.username);
-                    return RedirectToAction("index", "Forum");
+                    return RedirectToAction("GamesIndex","Rallypoint");
                     }
                }
                 
