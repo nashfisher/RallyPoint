@@ -111,6 +111,15 @@ body {
     background-color: rgb(240, 239, 239);
 }
 
+.post-left {
+    display: inline-block;
+}
+
+.post-right {
+    /* display: inline-block; */
+    float: right;
+}
+
 /* Game Info Page */
 
 
