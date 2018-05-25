@@ -39,8 +39,13 @@ namespace Rallypoint.Models{
 		public DateTime date {get; set;}
 		public string address {get; set;}
 
-		public int? playeroneScore {get; set;}
-		public int? playertwoScore {get; set;}
+		public int? playeroneroundoneScore {get; set;}
+		public int? playertworoundoneScore {get; set;}
+		public int? playeroneroundtwoScore {get; set;}
+		public int? playertworoundtwoScore {get; set;}
+		public int? playeroneroundthreeScore {get; set;}
+		public int? playertworoundthreeScore {get; set;}
+
 
 	}
 

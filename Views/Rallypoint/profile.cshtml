@@ -1,12 +1,12 @@
 <div style="text-align: center">
 
-    <h1>@ViewBag.User.username</h1>
+    <h1>@ViewBag.User[0].username</h1>
     @{
-    @if(@ViewBag.User.imagelink == null){
+    @if(@ViewBag.User[0].imagelink == null){
         <h3>If you want a Profile Picture, please submit an image link! (Any image considered Offensive will be removed and result in a banned account.)</h3>
     }
     else{
-        <img id="profilepic" src="@ViewBag.User.imagelink" alt="profile image">
+        <img id="profilepic" src="@ViewBag.User[0].imagelink" alt="profile image">
 
         }   
     }
@@ -17,9 +17,10 @@
 
     </form>
     <div id="stats">
-       <h4 class="stuff"> Wins: @ViewBag.User.wins</h4>
-        <h4 class="stuff"> Losses: @ViewBag.User.losses</h4>
-        <h4 class="stuff"> Games Joined: @ViewBag.User.gamesjoined.Count</h4> 
+       <h4 class="stuff"> Wins: @ViewBag.User[0].wins</h4>
+        <h4 class="stuff"> Losses: @ViewBag.User[0].losses</h4>
+        <h4 class="stuff"> Games Joined: @ViewBag.User[0].gamesjoined.Count</h4> 
+        <h4 class="stuff"> Games Created: @ViewBag.User[0].gamescreated.Count</h4> 
     </div>
     
 </div>

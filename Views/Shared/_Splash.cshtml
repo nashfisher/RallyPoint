@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] Rallypoint Forum</title>
+    <title>@ViewData["Title"] - Rallypoint</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -16,18 +16,20 @@
     <script type="text/javascript" src="~/js/main.js"></script>
 </head>
 <body>
-    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-    <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
-        <div class="uk-navbar-left uk-light">
-            <a class="uk-navbar-item uk-logo" href="/"><img src="~/images/logo-2.png"><h2>Forum</h2></a>
-        </div>
-        <div class="uk-navbar-right">
+    <div class="header">
+        <!-- maybe remove transparent -->
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <div class="uk-navbar-left">
 
-            <ul class="uk-navbar-nav">
-            
-                <li class="uk-active"><a href="/games">Matchmaking</a></li>
-                <li class="uk-active"><a href="/">Scoreboard</a></li>
-                <li>
+        <a class="uk-navbar-item uk-logo" href="/"><img src="~/images/logo-2.png"></a>
+
+        <ul class="uk-navbar-nav">
+        </ul>
+
+    </div>
+    <div class="uk-navbar-right" >
+        <ul class="uk-navbar-nav">
+            <li>
                 @{
                     if (ViewBag.log == "Login")
                     {
@@ -38,16 +40,17 @@
                         <a><div class="mobile-hidden">@ViewBag.log</div><span class="uk-icon uk-margin-small-left" uk-icon="icon: triangle-down"></span></a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><a href="/profile/@ViewBag.log" class="uk-link" style="color:rgb(39, 39, 39) !important;">View Profile</a></li>
+                                <li><a href="#" class="uk-link" style="color:rgb(39, 39, 39) !important;">View Profile</a></li>
                                 <li><a href="/login" class="uk-link" style="color:rgb(39, 39, 39) !important;">Logout</a></li>
                             </ul>
                         </div>
                     }
                 }
             </li>
-            </ul>
-        </div>
+        </ul>
+    </div>
     </nav>
+
     </div>
 
     <div class="body">
