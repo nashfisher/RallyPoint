@@ -169,3 +169,22 @@ ol, ul {
     -khtml-border-radius: 999px;
     -webkit-border-radius: 999px;
 }
+
+#profilepic{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+#stats{
+    margin-top: 35px;
+    margin-left: 575px;
+    width: 300px;
+    padding: 40px;    
+    border: 5px solid blue;
+    background-color: grey;
+    
+}
+.stuff{
+    color: white;
+}

@@ -10,6 +10,8 @@ namespace Rallypoint.Models{
 		public string username {get; set;}
 		public string email {get; set;}
 		public string password {get; set;}
+
+		public string imagelink {get; set;}
 		public int wins {get; set;}
 		public int losses {get; set;}
 		public bool admin {get; set;}

@@ -166,5 +166,26 @@ namespace Rallypoint.Controllers{
 
             return View("gameinfo");
         }
+
+        [HttpGet]
+        [Route("/profile/{username}")]
+
+        public IActionResult Showme(string username){
+            User singleuser = _context.Users.SingleOrDefault(u => u.username == username);
+
+            ViewBag.User = singleuser;
+            return View("profile");
+        }
+
+        [HttpPost]
+        [Route("/upload")]
+
+        public IActionResult Upload(string link){
+            User someuser = _context.Users.SingleOrDefault(u => u.Id == HttpContext.Session.GetInt32("Id"));
+            someuser.imagelink = link;
+            _context.SaveChanges();
+            return RedirectToAction("Showme", new {username = someuser.username});
+
+        }    
     }
 }
