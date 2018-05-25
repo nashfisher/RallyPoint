@@ -136,7 +136,7 @@ namespace Rallypoint.Controllers{
                 _context.SaveChanges();
                 return RedirectToAction("NewGame");
             }
-            return View();
+            return RedirectToAction("NewGame");
         }
 
         [HttpGet]
