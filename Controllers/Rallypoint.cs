@@ -40,9 +40,6 @@ namespace Rallypoint.Controllers{
         [HttpGet]
         [Route("/games")]
         public IActionResult GamesIndex(){
-<<<<<<< HEAD
-            int? userId = HttpContext.Session.GetInt32("Id");
-=======
 
 
             // Force user to login
@@ -54,8 +51,7 @@ namespace Rallypoint.Controllers{
             // Display username in nav
             ViewBag.log = HttpContext.Session.GetString("Username");
 
-            int userId = 1;
->>>>>>> master
+            int? userId = HttpContext.Session.GetInt32("Id");
             IQueryable<Game> userGames = 
                 _context.Games.Where(g => (g.playeroneId == userId || g.playertwoId == userId));
             IQueryable<Game> availableGames =
@@ -84,15 +80,10 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/join")]
         public IActionResult JoinGame(int GameId, bool join){
-<<<<<<< HEAD
             int? userId = HttpContext.Session.GetInt32("Id");
-=======
 
             // Display username in nav
             ViewBag.log = HttpContext.Session.GetString("Username");
-
-            int userId = 1;
->>>>>>> master
             Game toJoin = _context.Games
                 .Where(g => g.Id == GameId).SingleOrDefault();
             toJoin.playertwoId = join ? userId : (int?) null;
@@ -117,19 +108,12 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/new")]
         public IActionResult NewGame(GameViewModel game) {
-<<<<<<< HEAD
             int? playeroneId = HttpContext.Session.GetInt32("Id");
-=======
-            //Some logic to get the current user id.
-            
->>>>>>> master
 
             if (ModelState.IsValid) {
                 Game newGame = new Game(){
                     playeroneId = game.playeroneId,
                     playertwoId = game.playertwoId,
-                    playeroneScore = game.playeroneScore,
-                    playertwoScore = game.playertwoScore,
                     date = (DateTime) game.date,
                     address = game.address
                 };
@@ -161,7 +145,6 @@ namespace Rallypoint.Controllers{
             ViewBag.log = HttpContext.Session.GetString("Username");
             List<User> users = _context.Users.ToList();
             ViewBag.Users = users;
-
             return View();
         }
 

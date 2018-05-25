@@ -29,12 +29,8 @@ namespace Rallypoint.Controllers{
                 ViewBag.log = HttpContext.Session.GetString("Username");
             }
             // for testing individual user
-<<<<<<< HEAD
-            var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == 1);
-=======
             int? sessionid = HttpContext.Session.GetInt32("Id");
             var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == HttpContext.Session.GetInt32("Id"));
->>>>>>> master
             var test = _context.Posts.Include(p => p.user);
             ViewBag.RecentPost = test;
             return View("Index","_ForumLayout");
