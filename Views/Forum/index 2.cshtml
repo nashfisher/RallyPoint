@@ -2,16 +2,19 @@
  Layout = "~/Views/Shared/_ForumLayout.cshtml";
 }
 
-<div class="uk-section uk-section-primary ">
-    <div class="uk-container">
+<div class="wrapper">
 
+        <p>Channels</p>
         <ul class="uk-breadcrumb">
-            <li><a href="">Home</a></li>
-            <li><span></span></li>
+            <li><a href="">Pro</a></li>
+            <li><a href="">All</a></li>
+            <li><a href="">QandA</a></li>
         </ul>
 
-        <div class="uk-panel uk-margin-medium">
-            <a class="uk-button uk-button-default" href="test/create"><h3 class="categories">Create Post</h3></a>
+        <div class="uk-panel uk-margin-medium" style="text-align: right;" id="forum-toolbar">
+            <div>
+                <a class="uk-button uk-button-default" href="forum/create"><span class="uk-icon uk-margin-small-right" uk-icon="icon: plus; ratio: 1"></span>Create Post</a>
+            </div>
         </div>
 
         <div class="uk-panel uk-margin-medium">
@@ -39,13 +42,18 @@
             @foreach(var post in @ViewBag.RecentPost)
             {
                 <div>
-                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-                        <p class="post-title">@post.title </p>
-                        <a href="/profile/{id}"><p class="post-data"><span class="uk-icon uk-margin-small-right" uk-icon="icon: user; ratio: .5"></span>@post.user.username </p></a>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="postlist">
+                        <div class="post-left">
+                            <p class="post-title">@post.title </p>
+                            <a href="/profile"><p class="post-data"><span class="uk-icon uk-margin-small-right" uk-icon="icon: user; ratio: .5"></span>@post.user.username </p></a>
+                        </div>
+                        <div class="post-right">
+                            <p>@post.likes</p><a href="/forum/like/@post.Id"><span class="uk-icon" uk-icon="icon: arrow-up; ratio: 2" id="upvote"></span></a>
+                        </div>
                     </div>
                 </div>
             }
         <!-- </div> -->
 
-    </div>
+
 </div>
