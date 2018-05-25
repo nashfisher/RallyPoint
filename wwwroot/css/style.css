@@ -118,7 +118,10 @@ body {
 .post-right {
     /* display: inline-block; */
     float: right;
+    height: 70px;
+    
 }
+
 
 /* Game Info Page */
 
