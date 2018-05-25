@@ -66,15 +66,19 @@ namespace Rallypoint.Controllers{
         {
             Like stuff = _context.Likes.SingleOrDefault(j => j.PostId == postId && j.UserId == HttpContext.Session.GetInt32("Id"));
             if(stuff != null){
-                return Redirect("forum");
+                return RedirectToAction("Index");
             }
-            Like likedstuff = new Like {
-                PostId = postId,
-                UserId =(int)HttpContext.Session.GetInt32("Id")
-            };
-            _context.Likes.Add(likedstuff);
-            _context.SaveChanges();
-            return RedirectToAction("forum");
+            else {
+                
+                Like likedstuff = new Like {
+                    PostId = postId,
+                    UserId =(int)HttpContext.Session.GetInt32("Id")
+                };
+                _context.Likes.Add(likedstuff);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+
+            }
         }
     }
 }
