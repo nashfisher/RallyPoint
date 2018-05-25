@@ -4,9 +4,11 @@
 
 <div class="wrapper">
 
+        <p>Channels</p>
         <ul class="uk-breadcrumb">
-            <li><a href="">Home</a></li>
-            <li><span></span></li>
+            <li><a href="">Pro</a></li>
+            <li><a href="">All</a></li>
+            <li><a href="">QandA</a></li>
         </ul>
 
         <div class="uk-panel uk-margin-medium" style="text-align: right;" id="forum-toolbar">
@@ -46,7 +48,7 @@
                             <a href="/profile"><p class="post-data"><span class="uk-icon uk-margin-small-right" uk-icon="icon: user; ratio: .5"></span>@post.user.username </p></a>
                         </div>
                         <div class="post-right">
-                            <p>@post.likes</p><a href="/forum/like/@post.Id"><span class="uk-icon uk-margin-small-right" uk-icon="icon: arrow-up; ratio: 2"></span></a>
+                            <p>@post.likes</p><a href="/forum/like/@post.Id"><span class="uk-icon" uk-icon="icon: arrow-up; ratio: 2" id="upvote"></span></a>
                         </div>
                     </div>
                 </div>

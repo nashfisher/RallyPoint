@@ -19,8 +19,9 @@
                     <button class="uk-button uk-button-danger">Delete</button>
                 </form>
                 } else {
-                <form asp-controller="Rallypoint" asp-action="JoinGame"       asp-route-GameId="@game.Id" asp-route-join="false"><button class="uk-button uk-button-primary">Leave</button></form>
+                <form asp-controller="Rallypoint" asp-action="JoinGame" asp-route-GameId="@game.Id" asp-route-join="false"><button class="uk-button uk-button-primary">Leave</button></form>
                 }
+                <a href="/gameinfo/@game.Id"><button class="uk-button uk-button-default">View</button></a>
             </div>
             }
         </div>
