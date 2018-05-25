@@ -3,24 +3,28 @@
 }
 
 <div class="wrapper">
-    <h1>Welcome to the Game Index!</h1>
+    <h1>Matchmaking</h1>
     <a asp-action="NewGame" asp-controller="Rallypoint">
         <button class="uk-button uk-button-primary">Add Game</button>
     </a>
+    <a href="/games/scoreboard"><button class="uk-button uk-button-primary">Global Scoreboard</button></a>
     <hr>
-    <h2>My Games</h2>
+    <h3>Scheduled Matches</h3>
         <div class="uk-grid">
             @foreach(var game in ViewBag.userGames){
-            <div class="uk-card">
-                <h3 class="uk-card-title">@game.date</h3>
-                <div class="uk-card-body">@game.address</div>
-                <form asp-controller="Rallypoint" asp-action="DeleteGame" asp-route-Id="@game.Id"><button class="uk-button uk-button-danger">Delete</button></form>
-                <a href="/gameinfo/@game.Id"><button class="uk-button uk-button-default">View</button></a>
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-body">
+                    <p>@game.playerone.username vs. @game.playertwo.username</p>
+                    <p>@game.date</p>
+                    <p>Location: @game.address</p>
+                </div>
+                <form asp-controller="Rallypoint" asp-action="DeleteGame" asp-route-Id="@game.Id"><button class="uk-button uk-button-danger uk-margin">Delete</button></form>
+                <a href="/gameinfo/@game.Id"><button class="uk-button uk-button-default uk-margin">View</button></a>
             </div>
             }
         </div>
     <hr>
-    <h2>Available Games</h2>
+    <h2>Find a Match</h2>
         <div class="uk-grid">
             @foreach(var game in ViewBag.availableGames){
             <div class="uk-card">
@@ -31,14 +35,4 @@
             }
         </div>
     <hr>
-    <h2>Other Games</h2>
-        <div class="uk-grid">
-            @foreach(var game in ViewBag.otherGames){
-            <div class="uk-card">
-                <h3 class="uk-card-title">@game.date</h3>
-                <div class="uk-card-body">@game.address</div>
-                <form asp-controller="Rallypoint" asp-action="JoinGame"       asp-route-GameId="@game.Id" asp-route-join="false"><button class="uk-button uk-button-primary">Leave</button></form>
-            </div>
-            }
-        </div>
 </div>

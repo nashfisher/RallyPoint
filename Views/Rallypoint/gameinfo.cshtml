@@ -1,76 +1,81 @@
 @model Rallypoint.Models.UpdateScoresViewModel
 
 <div class="wrapper">
-<h1>Game Name</h1>
-@{
-    if(ViewBag.Game.playertwo != null)
-    {
-        <h2>@ViewBag.Game.playerone.username vs @ViewBag.Game.playertwo.username</h2>
-    }
-    else{
-        <h2>@ViewBag.Game.playerone.username vs TBD</h2>
-    }
-}
-
-<h3>@ViewBag.Game.address</h3>
-<h3>@ViewBag.Game.date</h3>
-
-
-@{
-    if(ViewBag.Game.playeroneroundoneScore == null)
-    {
-        <form asp-action="UpdateScores" asp-controller="Rallypoint">
-    
-            <div class="uk-margin">
-                @ViewBag.Game.playerone.username  <label class="uk-form-label" asp-for="playeroneroundoneScore"></label>
-                <input class="uk-input" asp-for="playeroneroundoneScore"/>
-                <small><span asp-validation-for="playeroneroundoneScore"></span></small>
-            </div>
-            <div class="uk-margin">
-                @ViewBag.Game.playertwo.username   <label class="uk-form-label" asp-for="playertworoundoneScore"></label>
-                <input class="uk-input" asp-for="playertworoundoneScore"/>
-                <small><span asp-validation-for="playertworoundoneScore"></span></small>
-            </div>
-            <div class="uk-margin">
-                @ViewBag.Game.playerone.username  <label class="uk-form-label" asp-for="playeroneroundtwoScore"></label>
-                <input class="uk-input" asp-for="playeroneroundtwoScore"/>
-                <small><span asp-validation-for="playeroneroundtwoScore"></span></small>
-            </div>
-            <div class="uk-margin">
-                @ViewBag.Game.playertwo.username  <label class="uk-form-label" asp-for="playertworoundtwoScore"></label>
-                <input class="uk-input" asp-for="playertworoundtwoScore"/>
-                <small><span asp-validation-for="playertworoundtwoScore"></span></small>
-            </div>
-            <div class="uk-margin">
-                @ViewBag.Game.playerone.username  <label class="uk-form-label" asp-for="playeroneroundthreeScore"></label> (if exists)
-                <input class="uk-input" asp-for="playeroneroundthreeScore"/>
-                <small><span asp-validation-for="playeroneroundthreeScore"></span></small>
-            </div>
-            <div class="uk-margin">
-                @ViewBag.Game.playertwo.username  <label class="uk-form-label" asp-for="playertworoundthreeScore"></label> (if exists)
-                <input class="uk-input" asp-for="playertworoundthreeScore"/>
-                <small><span asp-validation-for="playertworoundthreeScore"></span></small>
-            </div>
-            <button class="uk-button uk-button-primary">Submit</button>
-        </form>
-    }
-    else
-    {
-        <p>@ViewBag.Game.playerone.username Round 1 Score: @ViewBag.Game.playeroneroundoneScore</p>
-        <p>@ViewBag.Game.playertwo.username Two Round 1 Score: @ViewBag.Game.playertworoundoneScore</p>
-
-        <p>@ViewBag.Game.playerone.username Round 2 Score: @ViewBag.Game.playeroneroundtwoScore</p>
-        <p>@ViewBag.Game.playertwo.username Round 2 Score: @ViewBag.Game.playertworoundtwoScore</p>
-        if(ViewBag.Game.playeroneroundthreeScore != null)
-        {
-            <p>@ViewBag.Game.playerone.username Round 3 Score: @ViewBag.Game.playeroneroundthreeScore</p>
-            <p>@ViewBag.Game.playertwo.username Round 3 Score: @ViewBag.Game.playertworoundthreeScore</p>
+    <div class="match-info">
+        <h1>Match Name</h1>
+        @{
+            if(ViewBag.Game.playertwo != null)
+            {
+                <h2>@ViewBag.Game.playerone.username vs @ViewBag.Game.playertwo.username</h2>
+            }
+            else{
+                <h2>@ViewBag.Game.playerone.username vs TBD</h2>
+            }
         }
-        
-    }
 
-}
+        <h3>@ViewBag.Game.address</h3>
+        <h3>@ViewBag.Game.date</h3>
 
 
-<iframe width="600" height="450" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/search?q=@ViewBag.Game.address&key=AIzaSyAekucP4ULjCS-mzW5lXJU-1EON1srynjw" allowfullscreen></iframe>
+        @{
+            if(ViewBag.Game.playeroneroundoneScore == null)
+            {
+                <form asp-action="UpdateScores" asp-controller="Rallypoint">
+            
+                    <div class="uk-margin">
+                        @ViewBag.Game.playerone.username  <label class="uk-form-label" asp-for="playeroneroundoneScore"></label>
+                        <input class="uk-input" asp-for="playeroneroundoneScore"/>
+                        <small><span asp-validation-for="playeroneroundoneScore"></span></small>
+                    </div>
+                    <div class="uk-margin">
+                        @ViewBag.Game.playertwo.username   <label class="uk-form-label" asp-for="playertworoundoneScore"></label>
+                        <input class="uk-input" asp-for="playertworoundoneScore"/>
+                        <small><span asp-validation-for="playertworoundoneScore"></span></small>
+                    </div>
+                    <div class="uk-margin">
+                        @ViewBag.Game.playerone.username  <label class="uk-form-label" asp-for="playeroneroundtwoScore"></label>
+                        <input class="uk-input" asp-for="playeroneroundtwoScore"/>
+                        <small><span asp-validation-for="playeroneroundtwoScore"></span></small>
+                    </div>
+                    <div class="uk-margin">
+                        @ViewBag.Game.playertwo.username  <label class="uk-form-label" asp-for="playertworoundtwoScore"></label>
+                        <input class="uk-input" asp-for="playertworoundtwoScore"/>
+                        <small><span asp-validation-for="playertworoundtwoScore"></span></small>
+                    </div>
+                    <div class="uk-margin">
+                        @ViewBag.Game.playerone.username  <label class="uk-form-label" asp-for="playeroneroundthreeScore"></label> (if exists)
+                        <input class="uk-input" asp-for="playeroneroundthreeScore"/>
+                        <small><span asp-validation-for="playeroneroundthreeScore"></span></small>
+                    </div>
+                    <div class="uk-margin">
+                        @ViewBag.Game.playertwo.username  <label class="uk-form-label" asp-for="playertworoundthreeScore"></label> (if exists)
+                        <input class="uk-input" asp-for="playertworoundthreeScore"/>
+                        <small><span asp-validation-for="playertworoundthreeScore"></span></small>
+                    </div>
+                    <button class="uk-button uk-button-primary">Submit</button>
+                </form>
+            }
+            else
+            {
+                <p>@ViewBag.Game.playerone.username Round 1 Score: @ViewBag.Game.playeroneroundoneScore</p>
+                <p>@ViewBag.Game.playertwo.username Two Round 1 Score: @ViewBag.Game.playertworoundoneScore</p>
+
+                <p>@ViewBag.Game.playerone.username Round 2 Score: @ViewBag.Game.playeroneroundtwoScore</p>
+                <p>@ViewBag.Game.playertwo.username Round 2 Score: @ViewBag.Game.playertworoundtwoScore</p>
+                if(ViewBag.Game.playeroneroundthreeScore != null)
+                {
+                    <p>@ViewBag.Game.playerone.username Round 3 Score: @ViewBag.Game.playeroneroundthreeScore</p>
+                    <p>@ViewBag.Game.playertwo.username Round 3 Score: @ViewBag.Game.playertworoundthreeScore</p>
+                }
+                
+            }
+
+        }
+
+        <a href="/games"><button class="uk-button uk-button-default">Go Back</button></a>
+    </div>
+
+<div class="map">
+    <iframe width="600" height="450" frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/search?q=@ViewBag.Game.address&key=AIzaSyAekucP4ULjCS-mzW5lXJU-1EON1srynjw" allowfullscreen></iframe>
+</div>

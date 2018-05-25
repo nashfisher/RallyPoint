@@ -53,7 +53,7 @@ namespace Rallypoint.Controllers{
 
             int userId = 1;
             IQueryable<Game> userGames = 
-                _context.Games.Where(g => g.playeroneId == userId);
+                _context.Games.Where(g => g.playeroneId == userId).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
             IQueryable<Game> availableGames =
                 _context.Games.Where(g => (
                     g.playertwoId == null &&
