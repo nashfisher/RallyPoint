@@ -51,9 +51,9 @@ namespace Rallypoint.Controllers{
             // Display username in nav
             ViewBag.log = HttpContext.Session.GetString("Username");
 
-            int userId = 1;
+            int? userId = HttpContext.Session.GetInt32("Id");
             IQueryable<Game> userGames = 
-                _context.Games.Where(g => g.playeroneId == userId);
+                _context.Games.Where(g => (g.playeroneId == userId || g.playertwoId == userId));
             IQueryable<Game> availableGames =
                 _context.Games.Where(g => (
                     g.playertwoId == null &&
@@ -61,7 +61,8 @@ namespace Rallypoint.Controllers{
             IQueryable<Game> otherGames =
                 _context.Games.Where(g => (
                     g.playeroneId != userId &&
-                    g.playertwoId != null));
+                    g.playertwoId != userId));
+            ViewBag.userId = userId;
             ViewBag.userGames = userGames;
             ViewBag.availableGames = availableGames;
             ViewBag.otherGames = otherGames;
@@ -79,11 +80,10 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/join")]
         public IActionResult JoinGame(int GameId, bool join){
+            int? userId = HttpContext.Session.GetInt32("Id");
 
             // Display username in nav
             ViewBag.log = HttpContext.Session.GetString("Username");
-
-            int userId = 1;
             Game toJoin = _context.Games
                 .Where(g => g.Id == GameId).SingleOrDefault();
             toJoin.playertwoId = join ? userId : (int?) null;
@@ -108,15 +108,12 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/new")]
         public IActionResult NewGame(GameViewModel game) {
-            //Some logic to get the current user id.
-            
+            int? playeroneId = HttpContext.Session.GetInt32("Id");
 
             if (ModelState.IsValid) {
                 Game newGame = new Game(){
                     playeroneId = game.playeroneId,
                     playertwoId = game.playertwoId,
-                    playeroneScore = game.playeroneScore,
-                    playertwoScore = game.playertwoScore,
                     date = (DateTime) game.date,
                     address = game.address
                 };
@@ -148,7 +145,6 @@ namespace Rallypoint.Controllers{
             ViewBag.log = HttpContext.Session.GetString("Username");
             List<User> users = _context.Users.ToList();
             ViewBag.Users = users;
-
             return View();
         }
 
