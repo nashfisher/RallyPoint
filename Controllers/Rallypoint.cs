@@ -53,7 +53,11 @@ namespace Rallypoint.Controllers{
 
             int? userId = HttpContext.Session.GetInt32("Id");
             IQueryable<Game> userGames = 
+<<<<<<< HEAD
                 _context.Games.Where(g => (g.playeroneId == userId || g.playertwoId == userId));
+=======
+                _context.Games.Where(g => g.playeroneId == userId).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
+>>>>>>> nash_branch
             IQueryable<Game> availableGames =
                 _context.Games.Where(g => (
                     g.playertwoId == null &&

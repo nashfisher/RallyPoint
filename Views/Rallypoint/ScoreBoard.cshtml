@@ -1,14 +1,25 @@
-<h1> Global Scoreboard</h1>
 
-<div class="scoreboard">
-    @{
-        foreach(var user in ViewBag.Users)
-        {
-            <div>
-                <p>Username: @user.username</p>
-                <p>Wins: @user.wins</p>
-                <p>Losses: @user.losses</p>
-            </div>
-        }
-    }
+<div class="wrapper">
+    <h1> Global Scoreboard</h1>
+    <div class="scoreboard">
+        <table class="uk-table uk-table-striped">
+            <thead>
+                <th>Username</th>
+                <th>Wins</th>
+                <th>Losses</th>
+            </thead>
+            <tbody>
+                @{
+                    foreach(var user in ViewBag.Users)
+                    {
+                        <tr>
+                            <td>@user.username</td>
+                            <td>@user.wins</td>
+                            <td>@user.losses</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
