@@ -2,7 +2,7 @@
 
 <div class="wrapper">
     <div class="match-info">
-        <h1>Match Name</h1>
+        <h1>Match</h1>
         @{
             if(ViewBag.Game.playertwo != null)
             {
@@ -52,7 +52,7 @@
                         <input class="uk-input" asp-for="playertworoundthreeScore"/>
                         <small><span asp-validation-for="playertworoundthreeScore"></span></small>
                     </div>
-                    <button class="uk-button uk-button-primary">Submit</button>
+                    <button class="uk-button uk-button-primary uk-margin">Submit</button>
                 </form>
             }
             else
@@ -72,7 +72,7 @@
 
         }
 
-        <a href="/games"><button class="uk-button uk-button-default">Go Back</button></a>
+        <a href="/games"><button class="uk-button uk-button-default uk-margin">Go Back</button></a>
     </div>
 
 <div class="map">

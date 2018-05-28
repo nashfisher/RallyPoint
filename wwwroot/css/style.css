@@ -122,6 +122,11 @@ body {
     
 }
 
+/* Match Index */
+#match-card {
+    margin: 10px !important;
+}
+
 
 /* Match Info Page */
 .match-info {
@@ -131,6 +136,7 @@ body {
     float: right;
     border: 1px solid lightblue;
 }
+
 
 
 nav img {

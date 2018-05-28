@@ -235,6 +235,8 @@ namespace Rallypoint.Controllers{
         public IActionResult Showme(string username){
             List <User> singleuser = _context.Users.Where(u => u.username == username).Include(g => g.gamescreated).Include(j => j.gamesjoined).ToList();
 
+            ViewBag.log = HttpContext.Session.GetString("Username");
+            
             ViewBag.User = singleuser;
             return View("profile");
         }
