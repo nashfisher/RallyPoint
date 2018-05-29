@@ -8,3 +8,4 @@
 /Users/Nash/Desktop/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.AssemblyInfo.cs
 /Users/Nash/Desktop/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.dll
 /Users/Nash/Desktop/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.pdb
+/Users/Nash/Desktop/RallyPoint/obj/Debug/netcoreapp2.0/Rallypoint.csprojResolveAssemblyReference.cache

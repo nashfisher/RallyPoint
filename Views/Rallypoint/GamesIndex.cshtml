@@ -5,19 +5,19 @@
 <div class="wrapper">
     <h1>Matchmaking</h1>
     <a asp-action="NewGame" asp-controller="Rallypoint">
-        <button class="uk-button uk-button-primary">Add Game</button>
+        <button class="uk-button uk-button-default">Add Game</button>
     </a>
-    <a href="/games/scoreboard"><button class="uk-button uk-button-primary">Global Scoreboard</button></a>
+    <a href="/games/scoreboard"><button class="uk-button uk-button-default">Global Scoreboard</button></a>
     <hr>
     <h3>Scheduled Matches</h3>
-        <div class="uk-grid">
+        <div class="uk-child-width-1-4@m uk-grid-small uk-grid-match" uk-grid>
             @foreach(var game in ViewBag.userGames){
-            <div class="uk-card uk-card-default">
-                <div class="uk-card-body">
-                    <p>@game.playerone.username vs. @game.playertwo.username</p>
-                    <p>@game.date</p>
-                    <p>Location: @game.address</p>
-                </div>
+            <div class="uk-card uk-card-primary uk-card-body">
+                
+                <p class="uk-card-title">@game.playerone.username vs. @game.playertwo.username</p>
+                <p>@game.date</p>
+                <p>Location: @game.address</p>
+                
                 <form asp-controller="Rallypoint" asp-action="DeleteGame" asp-route-Id="@game.Id"><button class="uk-button uk-button-danger uk-margin">Delete</button></form>
                 <a href="/gameinfo/@game.Id"><button class="uk-button uk-button-default uk-margin">View</button></a>
             </div>

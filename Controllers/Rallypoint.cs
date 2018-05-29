@@ -51,9 +51,10 @@ namespace Rallypoint.Controllers{
             // Display username in nav
             ViewBag.log = HttpContext.Session.GetString("Username");
 
-            int userId = 1;
+            int? userId = HttpContext.Session.GetInt32("Id");
+
             IQueryable<Game> userGames = 
-                _context.Games.Where(g => g.playeroneId == userId).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
+                _context.Games.Where(g => g.playeroneId == userId || g.playertwoId == userId).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
             IQueryable<Game> availableGames =
                 _context.Games.Where(g => (
                     g.playertwoId == null &&
@@ -71,6 +72,9 @@ namespace Rallypoint.Controllers{
         [HttpGet]
         [Route("/games/scoreboard")]
         public IActionResult ScoreBoard(){
+            // Display username in nav
+            ViewBag.log = HttpContext.Session.GetString("Username");
+
             List<User> users = _context.Users.ToList();
             ViewBag.Users = users;
             return View("ScoreBoard");
@@ -136,7 +140,7 @@ namespace Rallypoint.Controllers{
 
                 _context.Add(newGame);
                 _context.SaveChanges();
-                return RedirectToAction("NewGame");
+                return RedirectToAction("GamesIndex");
             }
             return View();
         }
@@ -202,7 +206,8 @@ namespace Rallypoint.Controllers{
                 p2subwins++;
             }
 
-            if(p1subwins == 2)
+            // 3 wins isn't technically required, but just in case... 
+            if(p1subwins == 2 || p1subwins == 3)
             {
                 p1.wins++;
                 p2.losses++;
