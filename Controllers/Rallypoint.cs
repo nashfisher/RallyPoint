@@ -117,21 +117,6 @@ namespace Rallypoint.Controllers{
                     date = (DateTime) game.date,
                     address = game.address
                 };
-                // if(newGame.playeroneScore > newGame.playertwoScore)
-                // {
-                //     User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
-                //     User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
-                //     winner.wins++;
-                //     loser.losses++;
-                // }
-                // else
-                // {
-                //     User winner = _context.Users.SingleOrDefault(u => u.Id == newGame.playertwoId);
-                //     User loser = _context.Users.SingleOrDefault(u => u.Id == newGame.playeroneId);
-                //     winner.wins++;
-                //     loser.losses++;
-                // }
-
                 _context.Add(newGame);
                 _context.SaveChanges();
                 return RedirectToAction("NewGame");
