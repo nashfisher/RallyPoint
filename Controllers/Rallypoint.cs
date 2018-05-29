@@ -53,7 +53,7 @@ namespace Rallypoint.Controllers{
 
             int? userId = HttpContext.Session.GetInt32("Id");
             IQueryable<Game> userGames = 
-                _context.Games.Where(g => g.playeroneId == userId).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
+                _context.Games.Where(g => g.playeroneId == userId || g.playertwoId == userId).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
             IQueryable<Game> availableGames =
                 _context.Games.Where(g => (
                     g.playertwoId == null &&
@@ -184,7 +184,8 @@ namespace Rallypoint.Controllers{
                 p2subwins++;
             }
 
-            if(p1subwins == 2)
+            // 3 wins is unnecessary, but just in case...
+            if(p1subwins == 2 || p1subwins == 3)
             {
                 p1.wins++;
                 p2.losses++;

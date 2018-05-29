@@ -38,7 +38,7 @@ namespace Rallypoint.Models
 
        
         [Required(ErrorMessage = "Password is required")]
-        [MinLength(8)]
+        [MinLength(5)]
         [DataType(DataType.Password)]
 
         public string password {get; set;}
