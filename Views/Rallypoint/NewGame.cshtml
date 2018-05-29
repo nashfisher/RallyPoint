@@ -4,48 +4,50 @@
     ViewData["Title"] = "Add Game";
 }
 <div class="wrapper">
-    <h3>Schedule a Match</h3>
-    <form asp-action="NewGame" asp-controller="Rallypoint">
-        <div class="uk-margin">
-            <label class="uk-form-label" asp-for="playeroneId"></label>
-            <select asp-for="playeroneId">
-            @{
-                foreach(var user in ViewBag.Users)
-                {
-                    <option value="@user.Id">@user.username</option>
+    <div class="entrance">
+        <h3>Schedule a Match</h3>
+        <form asp-action="NewGame" asp-controller="Rallypoint">
+            <div class="uk-margin">
+                <label class="uk-form-label" asp-for="playeroneId"></label>
+                <select asp-for="playeroneId">
+                @{
+                    foreach(var user in ViewBag.Users)
+                    {
+                        <option value="@user.Id">@user.username</option>
+                    }
                 }
-            }
-            </select>
-            <small><span asp-validation-for="playeroneId"></span></small>
-        </div>
+                </select>
+                <small><span asp-validation-for="playeroneId"></span></small>
+            </div>
 
-        <div class="uk-margin">
-            <label class="uk-form-label" asp-for="playertwoId"></label>
-            <select asp-for="playertwoId">
-            @{
-                foreach(var user in ViewBag.Users)
-                {
-                    <option value="@user.Id">@user.username</option>
+            <div class="uk-margin">
+                <label class="uk-form-label" asp-for="playertwoId"></label>
+                <select asp-for="playertwoId">
+                @{
+                    foreach(var user in ViewBag.Users)
+                    {
+                        <option value="@user.Id">@user.username</option>
+                    }
                 }
-            }
-                <option>-Open-</option>
-            </select>
-            <small><span asp-validation-for="playertwoId"></span></small>
-        </div>
-       
-        <div class="uk-margin">
-            <label class="uk-form-label" asp-for="address"></label>
-            <input class="uk-input" asp-for="address"/>
-            <small><span asp-validation-for="address"></span></small>
-        </div>
-        <div class="uk-margin">
-            <label class="uk-form-label" asp-for="date"></label>
-            <input class="uk-input" asp-for="date"/>
-            <small><span asp-validation-for="date"></span></small>
-        </div>
-        
+                    <option>-Open-</option>
+                </select>
+                <small><span asp-validation-for="playertwoId"></span></small>
+            </div>
 
-        <button class="uk-button uk-button-primary uk-margin">Submit</button>
-    </form>
-    <a href="/games"><button class="uk-button uk-button-default">Go Back</button></a>
+            <div class="uk-margin">
+                <label class="uk-form-label" asp-for="address"></label>
+                <input class="uk-input" asp-for="address"/>
+                <small><span asp-validation-for="address"></span></small>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" asp-for="date"></label>
+                <input class="uk-input" asp-for="date"/>
+                <small><span asp-validation-for="date"></span></small>
+            </div>
+            
+
+            <button class="uk-button uk-button-primary uk-margin">Submit</button>
+        </form>
+        <a href="/games"><button class="uk-button uk-button-default">Go Back</button></a>
+    </div>
 </div>

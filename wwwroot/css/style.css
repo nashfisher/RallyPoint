@@ -122,6 +122,11 @@ body {
     
 }
 
+/* Match Index */
+#match-card {
+    margin: 10px !important;
+}
+
 
 /* Match Info Page */
 .match-info {
@@ -131,6 +136,7 @@ body {
     float: right;
     border: 1px solid lightblue;
 }
+
 
 
 nav img {
@@ -187,4 +193,23 @@ ol, ul {
     -moz-border-radius: 999px;
     -khtml-border-radius: 999px;
     -webkit-border-radius: 999px;
+}
+
+#profilepic{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+#stats{
+    margin-top: 35px;
+    margin-left: 575px;
+    width: 300px;
+    padding: 40px;    
+    border: 5px solid blue;
+    background-color: grey;
+    
+}
+.stuff{
+    color: white;
 }
