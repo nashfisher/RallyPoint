@@ -16,8 +16,8 @@ namespace Rallypoint.Models
     {
         [Required,Display(Name="Player One")]
         public int playeroneId {get;set;}
-        [Required,Display(Name="Player Two")]
-        public int playertwoId {get;set;}
+        [Display(Name="Player Two")]
+        public int? playertwoId {get;set;}
         [Required,Display(Name="Location")]
         public string address {get;set;}
         [Later(ErrorMessage="Must be later than today."), Required, Display(Name="Game Date")]

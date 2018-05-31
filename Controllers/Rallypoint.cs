@@ -109,7 +109,8 @@ namespace Rallypoint.Controllers{
         [Route("/games/new")]
         public IActionResult NewGame(GameViewModel game) {
             int? playeroneId = HttpContext.Session.GetInt32("Id");
-
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine(ModelState.IsValid);
             if (ModelState.IsValid) {
                 Game newGame = new Game(){
                     playeroneId = game.playeroneId,

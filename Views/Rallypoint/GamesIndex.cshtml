@@ -14,7 +14,14 @@
             @foreach(var game in ViewBag.userGames){
             <div class="uk-card uk-card-default">
                 <div class="uk-card-body">
-                    <p>@game.playerone.username vs. @game.playertwo.username</p>
+                    @if(@game.playertwoId == null)
+                    {
+                        <p>@game.playerone.username vs. OPEN</p>
+                    }
+                    else
+                    {
+                        <p>@game.playerone.username vs. @game.playertwo.username</p>
+                    }
                     <p>@game.date</p>
                     <p>Location: @game.address</p>
                 </div>
@@ -28,6 +35,7 @@
         <div class="uk-grid">
             @foreach(var game in ViewBag.availableGames){
             <div class="uk-card">
+                <h3 class="uk-card-title">Opponent: @game.playerone.username</h3>
                 <h3 class="uk-card-title">@game.date</h3>
                 <div class="uk-card-body">@game.address</div>
                 <form asp-controller="Rallypoint" asp-action="JoinGame"       asp-route-GameId="@game.Id" asp-route-join="true"><button class="uk-button uk-button-primary">Join</button></form>
