@@ -1,10 +1,47 @@
 body {
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     height: 100vh;
 
     /* Setting the background image */
+    /* background-image: url("/images/background3.jpg"); */
+    /* background-size: 100%;  */
+}
+
+.backgroundimage{
+    position: fixed;
+    z-index: 1;
+    
+    display: block;
     background-image: url("/images/background3.jpg");
     background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.backgroundimagelogin{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
+    display: block;
+    background-image: url("/images/background3.jpg");
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+      
+.content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 
 .categories {
@@ -21,9 +58,9 @@ body {
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
     background:  linear-gradient(to top, #2e35c4, #1359b9, #2e35c4) !important;
-    /* -webkit-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
-    -moz-box-shadow: 0px 11px 14px 6px rgba(153,153,153,1);
-    box-shadow: 0px 11px 14px 6px rgba(153,153,153,1); */
+    /* -webkit-box-shadow: 5px 11px 14px 6px rgba(153,153,153,1);
+    -moz-box-shadow: 5px 11px 14px 6px rgba(153,153,153,1);
+    box-shadow: 5px 11px 14px 6px rgba(153,153,153,1); */
     /* position: fixed; */
 }
 
@@ -41,23 +78,40 @@ body {
     /* Maybe change this */
     height: 90vh;
     overflow: scroll;
-    padding: 20px;
+    padding: 25px;
     background-color: rgb(255, 255, 255);
     /* background-color: white; */
 }
 
 .entrance {
+    /* position: absolute;
+    top: 25vh;
+    left: 35vw; */
     width: 30vw;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.651);
+    background-color: rgba(255, 255, 255, 0.151);
     border-radius: 3px;
+    z-index: 10;
+    color: white;
+    text-shadow: 1px 1px gray;
+}
+
+.entrance a {
+    color: white;
 }
 
 .splashtitle {
     width: 100vw;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.651);
+    background-color: rgba(255, 255, 255, 0.712);
+    text-shadow: 2px 2px grey;
     border-radius: 3px;
+}
+
+.splashtext {
+    font-size: 24vw;
+    color:white;
+    text-shadow: 2px 2px rgba(87, 87, 87, 0.555);
 }
 
 .splash {
@@ -69,8 +123,8 @@ body {
 .sub {
     position: relative;
     text-align: right;
-    padding: 10px;
-    bottom: 120px;
+    padding: 5px;
+    bottom: 125px;
 }
 
 .entranceform {
@@ -81,7 +135,7 @@ body {
 
 .post-title {
     color: black;
-    margin-bottom: 0px !important;
+    margin-bottom: 5px !important;
 }
 
 .post-data {
@@ -102,9 +156,9 @@ body {
 
 /* Forum */
 #postlist {
-    padding: 10px !important;
-    padding-left: 30px !important;
-    height: 70px;
+    padding: 5px !important;
+    padding-left: 35px !important;
+    height: 75px;
 }
 
 .uk-card-default.uk-card-hover:hover {
@@ -118,13 +172,13 @@ body {
 .post-right {
     /* display: inline-block; */
     float: right;
-    height: 70px;
+    height: 75px;
     
 }
 
 /* Match Index */
 #match-card {
-    margin: 10px !important;
+    margin: 5px !important;
 }
 
 
@@ -140,7 +194,7 @@ body {
 
 
 nav img {
-    height: 50px;
+    height: 55px;
 }
 nav a {
     color: rgb(238, 238, 238) !important;
@@ -151,11 +205,11 @@ ul {
 }
 
 ol, ul {
-    padding-left: 0px !important;
+    padding-left: 5px !important;
 }
 
 .ForumForm {
-    padding-top: 100px;
+    padding-top: 105px;
 }
 
 .CatChoice {
@@ -167,7 +221,7 @@ ol, ul {
 @media screen and (max-width: 767px) {
     
     body {
-        padding-bottom: 20px;
+        padding-bottom: 25px;
         height: 100vh;
     
         /* Setting the background image */
@@ -187,8 +241,8 @@ ol, ul {
 }
 
 #maps{
-    width: 100px;
-    height: 100px;
+    width: 105px;
+    height: 105px;
     border-radius: 999px;
     -moz-border-radius: 999px;
     -khtml-border-radius: 999px;
@@ -196,16 +250,16 @@ ol, ul {
 }
 
 #profilepic{
-    width: 200px;
-    height: 200px;
-    margin-bottom: 30px;
+    width: 205px;
+    height: 205px;
+    margin-bottom: 35px;
 }
 
 #stats{
-    margin-top: 35px;
-    margin-left: 575px;
-    width: 300px;
-    padding: 40px;    
+    margin-top: 315px;
+    margin-left: 5715px;
+    width: 305px;
+    padding: 45px;    
     border: 5px solid blue;
     background-color: grey;
     

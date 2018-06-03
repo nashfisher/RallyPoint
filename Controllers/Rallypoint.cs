@@ -5,12 +5,25 @@ using Microsoft.EntityFrameworkCore;
 using Rallypoint.Models;
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Threading.Tasks;
 
 namespace Rallypoint.Controllers{
     public class RallypointController:Controller{
         private RallypointContext _context;
         public RallypointController(RallypointContext context){
             _context = context;
+        }
+        public async Task<IActionResult> Index(string searchString)
+        {
+            var player = from p in _context.Users select p;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                player = player.Where(u => u.username.Contains(searchString));
+            }
+
+            return View(await player.ToListAsync());
         }
 
         
@@ -107,11 +120,31 @@ namespace Rallypoint.Controllers{
             _context.SaveChanges();
             return RedirectToAction("GamesIndex");
         }
+        
+        [HttpGet]
+        [Route("games/new")]
+        public async Task<IActionResult> NewGame(string searchString){
+            ViewBag.log = HttpContext.Session.GetString("Username");
+            List<User> users = _context.Users.ToList();
+            ViewBag.Users = users;
+
+            var player = from p in _context.Users select p;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                player = player.Where(u => u.username.Contains(searchString));
+            }
+
+            return View(await player.ToListAsync());
+        }
+
 
         [HttpPost]
         [Route("/games/new")]
         public IActionResult NewGame(GameViewModel game) {
             int? playeroneId = HttpContext.Session.GetInt32("Id");
+            ViewBag.log = HttpContext.Session.GetString("Username");
+
 
             if (ModelState.IsValid) {
                 Game newGame = new Game(){
@@ -128,12 +161,18 @@ namespace Rallypoint.Controllers{
         }
 
         [HttpGet]
-        [Route("games/new")]
-        public IActionResult NewGame(){
+        [Route("/gameinfo/{gameid}")]
+        public IActionResult gameinfo(int gameid){
+
+
+            // Display username in nav
             ViewBag.log = HttpContext.Session.GetString("Username");
-            List<User> users = _context.Users.ToList();
-            ViewBag.Users = users;
-            return View();
+            
+
+            Game game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo).SingleOrDefault();
+            ViewBag.Game = game;
+
+            return View("gameinfo");
         }
 
         [HttpPost]
@@ -203,20 +242,6 @@ namespace Rallypoint.Controllers{
             return View("gameinfo");
         }
 
-        [HttpGet]
-        [Route("/gameinfo/{gameid}")]
-        public IActionResult gameinfo(int gameid){
-
-
-            // Display username in nav
-            ViewBag.log = HttpContext.Session.GetString("Username");
-            
-
-            Game game = _context.Games.Where(g => g.Id == gameid).Include(up => up.playerone).Include(u =>u.playertwo).SingleOrDefault();
-            ViewBag.Game = game;
-
-            return View("gameinfo");
-        }
 
         [HttpGet]
         [Route("/profile/{username}")]
