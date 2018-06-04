@@ -123,19 +123,13 @@ namespace Rallypoint.Controllers{
         
         [HttpGet]
         [Route("games/new")]
-        public async Task<IActionResult> NewGame(string searchString){
+        public IActionResult NewGame(){
             ViewBag.log = HttpContext.Session.GetString("Username");
             List<User> users = _context.Users.ToList();
             ViewBag.Users = users;
 
-            var player = from p in _context.Users select p;
 
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                player = player.Where(u => u.username.Contains(searchString));
-            }
-
-            return View(await player.ToListAsync());
+            return View();
         }
 
 
