@@ -1,37 +1,22 @@
 @model Rallypoint.Models.GameViewModel;
 
-@{
-    ViewData["Title"] = "Add Game";
-}
+
 <div class="wrapper">
     <div class="entrance">
         <h3>Schedule a Match</h3>
         <form asp-action="NewGame" asp-controller="Rallypoint">
+
+
             <div class="uk-margin">
-                <label class="uk-form-label" asp-for="playeroneId"></label>
-                <select asp-for="playeroneId">
-                @{
-                    foreach(var user in ViewBag.Users)
-                    {
-                        <option value="@user.Id">@user.username</option>
-                    }
-                }
-                </select>
-                <small><span asp-validation-for="playeroneId"></span></small>
+                <label class="uk-form-label" asp-for="playeroneUsername"></label>
+                <input type="text" class="uk-input" asp-for="playeroneUsername">
+                <div class="error-message"<span asp-validation-for="playeroneUsername"></span></div>
             </div>
 
             <div class="uk-margin">
-                <label class="uk-form-label" asp-for="playertwoId"></label>
-                <select asp-for="playertwoId">
-                @{
-                    foreach(var user in ViewBag.Users)
-                    {
-                        <option value="@user.Id">@user.username</option>
-                    }
-                }
-                    <option>-Open-</option>
-                </select>
-                <small><span asp-validation-for="playertwoId"></span></small>
+                <label class="uk-form-label" asp-for="playertwoUsername"></label>
+                <input type="text" class="uk-input" asp-for="playertwoUsername">
+                <div class="error-message"<span asp-validation-for="playertwoUsername"></span></div>
             </div>
 
             <div class="uk-margin">
@@ -39,12 +24,16 @@
                 <input class="uk-input" asp-for="address"/>
                 <small><span asp-validation-for="address"></span></small>
             </div>
+
             <div class="uk-margin">
                 <label class="uk-form-label" asp-for="date"></label>
                 <input class="uk-input" asp-for="date"/>
                 <small><span asp-validation-for="date"></span></small>
             </div>
-            
+
+            <div class="error-message">
+                <p>@TempData["error"]</p>
+            </div>
 
             <button class="uk-button uk-button-primary uk-margin">Submit</button>
         </form>

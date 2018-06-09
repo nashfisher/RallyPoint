@@ -64,16 +64,21 @@ namespace Rallypoint.Controllers{
             // Display username in nav
             ViewBag.log = HttpContext.Session.GetString("Username");
 
+            string userName = HttpContext.Session.GetString("Username");
             int? userId = HttpContext.Session.GetInt32("Id");
             IQueryable<Game> userGames = 
-                _context.Games.Where(g => g.playeroneId == userId || g.playertwoId == userId).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
+                // _context.Games.Where(g => g.playe roneId == userId || g.playertwoId == userId).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
+                _context.Games.Where(g => g.playeroneUsername == userName || g.playertwoUsername == userName).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
             IQueryable<Game> availableGames =
                 _context.Games.Where(g => (
                     g.playertwoId == null &&
-                    g.playeroneId != userId));
+                    
+                    // g.playeroneId != userId));
+                    g.playeroneUsername != userName));
             IQueryable<Game> otherGames =
                 _context.Games.Where(g => (
-                    g.playeroneId != userId &&
+                    // g.playeroneId != userId &&
+                    g.playeroneUsername != userName &&
                     g.playertwoId != userId));
             ViewBag.userId = userId;
             ViewBag.userGames = userGames;
@@ -126,7 +131,7 @@ namespace Rallypoint.Controllers{
         public IActionResult NewGame(){
             ViewBag.log = HttpContext.Session.GetString("Username");
             List<User> users = _context.Users.ToList();
-            ViewBag.Users = users;
+            // ViewBag.Users = users;
 
 
             return View();
@@ -141,9 +146,37 @@ namespace Rallypoint.Controllers{
 
 
             if (ModelState.IsValid) {
+                if(!_context.Users.Any(u =>u.username == game.playeroneUsername) || !_context.Users.Any(u => u.username == game.playertwoUsername))
+                {
+                    if(_context.Users.Any(u => u.username == game.playertwoUsername))
+                    {
+                        ModelState.AddModelError("playeroneUsername", "Player one not found.");
+
+                        return View("NewGame", game);
+                    }
+                    else if(_context.Users.Any(u => u.username == game.playeroneUsername))
+                    {
+                        ModelState.AddModelError("playertwoUsername", "Player two not found.");
+
+                        return View("NewGame", game);
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("playeroneUsername", "Player one not found.");
+                        ModelState.AddModelError("playertwoUsername", "Player two not found.");
+                        
+                        return View("NewGame", game);
+                    }
+                }
                 Game newGame = new Game(){
-                    playeroneId = game.playeroneId,
-                    playertwoId = game.playertwoId,
+                    // playeroneId = game.playeroneId,
+                    
+                    
+                    // issue here 
+                    playeroneUsername = game.playeroneUsername,
+                    // 
+                    playertwoUsername = game.playertwoUsername,
+                    // playertwoId = game.playertwoId,
                     date = (DateTime) game.date,
                     address = game.address
                 };
@@ -190,7 +223,6 @@ namespace Rallypoint.Controllers{
                 game.playertworoundtwoScore = model.playertworoundtwoScore;
                 game.playeroneroundthreeScore = model.playeroneroundthreeScore;
                 game.playertworoundthreeScore = model.playertworoundthreeScore;
-
             }
 
             if(game.playeroneroundoneScore > game.playertworoundoneScore)
@@ -210,7 +242,7 @@ namespace Rallypoint.Controllers{
             {
                 p2subwins++;
             }
-
+            
             if(game.playeroneroundthreeScore > game.playertworoundthreeScore)
             {
                 p1subwins++;

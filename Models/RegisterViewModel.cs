@@ -33,7 +33,6 @@ namespace Rallypoint.Models
     public class LoginViewModel : BaseEntity{
 
         [Required(ErrorMessage = "Username or email is required")]
-
         public string identity {get; set;}
 
        

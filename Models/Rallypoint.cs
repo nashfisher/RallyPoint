@@ -30,9 +30,11 @@ namespace Rallypoint.Models{
 
 	public class Game: BaseEntity{
 
+		public string playertwoUsername { get; set; }
 		public int? playertwoId {get; set;}
 		public User playertwo {get; set;}
 
+		public string playeroneUsername { get; set; }
 		public int? playeroneId {get; set;}
 		public User playerone {get; set;}
 

@@ -83,11 +83,11 @@ namespace Rallypoint.Controllers
         [Route("signin")]
         public IActionResult Login(LoginViewModel user) {
             if(ModelState.IsValid){
-                if(!_context.Users.Any(u => u.email == user.identity) && !_context.Users.Any(t =>t.username == user.identity))
+                if(!_context.Users.Any(u => u.email == user.identity) && !_context.Users.Any(t => t.username == user.identity))
                 {
                     ModelState.AddModelError("identity", "Invalid Login Information");
-                    return View("Login", user);
 
+                    return View("Login", user);
                 }
                 var lUser = _context.Users.SingleOrDefault(u => u.email == user.identity);
                 var lHasher = new PasswordHasher<User>();
