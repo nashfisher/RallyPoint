@@ -14,7 +14,7 @@ namespace Rallypoint.Models
 {
     public class GameViewModel : BaseEntity
     {
-        [Required,Display(Name="Player One")]
+        [Required(ErrorMessage = "Input is required"),Display(Name="Player One")]
         public string playeroneUsername { get; set; }
         // public int playeroneId {get;set;}
 

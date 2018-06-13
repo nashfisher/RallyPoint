@@ -9,25 +9,25 @@
 
             <div class="uk-margin">
                 <label class="uk-form-label" asp-for="playeroneUsername"></label>
-                <input type="text" class="uk-input" asp-for="playeroneUsername">
+                <input type="text" class="uk-input" asp-for="playeroneUsername" placeholder="Username">
                 <div class="error-message"<span asp-validation-for="playeroneUsername"></span></div>
             </div>
 
             <div class="uk-margin">
                 <label class="uk-form-label" asp-for="playertwoUsername"></label>
-                <input type="text" class="uk-input" asp-for="playertwoUsername">
+                <input type="text" class="uk-input" asp-for="playertwoUsername" placeholder="Username">
                 <div class="error-message"<span asp-validation-for="playertwoUsername"></span></div>
             </div>
 
             <div class="uk-margin">
                 <label class="uk-form-label" asp-for="address"></label>
-                <input class="uk-input" asp-for="address"/>
+                <input class="uk-input" asp-for="address" placeholder="Business, City, State, etc"/>
                 <small><span asp-validation-for="address"></span></small>
             </div>
 
             <div class="uk-margin">
                 <label class="uk-form-label" asp-for="date"></label>
-                <input class="uk-input" asp-for="date"/>
+                <input class="uk-input" type="datetime" asp-for="date" placeholder="MM/DD/YYYY h:mm am/pm"/>
                 <small><span asp-validation-for="date"></span></small>
             </div>
 
@@ -35,8 +35,8 @@
                 <p>@TempData["error"]</p>
             </div>
 
-            <button class="uk-button uk-button-primary uk-margin">Submit</button>
+            <button class="uk-button uk-button-primary uk-margin">Create</button>
         </form>
-        <a href="/games"><button class="uk-button uk-button-default">Go Back</button></a>
+        <a href="/games"><button class="uk-button uk-button-default">Cancel</button></a>
     </div>
 </div>

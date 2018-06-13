@@ -4,9 +4,9 @@
     <div class="match-info">
         <h1>Match</h1>
         @{
-            if(ViewBag.Game.playertwo != null)
+            if(ViewBag.Game.playertwoUsername != null)
             {
-                <h2>@ViewBag.Game.playeroneUsername vs @ViewBag.Game.playertwo.username</h2>
+                <h2>@ViewBag.Game.playeroneUsername vs @ViewBag.Game.playertwoUsername</h2>
             }
             else{
                 <h2>@ViewBag.Game.playeroneUsername vs TBD</h2>
@@ -28,7 +28,7 @@
                         <small><span asp-validation-for="playeroneroundoneScore"></span></small>
                     </div>
                     <div class="uk-margin">
-                        @ViewBag.Game.playertwo.username   <label class="uk-form-label" asp-for="playertworoundoneScore"></label>
+                        @ViewBag.Game.playertwoUsername   <label class="uk-form-label" asp-for="playertworoundoneScore"></label>
                         <input class="uk-input" asp-for="playertworoundoneScore"/>
                         <small><span asp-validation-for="playertworoundoneScore"></span></small>
                     </div>
@@ -38,7 +38,7 @@
                         <small><span asp-validation-for="playeroneroundtwoScore"></span></small>
                     </div>
                     <div class="uk-margin">
-                        @ViewBag.Game.playertwo.username  <label class="uk-form-label" asp-for="playertworoundtwoScore"></label>
+                        @ViewBag.Game.playertwoUsername  <label class="uk-form-label" asp-for="playertworoundtwoScore"></label>
                         <input class="uk-input" asp-for="playertworoundtwoScore"/>
                         <small><span asp-validation-for="playertworoundtwoScore"></span></small>
                     </div>
@@ -48,7 +48,7 @@
                         <small><span asp-validation-for="playeroneroundthreeScore"></span></small>
                     </div>
                     <div class="uk-margin">
-                        @ViewBag.Game.playertwo.username  <label class="uk-form-label" asp-for="playertworoundthreeScore"></label> (if exists)
+                        @ViewBag.Game.playertwoUsername  <label class="uk-form-label" asp-for="playertworoundthreeScore"></label> (if exists)
                         <input class="uk-input" asp-for="playertworoundthreeScore"/>
                         <small><span asp-validation-for="playertworoundthreeScore"></span></small>
                     </div>
@@ -58,14 +58,14 @@
             else
             {
                 <p>@ViewBag.Game.playeroneUsername Round 1 Score: @ViewBag.Game.playeroneroundoneScore</p>
-                <p>@ViewBag.Game.playertwo.username Two Round 1 Score: @ViewBag.Game.playertworoundoneScore</p>
+                <p>@ViewBag.Game.playertwoUsername Two Round 1 Score: @ViewBag.Game.playertworoundoneScore</p>
 
                 <p>@ViewBag.Game.playeroneUsername Round 2 Score: @ViewBag.Game.playeroneroundtwoScore</p>
-                <p>@ViewBag.Game.playertwo.username Round 2 Score: @ViewBag.Game.playertworoundtwoScore</p>
+                <p>@ViewBag.Game.playertwoUsername Round 2 Score: @ViewBag.Game.playertworoundtwoScore</p>
                 if(ViewBag.Game.playeroneroundthreeScore != null)
                 {
                     <p>@ViewBag.Game.playeroneUsername Round 3 Score: @ViewBag.Game.playeroneroundthreeScore</p>
-                    <p>@ViewBag.Game.playertwo.username Round 3 Score: @ViewBag.Game.playertworoundthreeScore</p>
+                    <p>@ViewBag.Game.playertwoUsername Round 3 Score: @ViewBag.Game.playertworoundthreeScore</p>
                 }
                 
             }

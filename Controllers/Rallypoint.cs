@@ -142,21 +142,28 @@ namespace Rallypoint.Controllers{
         [Route("/games/new")]
         public IActionResult NewGame(GameViewModel game) {
             int? playeroneId = HttpContext.Session.GetInt32("Id");
+
+            // Username in navbar
             ViewBag.log = HttpContext.Session.GetString("Username");
 
+            if(!ModelState.IsValid){
+                
+                return View("NewGame", game);
+            }
 
-            if (ModelState.IsValid) {
+            else if (ModelState.IsValid) {
+                // Validations for username inputs - seperated for individual inputs
                 if(!_context.Users.Any(u =>u.username == game.playeroneUsername) || !_context.Users.Any(u => u.username == game.playertwoUsername))
                 {
                     if(_context.Users.Any(u => u.username == game.playertwoUsername))
                     {
-                        ModelState.AddModelError("playeroneUsername", "Player one not found.");
+                        ModelState.AddModelError("playeroneUsername", "Username not found.");
 
                         return View("NewGame", game);
                     }
                     else if(_context.Users.Any(u => u.username == game.playeroneUsername))
                     {
-                        ModelState.AddModelError("playertwoUsername", "Player two not found.");
+                        ModelState.AddModelError("playertwoUsername", "Username not found.");
 
                         return View("NewGame", game);
                     }
@@ -164,7 +171,7 @@ namespace Rallypoint.Controllers{
                     {
                         ModelState.AddModelError("playeroneUsername", "Player one not found.");
                         ModelState.AddModelError("playertwoUsername", "Player two not found.");
-                        
+
                         return View("NewGame", game);
                     }
                 }
