@@ -14,20 +14,19 @@ namespace Rallypoint.Controllers{
         public RallypointController(RallypointContext context){
             _context = context;
         }
-        public async Task<IActionResult> Index(string searchString)
-        {
-            var player = from p in _context.Users select p;
+        // public async Task<IActionResult> Index(string searchString)
+        // {
+        //     var player = from p in _context.Users select p;
 
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                player = player.Where(u => u.username.Contains(searchString));
-            }
+        //     if (!String.IsNullOrEmpty(searchString))
+        //     {
+        //         player = player.Where(u => u.username.Contains(searchString));
+        //     }
 
-            return View(await player.ToListAsync());
-        }
+        //     return View(await player.ToListAsync());
+        // }
 
         
-
 
         public bool LoggedIn() {
             if (HttpContext.Session.GetString("Username") == null) {
@@ -71,10 +70,10 @@ namespace Rallypoint.Controllers{
                 _context.Games.Where(g => g.playeroneUsername == userName || g.playertwoUsername == userName).Include(u1 => u1.playerone).Include(u2 => u2.playertwo);
             IQueryable<Game> availableGames =
                 _context.Games.Where(g => (
-                    g.playertwoId == null &&
+                    (g.playertwoUsername == null &&
                     
                     // g.playeroneId != userId));
-                    g.playeroneUsername != userName));
+                    g.playeroneUsername != userName) || (g.playeroneUsername == null && g.playertwoUsername != userName)));
             IQueryable<Game> otherGames =
                 _context.Games.Where(g => (
                     // g.playeroneId != userId &&
@@ -153,7 +152,7 @@ namespace Rallypoint.Controllers{
 
             else if (ModelState.IsValid) {
                 // Validations for username inputs - seperated for individual inputs
-                if(!_context.Users.Any(u =>u.username == game.playeroneUsername) || !_context.Users.Any(u => u.username == game.playertwoUsername))
+                if(((!_context.Users.Any(u =>u.username == game.playeroneUsername) && game.playeroneUsername != null) || ((!_context.Users.Any(u => u.username == game.playertwoUsername) && game.playertwoUsername != null))))
                 {
                     if(_context.Users.Any(u => u.username == game.playertwoUsername))
                     {

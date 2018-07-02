@@ -25,13 +25,16 @@
         </div>
     <hr>
     <h2>Find a Match</h2>
-        <div class="uk-grid">
+        <div class="uk-child-width-1-4@m uk-grid-small uk-grid-match" uk-grid>
             @foreach(var game in ViewBag.availableGames){
-            <div class="uk-card">
-                <h3 class="uk-card-title">@game.date</h3>
-                <div class="uk-card-body">@game.address</div>
-                <form asp-controller="Rallypoint" asp-action="JoinGame"       asp-route-GameId="@game.Id" asp-route-join="true"><button class="uk-button uk-button-primary">Join</button></form>
-                <form asp-controller="Rallypoint" asp-action="DeleteGame" asp-route-Id="@game.Id"><button class="uk-button-danger uk-margin">Delete</button></form>
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-body">
+                    <p class="uk-card-title">@game.playeroneUsername vs. @game.playertwoUsername</p>
+                    <p>@game.date</p>
+                    <p>Location: @game.address</p>
+                </div>
+                <form asp-controller="Rallypoint" asp-action="JoinGame"       asp-route-GameId="@game.Id" asp-route-join="true"><button class="uk-button uk-button-primary uk-margin">Join</button></form>
+                <form asp-controller="Rallypoint" asp-action="DeleteGame" asp-route-Id="@game.Id"><button class="uk-button uk-button-danger uk-margin">Delete</button></form>
             </div>
             }
         </div>
