@@ -100,13 +100,21 @@ namespace Rallypoint.Controllers{
         [HttpPost]
         [Route("/games/join")]
         public IActionResult JoinGame(int GameId, bool join){
-            int? userId = HttpContext.Session.GetInt32("Id");
+            string userName = HttpContext.Session.GetString("Username");
 
             // Display username in nav
             ViewBag.log = HttpContext.Session.GetString("Username");
             Game toJoin = _context.Games
                 .Where(g => g.Id == GameId).SingleOrDefault();
-            toJoin.playertwoId = join ? userId : (int?) null;
+                
+                if (toJoin.playertwoUsername == null) {
+
+                    toJoin.playertwoUsername = join ? userName : (string) null;
+                }
+                else {
+
+                    toJoin.playeroneUsername = join ? userName : (string) null;
+                }
             _context.SaveChanges();
             return RedirectToAction("GamesIndex");
         }
@@ -152,7 +160,7 @@ namespace Rallypoint.Controllers{
 
             else if (ModelState.IsValid) {
                 // Validations for username inputs - seperated for individual inputs
-                if(((!_context.Users.Any(u =>u.username == game.playeroneUsername) && game.playeroneUsername != null) || ((!_context.Users.Any(u => u.username == game.playertwoUsername) && game.playertwoUsername != null))))
+                if(((!_context.Users.Any(u => u.username == game.playeroneUsername) && game.playeroneUsername != null) || ((!_context.Users.Any(u => u.username == game.playertwoUsername) && game.playertwoUsername != null))))
                 {
                     if(_context.Users.Any(u => u.username == game.playertwoUsername))
                     {
@@ -174,14 +182,21 @@ namespace Rallypoint.Controllers{
                         return View("NewGame", game);
                     }
                 }
+
+                // Query for Users to add them to the created Game
+                User p1 = _context.Users.FirstOrDefault(u => u.username == game.playeroneUsername);
+                User p2 = _context.Users.FirstOrDefault(u => u.username == game.playertwoUsername);
+                
                 Game newGame = new Game(){
                     // playeroneId = game.playeroneId,
                     
-                    
-                    // issue here 
                     playeroneUsername = game.playeroneUsername,
-                    // 
+                
+                    playerone = p1,
+                    
                     playertwoUsername = game.playertwoUsername,
+
+                    playertwo = p1,
                     // playertwoId = game.playertwoId,
                     date = (DateTime) game.date,
                     address = game.address
@@ -269,6 +284,26 @@ namespace Rallypoint.Controllers{
                 p2.wins++;
                 p1.losses++;
             }
+
+            // Working above (fix the issue with wins/losses record)
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            
 
             _context.SaveChanges();
             return View("gameinfo");
