@@ -107,13 +107,17 @@ namespace Rallypoint.Controllers{
             Game toJoin = _context.Games
                 .Where(g => g.Id == GameId).SingleOrDefault();
                 
+                User p = _context.Users.FirstOrDefault(u => u.username == userName);
+
                 if (toJoin.playertwoUsername == null) {
 
                     toJoin.playertwoUsername = join ? userName : (string) null;
+                    toJoin.playertwo = p;
                 }
                 else {
 
                     toJoin.playeroneUsername = join ? userName : (string) null;
+                    toJoin.playerone = p;
                 }
             _context.SaveChanges();
             return RedirectToAction("GamesIndex");
@@ -182,22 +186,66 @@ namespace Rallypoint.Controllers{
                         return View("NewGame", game);
                     }
                 }
+                // Will not allow game to be created with no players
+                if (game.playeroneUsername == null && game.playertwoUsername == null) {
+
+                    ModelState.AddModelError("playeroneUsername", "Must Include at least one known player");
+
+                    return View("NewGame", game);
+                }
 
                 // Query for Users to add them to the created Game
-                User p1 = _context.Users.FirstOrDefault(u => u.username == game.playeroneUsername);
                 User p2 = _context.Users.FirstOrDefault(u => u.username == game.playertwoUsername);
+                User p1 = _context.Users.FirstOrDefault(u => u.username == game.playeroneUsername);
                 
-                Game newGame = new Game(){
-                    // playeroneId = game.playeroneId,
-                    
-                    playeroneUsername = game.playeroneUsername,
-                
-                    playerone = p1,
-                    
-                    playertwoUsername = game.playertwoUsername,
 
+            // Separate game creation for a joinable match
+
+                // if player one is 'open'
+                if (game.playeroneUsername == null) {
+                    
+                    Game openGame1 = new Game() {
+
+                        playertwoId = p2.Id,
+                        playertwoUsername = game.playertwoUsername,
+                        playertwo = p1,
+                        
+                        date = (DateTime) game.date,
+                        address = game.address
+                    };
+                    _context.Add(openGame1);
+                    _context.SaveChanges();
+                    return RedirectToAction("GamesIndex");
+
+                }
+
+                if (game.playertwoUsername == null) {
+
+                    Game openGame2 =  new Game() {
+
+                        playeroneId = p1.Id,
+                        playeroneUsername = game.playeroneUsername,
+                        playerone = p1,
+
+                        date = (DateTime) game.date,
+                       
+                        address = game.address
+                    };
+                    _context.Add(openGame2);
+                    _context.SaveChanges();
+                    return RedirectToAction("GamesIndex");
+                }
+
+                Game newGame = new Game(){
+
+                    playeroneId = p1.Id,                   
+                    playeroneUsername = game.playeroneUsername,               
+                    playerone = p1,
+
+                    playertwoId = p2.Id,                   
+                    playertwoUsername = game.playertwoUsername,
                     playertwo = p1,
-                    // playertwoId = game.playertwoId,
+                    
                     date = (DateTime) game.date,
                     address = game.address
                 };
@@ -303,7 +351,7 @@ namespace Rallypoint.Controllers{
             // 
             // 
             // 
-            
+
 
             _context.SaveChanges();
             return View("gameinfo");
