@@ -333,26 +333,6 @@ namespace Rallypoint.Controllers{
                 p1.losses++;
             }
 
-            // Working above (fix the issue with wins/losses record)
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-
-
             _context.SaveChanges();
             return View("gameinfo");
         }
