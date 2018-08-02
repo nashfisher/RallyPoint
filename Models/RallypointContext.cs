@@ -10,8 +10,9 @@ namespace Rallypoint.Models
         public DbSet<Game> Games {get; set;}
         public DbSet<Post> Posts {get; set;}
         public DbSet<Like> Likes {get; set;}
-
         public DbSet<Comment> Comments {get;set;}
+
+        public DbSet<CLike> CLikes {get;set;}
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

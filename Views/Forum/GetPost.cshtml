@@ -1,0 +1,80 @@
+@{
+ Layout = "~/Views/Shared/_ForumLayout.cshtml";
+}
+
+
+<div class="wrapper">
+    <ul class="uk-comment-list">
+        <li>
+            <article style="border: black 2px solid" class="uk-comment uk-comment-primary">
+                <header class="uk-comment-header">
+                    @{
+                        int postlike = 0;
+                        string upcolor = "orange";
+                        string downcolor = "blue";
+                        @foreach(var likes in @ViewBag.Post[0].likedpost)
+                        {
+                            if(likes.liked == null)
+                            {
+                                break;
+                            }
+                            else if(likes.liked)
+                            {
+                                postlike += 1;
+                            }
+                            else if(!likes.liked)
+                            {
+                                postlike -= 1;
+                            }
+                        }
+                        @if(@ViewBag.Post[0].likedpost.Count == 0)
+                        {
+                            upcolor = "black";
+                            downcolor = "black";
+                        }
+                        else
+                        {
+                            @switch (@ViewBag.Post[0].likedpost[0].liked)
+                            {
+                                case null:
+                                    upcolor = "black";
+                                    downcolor = "black";
+                                    break;
+                                case true:
+                                    downcolor = "black";
+                                    upcolor = "orange";
+                                    break;
+                                case false:
+                                    upcolor = "black";
+                                    downcolor = "blue";
+                                    break;
+                            }
+                        }
+                    }
+                    <div>
+                        <form style="display: block;" class="LDbutton" asp-controller="Forum" asp-action="LikePost" asp-route-like="TRUE" asp-route-postID="@ViewBag.Post[0].Id" asp-route-routeID="post"><button class="votearrow"><i style="color: @upcolor;" class="fas fa-arrow-circle-up"></i></button></form>
+                        <p style="float: right;margin-top: auto;" class="votecount">@postlike</p>
+                        <form style="display: block;" class="LDbutton" asp-controller="Forum" asp-action="LikePost" asp-route-like="FALSE" asp-route-postID="@ViewBag.Post[0].Id" asp-route-routeID="post"><button class="votearrow"><i style="color: @downcolor;" class="fas fa-arrow-circle-down"></i></button></form>
+                    </div>
+                    <h4 style="display: inline-block;" class="uk-comment-title">@ViewBag.Post[0].title</h4>
+                    <div style="float: right;">
+                        <img style="display: block;" class="uk-comment-avatar" src="@ViewBag.CurrentUser.imagelink" alt="profilepic" width="80" height="80">
+                        <a href="/profile/@ViewBag.CurrentUser.username"><p style="margin: 0px;" class="post-data"><span class="uk-icon uk-margin-small-right" uk-icon="icon: user; ratio: .5"></span>@ViewBag.CurrentUser.username</p></a>
+                    </div>
+                    <ul class="uk-comment-meta uk-subnav">@ViewBag.Post[0].post</ul>
+                </header>
+                <div class="uk-comment-body"></div>
+                <div class="uk-inline">
+                    <button class="uk-button uk-button-default" type="button">Comment</button>
+                    <div uk-drop="mode: click">
+                        <div class="uk-card uk-card-body uk-card-default">
+                            <form asp-action="SavePost" asp-controller="Forum" method="POST">
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </li>
+    </ul>
+</div>

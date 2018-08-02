@@ -62,7 +62,7 @@ namespace Rallypoint.Models{
 
 		public int? likes {get; set;}
 
-		List<Like> likedpost {get; set;}
+		public List<Like> likedpost {get; set;}
 
 		public Post(){
 			likedpost = new List<Like>();
@@ -78,8 +78,14 @@ namespace Rallypoint.Models{
 		public Post post {get; set;}
 
 		public int? PostId {get; set;}
-	}
 
+		public bool? liked {get;set;}
+
+		public Like() {
+			liked = null;
+		}
+
+	}
 
 	public class Comment : BaseEntity{
 
@@ -93,12 +99,29 @@ namespace Rallypoint.Models{
 
 		public User user {get; set;}
 
-		public List<Like> commentlikes {get; set;}
-
-
+		public List<CLike> commentlikes {get; set;}
 		public Comment(){
-			commentlikes = new List<Like>();
+			commentlikes = new List<CLike>();
 		}
 	}
+
+	public class CLike : BaseEntity{
+
+		public User user {get; set;}
+
+		public int? UserId {get; set;}
+
+		public Comment comment {get; set;}
+
+		public int? CommentId {get; set;}
+
+		public bool? liked {get;set;}
+
+		public CLike() {
+			liked = null;
+		}
+	}
+
+
 
 }

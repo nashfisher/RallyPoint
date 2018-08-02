@@ -31,8 +31,9 @@ namespace Rallypoint.Controllers{
             // for testing individual user
             int? sessionid = HttpContext.Session.GetInt32("Id");
             var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == HttpContext.Session.GetInt32("Id"));
-            var test = _context.Posts.Include(p => p.user);
+            List<Post> test = _context.Posts.Include(p => p.user).Include(l => l.likedpost).ToList();
             ViewBag.RecentPost = test;
+            ViewBag.CurrentUser = CurrentUser;
             return View("Index","_ForumLayout");
         }
 
@@ -61,24 +62,127 @@ namespace Rallypoint.Controllers{
         }
 
         [HttpPost]
-        [Route("forum/like/{postId}")]
-        public IActionResult LikePost(int postId)
+        [Route("forum/{like}/{postId}/{routeID}")]
+        public IActionResult LikePost(int postId, bool like, string routeID)
         {
             Like stuff = _context.Likes.SingleOrDefault(j => j.PostId == postId && j.UserId == HttpContext.Session.GetInt32("Id"));
-            if(stuff != null){
+            if(stuff == null )
+            {
+                Like newlike = new Like
+                {
+                    PostId = postId,
+                    UserId = (int)HttpContext.Session.GetInt32("Id"),
+                    liked = like
+                };
+                _context.Likes.Add(newlike);
+                _context.SaveChanges();
+                if(routeID == "post")
+                {
+                    return RedirectToAction("GetPost");
+                }
                 return RedirectToAction("Index");
+            }
+            else if(stuff.liked == null)
+            {
+
+                stuff.liked = like;
+                _context.SaveChanges();
+                if(routeID == "post")
+                {
+                    return RedirectToAction("GetPost");
+                }
+                return RedirectToAction("Index");
+            }
+            switch(like)
+            {
+                case true:
+                    if((bool)stuff.liked)
+                    {
+                        stuff.liked = null;
+                        _context.SaveChanges();
+                        break;
+                    }
+                    else if(!(bool)stuff.liked)
+                    {
+                        stuff.liked = like;
+                        _context.SaveChanges();
+                        break;
+                    }
+                    else {
+                        
+                        Like likedstuff = new Like {
+                            PostId = postId,
+                            UserId =(int)HttpContext.Session.GetInt32("Id"),
+                            liked = true
+                        };
+                        // _context.Posts.SingleOrDefault(p => p.Id == postId); will be used to grab post
+                        _context.Likes.Add(likedstuff);
+                        _context.SaveChanges();
+                        break;
+                    }
+                case false:
+                    if(!(bool)stuff.liked)
+                    {
+                        stuff.liked = null;
+                        _context.SaveChanges();
+                        break;
+                    }
+                    else if((bool)stuff.liked)
+                    {
+                        stuff.liked = like;
+                        _context.SaveChanges();
+                        break;
+                    }
+                    else {
+                        
+                        Like likedstuff = new Like {
+                            PostId = postId,
+                            UserId =(int)HttpContext.Session.GetInt32("Id"),
+                            liked = false
+                        };
+                        // _context.Posts.SingleOrDefault(p => p.Id == postId); will be used to grab post
+                        _context.Likes.Add(likedstuff);
+                        _context.SaveChanges();
+                        break;
+                    }
+            }
+            if(routeID == "post")
+            {
+                return RedirectToAction("GetPost");
+            }
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        [Route("forum/post/{postId}")]
+        public IActionResult GetPost(int postId)
+        {
+            if (HttpContext.Session.GetString("Username") == null) {
+                ViewBag.log = "Login";
             }
             else {
-                
-                Like likedstuff = new Like {
-                    PostId = postId,
-                    UserId =(int)HttpContext.Session.GetInt32("Id")
-                };
-                _context.Likes.Add(likedstuff);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-
+                ViewBag.log = HttpContext.Session.GetString("Username");
             }
+            List<Post> result = _context.Posts.Where(p => p.Id == postId).Include(lp => lp.likedpost).ToList();
+            var CurrentUser = _context.Users.SingleOrDefault(u => u.Id == HttpContext.Session.GetInt32("Id"));
+            ViewBag.CurrentUser = CurrentUser;
+            ViewBag.Post = result;
+            return View();
+        }
+
+        [HttpPost]
+        [Route("forum/commentpost/{postId")]
+        public IActionResult CommentPost(int postId)
+        {
+            if(HttpContext.Session.GetString("Username") == null)
+            {
+                ViewBag.log = "Login";
+            }
+            else
+            {
+                ViewBag.log = HttpContext.Session.GetString("Username");
+            }
+            return RedirectToAction("GetPost");
         }
     }
 }
